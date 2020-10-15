@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+const About = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -10,10 +10,12 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>Welcome to the home page!</h1>
+        <h1>Welcome to the about page!</h1>
       </main>
 
       <footer className={styles.footer}></footer>
     </div>
   );
-}
+};
+
+export default About;
