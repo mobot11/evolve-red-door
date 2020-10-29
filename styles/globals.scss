@@ -1,0 +1,106 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+/* GENERIC */
+/* basic normalization */
+* {
+  border: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+/* ========================================================================= */
+
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility Requirements */
+p {
+  padding-bottom: 2em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 2em
+}
+
+/* ................................. */
+
+body {
+  background: $white;
+  min-width: $min-size;
+}
+
+/* ========================================================================= */
+
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* classes t0, t1, t2, t3, s1, s2 and classes with t- prefix */
+/* root font */
+html {
+  @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* base font */
+.t0,
+p,
+span,
+a {
+  @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
+}
+
+/* largest font-size */
+.t1,
+h1 {
+  @include fluid-type(
+    $bp-s,
+    $bp-xl,
+    $mod_m * $mod_m * $mod_m * $base-font-min,
+    $mod_d * $mod_d * $mod_d * $base-font-max
+  );
+  font-family: 'Roboto', sans-serif;
+  @include for-size(xl-up) {
+    font-size: 60px;
+  }
+}
+
+/* second largest font-size */
+.t2,
+h2 {
+  @include fluid-type($bp-s, $bp-xl, $mod_m * $mod_m * $base-font-min, $mod_d * $mod_d * $base-font-max);
+  font-family: 'Roboto', sans-serif;
+  @include for-size(xl-up) {
+    font-size: 48px;
+  }
+}
+
+/* third largest font-size */
+.t3,
+h3 {
+  @include fluid-type($bp-s, $bp-xl, $mod_m * $base-font-min, $mod_d * $base-font-max);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 600;
+  @include for-size(xl-up) {
+    font-size: 24px;
+  }
+}
+
+/* first font-size smaller that base font-size */
+.s1,
+.caption {
+  @include fluid-type($bp-s, $bp-xl, $base-font-min / $mod_m, $base-font-max / $mod_d);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
+}
