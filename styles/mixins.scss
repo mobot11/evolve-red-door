@@ -1,0 +1,166 @@
+@charset 'utf-8';
+@import './variables';
+
+/* ................................. */
+
+/// border-radius - mixin for border-radius, where
+/// `background-clip: padding-box` stops bg color from leaking outside the border
+/// @name border-radius($radius)
+/// @param {string} $radius - radius
+/// @group cosmetic border
+@mixin border-radius($radius) {
+  background-clip: padding-box;
+  border-radius: $radius;
+}
+
+/* ................................. */
+/// box-shadow mixin. it adds 2 shadows
+/// that creates nice effect of more realistic shadow
+/// @name box-shadow($x: 0, $y: 1rem, $blur-radius: 1rem)
+/// @param {string} $x - offset-x, default to 0
+/// @param {string} $y - offset-y, default to 1rem
+/// @param {string} $blur-radius - blur-radius, default to 1rem
+/// @group cosmetic
+@mixin box-shadow($x: 0, $y: 1rem, $blur-radius: 1rem) {
+  $color-shadow: rgba($black, 0.5);
+  @if $x == 0 {
+    box-shadow: $x $y $blur-radius (-#{$blur-radius}) $color-shadow, $x $y $blur-radius $color-shadow;
+  } @else {
+    box-shadow: $x $y $blur-radius $color-shadow;
+  }
+}
+
+/* ................................. */
+
+/// text inputs placeholder mixin
+/// @name input-placeholder
+/// @content
+/// @example
+///  ```
+///  input,
+///  textarea {
+///      @include input-placeholder {
+///          color: $black;
+///      }
+///  }
+///  ```
+/// @group inputs
+@mixin input-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+/* ................................. */
+
+/* ................................. */
+
+/// media query mixin for different screen sizes
+/// @name for-size($range)
+/// @content
+/// @param {string} $range - name for screen size
+/// @example
+/// ```
+///   .my-box {
+///     padding: 10px;
+///
+///     @include for-size(s-only) {
+///       padding: 5px;
+///     }
+///   }
+/// ```
+/// @group layout
+@mixin for-size($range) {
+  @if $range == s-only {
+    @media (max-width: #{$bp-s - 1}) {
+      @content;
+    }
+  } @else if $range == m-only {
+    @media (min-width: $bp-s) and (max-width: #{$bp-l - 1}) {
+      @content;
+    }
+  } @else if $range == m-up {
+    @media (min-width: $bp-s) {
+      @content;
+    }
+  } @else if $range == l-up {
+    @media (min-width: $bp-l) {
+      @content;
+    }
+  } @else if $range == xl-up {
+    @media (min-width: $bp-xl) {
+      @content;
+    }
+  }
+}
+
+/* ................................. */
+
+/// strip-unit function @alias fluid-type mixin
+/// @name strip-unit($value)
+/// @param {string} $value - size value
+/// @return {number} - size value w/o unit
+/// @group typography
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+/// liquid typography mixin
+/// @name fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size)
+/// @param {string} $min-vw - min screen width
+/// @param {string} $max-vw - max screen width
+/// @param {string} $min-font-size - min base font size at $min-vw
+/// @param {string} $max-font-size - max base font size at $max-vw
+/// @require same units for width and base font
+/// @example
+///  ```
+///  html {
+///    @include fluid-type($bp-s, $bp-l, $base-font-min, $base-font-max);
+///  }
+///  ```
+/// @group typography
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: $letter-spacing;
+      line-height: $line-height;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height;
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: $letter-spacing;
+        line-height: $line-height;
+      }
+    }
+  }
+}
