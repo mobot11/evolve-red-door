@@ -13,6 +13,7 @@
   padding: 0;
   text-decoration: none;
   outline: none;
+  box-sizing: border-box;
 }
 
 /* ========================================================================= */
@@ -53,7 +54,10 @@ html {
 .t0,
 p,
 span,
-a {
+a,
+strong,
+em,
+ul > li {
   @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
 }
 
@@ -66,10 +70,12 @@ h1 {
     $mod_m * $mod_m * $mod_m * $base-font-min,
     $mod_d * $mod_d * $mod_d * $base-font-max
   );
-  font-family: 'Roboto', sans-serif;
   @include for-size(xl-up) {
     font-size: 60px;
   }
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2em !important;
 }
 
 /* second largest font-size */
@@ -80,6 +86,8 @@ h2 {
   @include for-size(xl-up) {
     font-size: 48px;
   }
+  text-transform: uppercase;
+  line-height: 1.2em !important;
 }
 
 /* third largest font-size */
@@ -91,6 +99,7 @@ h3 {
   @include for-size(xl-up) {
     font-size: 24px;
   }
+  line-height: 1.2em !important;
 }
 
 /* first font-size smaller that base font-size */
@@ -103,4 +112,59 @@ h3 {
 
 a {
   text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+li {
+  list-style-type: circle;
+}
+
+// ============= Shared layout============
+
+.container {
+  @extend %flex-column;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main {
+  @extend %flex-column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+ul {
+  padding-left: $space-default;
+  li {
+    padding-bottom: 0.5em;
+  }
+}
+
+section,
+.section {
+  @extend %flex-column;
+  @include bg();
+  width: 100%;
+}
+
+.section-content {
+  @extend %flex-row;
+  max-width: $max-size;
+  min-width: $min-size;
+  padding: $space-s;
+  @include for-size(m-only) {
+    padding: $space-m;
+  }
+  @include for-size(l-up) {
+    padding: $space-l;
+  }
 }

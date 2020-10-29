@@ -18,6 +18,7 @@ $bp-l: 740px; // major break point for "large screen" design
 $bp-xl: 1200px; // minor break point for "x-large screen" typography
 
 $min-size: $bp-s;
+$max-size: $bp-xl;
 
 /* Typography */
 /// @name base font variables
@@ -25,7 +26,7 @@ $min-size: $bp-s;
 /// @alias major break points for design, because it is used
 /// @alias fluid-type()
 $base-font-min: 14px;
-$base-font-max: 18px;
+$base-font-max: 16px;
 
 $mod_m: 1.15; // modular scale base for mobile screen
 $mod_d: 1.5; // modular scale base for desktop
@@ -39,10 +40,7 @@ $space-m: 1rem;
 $space-l: 2rem;
 $space-xl: 4rem;
 
-/* Fixed sizes */
-$header-height: 80px;
-
 /* Accessibility Requirements */
 $line-height: 1.5em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 1.5em
-$letter-spacing: 0.12em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 0.12em
+$letter-spacing: 0.1em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 0.12em
 $min-target-size: 44px; // WCAG 2.1 Success Criterion 2.5.5 Target Size AAA: recommendation is min 44px

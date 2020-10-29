@@ -66,6 +66,51 @@
 /* ................................. */
 
 /* ................................. */
+/// bg mixin
+/// @name bg($color: w)
+/// @param {string} $color - color, defaults to white
+/// @group cosmetic
+@mixin bg($color: w) {
+  @if $color == w {
+    background: $white;
+  } @else if $color == char {
+    background: $charcoal;
+  } @else if $color == sea {
+    background: $deep-sea;
+  } @else if $color == gem {
+    background: $gem-of-the-ocean;
+  } @else if $color == deep {
+    background: $deep-sea;
+  } @else if $color == b {
+    background: $black;
+  } @else {
+    background: transparent;
+  }
+}
+
+/// text-color mixin
+/// @name color($color: w)
+/// @param {string} $color - color, defaults to white
+/// @group cosmetic
+@mixin color($color: w) {
+  @if $color == w {
+    color: $white;
+  } @else if $color == char {
+    color: $charcoal;
+  } @else if $color == sea {
+    color: $deep-sea;
+  } @else if $color == gem {
+    color: $gem-of-the-ocean;
+  } @else if $color == deep {
+    color: $deep-sea;
+  } @else if $color == b {
+    color: $black;
+  } @else {
+    color: transparent;
+  }
+}
+
+/* ................................. */
 
 /// media query mixin for different screen sizes
 /// @name for-size($range)
@@ -84,11 +129,11 @@
 /// @group layout
 @mixin for-size($range) {
   @if $range == s-only {
-    @media (max-width: #{$bp-s - 1}) {
+    @media (max-width: #{$bp-s }) {
       @content;
     }
   } @else if $range == m-only {
-    @media (min-width: $bp-s) and (max-width: #{$bp-l - 1}) {
+    @media (min-width: $bp-s + 1) and (max-width: #{$bp-l - 1}) {
       @content;
     }
   } @else if $range == m-up {
