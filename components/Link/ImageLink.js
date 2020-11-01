@@ -9,13 +9,26 @@ const ImageLink = ({
   src,
   width,
   height,
-  linkStyles,
-  imgStyles,
+  propsForAnchor = {},
+  propsForImage = {},
 }) => {
+  const { className: anchorClassName, ...otherAnchorProps } = propsForAnchor;
+  const { className: imageClassName, otherImageProps } = propsForImage;
   return (
     <span className={styles.linkContainer}>
-      <a href={href} alt={altText} className={clsx(styles.imgLink, linkStyles)}>
-        <img src={src} width={width} height={height} className={imgStyles} />
+      <a
+        href={href}
+        alt={altText}
+        className={clsx(styles.imgLink, anchorClassName)}
+        {...otherAnchorProps}
+      >
+        <img
+          src={src}
+          width={width}
+          height={height}
+          className={imageClassName}
+          {...otherImageProps}
+        />
       </a>
     </span>
   );
