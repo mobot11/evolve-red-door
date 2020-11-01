@@ -129,7 +129,7 @@
 /// @group layout
 @mixin for-size($range) {
   @if $range == s-only {
-    @media (max-width: #{$bp-s - 1 }) {
+    @media (max-width: #{$bp-s }) {
       @content;
     }
   } @else if $range == s-only1 {
