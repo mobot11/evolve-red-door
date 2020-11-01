@@ -6,17 +6,19 @@ import ImageLink from "../components/Link/ImageLink";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>The Evolve Experience</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Nav />
-      <main className={styles.main}>
-        <h1>Welcome to the home page!</h1>
-      </main>
+    <Html lang="en">
+      <div className={styles.container}>
+        <Head>
+          <title>The Evolve Experience</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Nav />
+        <main className={styles.main}>
+          <h1>Welcome to the home page!</h1>
+        </main>
 
-      <footer className={styles.footer}></footer>
-    </div>
+        <footer className={styles.footer}></footer>
+      </div>
+    </Html>
   );
 }

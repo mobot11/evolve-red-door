@@ -8,6 +8,7 @@ const About = () => {
     <div className="container">
       <Head>
         <title>The Evolve Experience | About Us</title>
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />

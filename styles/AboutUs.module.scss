@@ -39,6 +39,10 @@ $flex-basis: 100px;
   }
   img {
     height: 100%;
+    @include for-size(s-only1) {
+      width: 60%;
+      height: auto;
+    }
   }
 }
 
