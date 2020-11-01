@@ -21,6 +21,7 @@ const Link = ({ href, text, propsForAnchor = {} }) => {
 Link.propTypes = {
   href: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  propsForAnchor: PropTypes.object,
 };
 
 export default Link;
