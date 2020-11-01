@@ -42,6 +42,8 @@ ImageLink.propTypes = {
   width: PropTypes.number,
   imgStyles: PropTypes.string,
   linkStyles: PropTypes.string,
+  propsForAnchor: PropTypes.object,
+  propsForImage: PropTypes.object,
 };
 
 export default ImageLink;
