@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+@import "./variables";
+@import "./mixins";
+@import "./classes";
+
+.page-header {
+  @include for-size(m-up) {
+    position: fixed;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    color: white;
+    background: black;
+    height: 50px;
+    a {
+      color: white;
+    }
+  }
+}
+.logo {
+  @include for-size(small-only) {
+    position: absolute;
+  }
+}
+.skip-links {
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  &:focus {
+    height: auto;
+    width: auto;
+    border: solid 1px white;
+    background: black;
+  }
+}
+.desktop-nav {
+  @include for-size(s-only) {
+    display: none;
+  }
+}

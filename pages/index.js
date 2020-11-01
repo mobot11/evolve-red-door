@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Nav from '../components/Nav';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import PageHeader from "../components/PageHeader";
 
 export default function Home() {
   return (
@@ -9,8 +9,8 @@ export default function Home() {
         <title>The Evolve Experience</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main className={styles.main}>
+      <PageHeader />
+      <main className={styles.main} id="main">
         <h1>Welcome to the home page!</h1>
       </main>
 

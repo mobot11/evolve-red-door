@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@import "./variables";
+@import "./mixins";
+@import "./classes";
+
+.nav {
+  flex: 1 0 auto;
+}
+.links {
+  @include for-size(m-up) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
