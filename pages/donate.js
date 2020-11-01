@@ -48,7 +48,7 @@ const About = () => {
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', styles.img1])}></div>
         </div>
-        <section>
+        <section className={styles.sectionContribution}>
           <div className={clsx(['section-content', styles.contribution])}>
             <h2 className={styles.h2}>Other ways to contribute</h2>
             <div className={styles.sectionListItem}>
@@ -110,24 +110,23 @@ const About = () => {
               </div>
               <div className={styles.sectionDescription}>
                 <h3 className={styles.h3}>Shop With Your Fred Meyer’s Reward Card</h3>
-                <p>
-                  Here’s how the program works:
-                  <ul>
-                    <li>
-                      Sign up for the Community Rewards Program by{' '}
-                      <a target="__blank" href="https://www.fredmeyer.com/i/community/community-rewards">
-                        linking your Fred Meyer’s Reward Card to the Red Door
-                      </a>
-                      .
-                    </li>
-                    <li>Search for us by name (The Red Door Project) or by our non-profit number (VK442)</li>
-                    <li>
-                      Then, every time you shop and use your Rewards Card, you are helping The Red Door Project earn a
-                      donation. The more supporters who register their Rewards Card and link it to The Red Door Project,
-                      the larger our donation!
-                    </li>
-                  </ul>
-                </p>
+
+                <p> Here’s how the program works:</p>
+                <ul>
+                  <li>
+                    Sign up for the Community Rewards Program by{' '}
+                    <a target="__blank" href="https://www.fredmeyer.com/i/community/community-rewards">
+                      linking your Fred Meyer’s Reward Card to the Red Door
+                    </a>
+                    .
+                  </li>
+                  <li>Search for us by name (The Red Door Project) or by our non-profit number (VK442)</li>
+                  <li>
+                    Then, every time you shop and use your Rewards Card, you are helping The Red Door Project earn a
+                    donation. The more supporters who register their Rewards Card and link it to The Red Door Project,
+                    the larger our donation!
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
