@@ -15,7 +15,7 @@ $flex-basis: 100px;
 }
 
 .hero {
-  height: 40rem;
+  height: 50rem;
   width: 100%;
   background: url('/assets/about1.png') center center no-repeat;
   background-size: contain;
@@ -48,7 +48,7 @@ $flex-basis: 100px;
 
 .sidePhoto {
   @extend %flex-column;
-  flex-grow: 3;
+  flex-grow: 4;
   flex-basis: $flex-basis;
   background: url('/assets/about2.png') bottom right no-repeat;
   background-size: auto 70%;
@@ -68,7 +68,7 @@ $flex-basis: 100px;
 .sideText {
   @extend %flex-column;
   align-items: flex-start;
-  flex-grow: 4;
+  flex-grow: 5;
   flex-basis: $flex-basis;
 }
 
