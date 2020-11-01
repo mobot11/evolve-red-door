@@ -78,11 +78,4 @@ $flex-basis: 100px;
 
 .span {
   margin: 2em 0;
-  a {
-    @include color(deep);
-    &:hover,
-    &:focus {
-      background: rgba(0, 64, 80, 0.2);
-    }
-  }
 }

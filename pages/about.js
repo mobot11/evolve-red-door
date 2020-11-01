@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Nav from '../components/Nav';
+import Link from '../components/Link/Link';
 import clsx from 'clsx';
 import styles from '../styles/AboutUs.module.scss';
 
@@ -8,7 +9,7 @@ const About = () => {
     <div className="container">
       <Head>
         <title>The Evolve Experience | About Us</title>
-
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
@@ -78,9 +79,11 @@ const About = () => {
               </ul>
               <span className={styles.span}>
                 To learn more,{' '}
-                <a target="__blank" href="https://reddoorproject.org/">
-                  visit RedDoorProject.org
-                </a>
+                <Link
+                  href="https://reddoorproject.org/"
+                  propsForAnchor={{ target: '_blank' }}
+                  text="visit RedDoorProject.org"
+                ></Link>
                 .
               </span>
             </div>

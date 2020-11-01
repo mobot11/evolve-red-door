@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Nav from '../components/Nav';
+import Link from '../components/Link/Link';
 import clsx from 'clsx';
 import styles from '../styles/Donate.module.scss';
 
@@ -8,7 +9,7 @@ const About = () => {
     <div className="container">
       <Head>
         <title>The Evolve Experience | Donate</title>
-
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
@@ -28,14 +29,18 @@ const About = () => {
               enforcement and every criminal justice agency in America.{' '}
               <strong>Donate to The Red Door Project and help create a society where everyone will thrive.</strong>
             </p>
-            <a href="https://app.arts-people.com/index.php?donation=awrdp" className={styles.button} target="__blank">
-              Donate
-            </a>
+            <Link
+              href="https://app.arts-people.com/index.php?donation=awrdp"
+              propsForAnchor={{ target: '_blank', className: styles.button }}
+              text="Donate"
+            ></Link>
             <p>
               Or{' '}
-              <a href="https://reddoorproject.org/wp-content/uploads/2020/08/RedDoorProjectDonationForm.pdf">
-                download the donation form (PDF)
-              </a>{' '}
+              <Link
+                href="https://reddoorproject.org/wp-content/uploads/2020/08/RedDoorProjectDonationForm.pdf"
+                propsForAnchor={{ download: true, target: '_blank' }}
+                text="download the donation form (PDF)"
+              ></Link>{' '}
               and mail it in with your check or credit card information.
             </p>
             <p className="s1">
@@ -60,10 +65,13 @@ const About = () => {
                 <p>
                   Do you live in Oregon? Have you already donated to the Red Door this year? You can double your impact
                   for free! Make a matching donation to the Oregon Cultural Trust by December 31st and claim the amount
-                  of your donation to the Trust as a tax credit. Find all the details at{' '}
-                  <a target="__blank" href="https://culturaltrust.org/">
-                    culturaltrust.org
-                  </a>
+                  of your donation to the Trust as a tax credit.{' '}
+                  <Link
+                    href="https://culturaltrust.org/"
+                    propsForAnchor={{ target: '_blank' }}
+                    text="Find all the details at culturaltrust.org"
+                  ></Link>
+                  .
                 </p>
               </div>
             </div>
@@ -78,24 +86,22 @@ const About = () => {
                 <p>
                   AmazonSmile is a simple and automatic way for you to support The Red Door Project every time you shop,
                   at no cost to you. When you shop at{' '}
-                  <a
-                    target="__blank"
+                  <Link
                     href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=45-3729152&ref_=smi_ext_ch_45-3729152_cl"
-                  >
-                    smile.amazon.com
-                  </a>
+                    propsForAnchor={{ target: '_blank' }}
+                    text="smile.amazon.com"
+                  ></Link>
                   , you’ll have the same shopping experience as Amazon.com, with the added bonus that Amazon will donate
                   .5% of the purchase price to the Red Door Project.
                 </p>
                 <h4 className={styles.h4}>How Does It Work?</h4>
                 <p>
                   To shop at AmazonSmile simply go to{' '}
-                  <a
-                    target="__blank"
+                  <Link
                     href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=45-3729152&ref_=smi_ext_ch_45-3729152_cl"
-                  >
-                    smile.amazon.com
-                  </a>
+                    propsForAnchor={{ target: '_blank' }}
+                    text="smile.amazon.com"
+                  ></Link>
                   . On your first visit to AmazonSmile, you need to select a non-profit to receive donations from your
                   purchases before you begin shopping. Simply type in The Red Door Project and select us. AmazonSmile
                   will remember your selection, and then every eligible purchase you make on AmazonSmile will result in
@@ -115,9 +121,11 @@ const About = () => {
                 <ul>
                   <li>
                     Sign up for the Community Rewards Program by{' '}
-                    <a target="__blank" href="https://www.fredmeyer.com/i/community/community-rewards">
-                      linking your Fred Meyer’s Reward Card to the Red Door
-                    </a>
+                    <Link
+                      href="https://www.fredmeyer.com/i/community/community-rewards"
+                      propsForAnchor={{ target: '_blank' }}
+                      text="linking your Fred Meyer’s Reward Card to the Red Door"
+                    ></Link>
                     .
                   </li>
                   <li>Search for us by name (The Red Door Project) or by our non-profit number (VK442)</li>
