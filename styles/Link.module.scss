@@ -1,15 +1,17 @@
 @charset 'utf-8';
-@import "./variables";
-@import "./mixins";
+@import './variables';
+@import './mixins';
 
 .link {
   color: $deep-sea;
   display: inline-block;
   &:active,
-  &:focus,
-  &:hover {
+  &:focus {
     background: rgba(0, 64, 80, 0.2);
     @include focus-indicator;
+  }
+  &:hover {
+    background: rgba(0, 64, 80, 0.2);
   }
 }
 

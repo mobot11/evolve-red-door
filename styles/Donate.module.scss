@@ -45,14 +45,7 @@ $flex-basis: 100px;
     }
   }
 
-  a {
-    @include color(deep);
-    &:hover,
-    &:focus {
-      background: rgba(0, 64, 80, 0.2);
-    }
-  }
-  a.button {
+  .button {
     @extend %flex-row;
     line-height: 1em;
     @include box-shadow(0, 0, 10px);
