@@ -5,38 +5,45 @@ import styles from "../../styles/Link.module.scss";
 
 const ImageLink = ({
   href,
-  altText,
+  alt,
   src,
   width,
   height,
   propsForAnchor = {},
   propsForImage = {},
+  variant,
 }) => {
   const { className: anchorClassName, ...otherAnchorProps } = propsForAnchor;
   const { className: imageClassName, otherImageProps } = propsForImage;
   return (
-    <span className={styles.linkContainer}>
-      <a
-        href={href}
-        alt={altText}
-        className={clsx(styles.imgLink, anchorClassName)}
-        {...otherAnchorProps}
-      >
-        <img
-          src={src}
-          width={width}
-          height={height}
-          className={imageClassName}
-          {...otherImageProps}
-        />
-      </a>
-    </span>
+    <div className="footer-container">
+      <span className={styles.linkContainer}>
+        <a
+          href={href}
+          alt={alt}
+          className={clsx(
+            styles.imgLink,
+            anchorClassName,
+            variant === "dark-background" && styles["dark-background"]
+          )}
+          {...otherAnchorProps}
+        >
+          <img
+            src={src}
+            width={width}
+            height={height}
+            className={imageClassName}
+            {...otherImageProps}
+          />
+        </a>
+      </span>
+    </div>
   );
 };
 
 ImageLink.propTypes = {
   href: PropTypes.string.isRequired,
-  altText: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   height: PropTypes.number,
   width: PropTypes.number,
@@ -44,6 +51,7 @@ ImageLink.propTypes = {
   linkStyles: PropTypes.string,
   propsForAnchor: PropTypes.object,
   propsForImage: PropTypes.object,
+  variant: PropTypes.oneOf(["light-background", "dark-background"]),
 };
 
 export default ImageLink;

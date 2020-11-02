@@ -1,0 +1,40 @@
+@charset 'utf-8';
+@import "./variables";
+@import "./mixins";
+
+.footer {
+  width: 100%;
+  background-color: $deep-sea;
+}
+
+.footer-content {
+  padding: 40px 175px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  padding: 20px 175px;
+}
+
+.social-links {
+  display: flex;
+  width: 275px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.horizontal-rule {
+  width: 100%;
+  height: 1px;
+  background: $white;
+}
+
+.copyright {
+  color: $white;
+  font-size: $base-font-min;
+}
+
+.knowbility-logo {
+  padding-bottom: 60px;
+}

@@ -31,8 +31,8 @@
   }
 }
 
-@mixin focus-indicator {
-  box-shadow: 0 0 0 2px $deep-sea;
+@mixin focus-indicator($color: $deep-sea) {
+  box-shadow: 0 0 0 2px $color;
 }
 
 /* ................................. */
