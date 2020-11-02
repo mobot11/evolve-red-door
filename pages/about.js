@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Nav from '../components/Nav';
-import Link from '../components/Link/Link';
-import clsx from 'clsx';
-import styles from '../styles/AboutUs.module.scss';
-=======
 import Head from "next/head";
 import Nav from "../components/Nav";
+import Link from "../components/Link/Link";
 import Footer from "../components/Footer/Footer";
 import clsx from "clsx";
 import styles from "../styles/AboutUs.module.scss";
->>>>>>> add footer
 
 const About = () => {
   return (
@@ -106,10 +99,10 @@ const About = () => {
                 </li>
               </ul>
               <span className={styles.span}>
-                To learn more,{' '}
+                To learn more,{" "}
                 <Link
                   href="https://reddoorproject.org/"
-                  propsForAnchor={{ target: '_blank' }}
+                  propsForAnchor={{ target: "_blank" }}
                   text="visit RedDoorProject.org"
                 ></Link>
                 .
