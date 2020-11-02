@@ -1,27 +1,43 @@
 @charset 'utf-8';
-@import "./variables";
-@import "./mixins";
+
+@import './variables';
+@import './mixins';
+@import './classes';
 
 .footer {
+  @extend %flex-column;
   width: 100%;
   background-color: $deep-sea;
 }
 
 .footer-content {
-  padding: 40px 175px;
-  display: flex;
+  @extend %flex-row;
+  max-width: $max-size;
+  width: 100%;
+  padding: $space-xl $space-xl;
   justify-content: space-between;
-}
-
-.footer-bottom {
-  padding: 20px 175px;
+  @include for-size(s-only) {
+    flex-direction: column;
+  }
+  @include for-size(m-only) {
+    flex-direction: column;
+  }
+  p {
+    line-height: 1em;
+    padding-bottom: 0;
+  }
 }
 
 .social-links {
-  display: flex;
+  @extend %flex-row;
   width: 275px;
   justify-content: space-between;
-  align-items: center;
+  @include for-size(s-only) {
+    margin-top: $space-l;
+  }
+  @include for-size(m-only) {
+    margin-top: $space-l;
+  }
 }
 
 .horizontal-rule {
@@ -36,5 +52,7 @@
 }
 
 .knowbility-logo {
-  padding-bottom: 60px;
+  @include for-size(s-only1) {
+    margin-top: $space-m;
+  }
 }
