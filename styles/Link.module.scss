@@ -22,8 +22,35 @@
   &:focus {
     @include focus-indicator;
   }
+  &.dark-background {
+    &:active,
+    &:focus {
+      background: rgba(0, 64, 80, 0.2);
+      @include focus-indicator($white);
+    }
+  }
 }
 
 .linkContainer {
   display: block;
+}
+
+.icon-link-green-background {
+  display: inline-flex;
+  max-height: 50px;
+  svg {
+    border-radius: 100%;
+    fill: $white;
+  }
+
+  &:hover {
+    svg {
+      fill: $gem-of-the-ocean;
+      background: $white;
+    }
+  }
+  &:active,
+  &:focus {
+    @include focus-indicator($white);
+  }
 }
