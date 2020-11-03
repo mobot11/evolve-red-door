@@ -32,13 +32,37 @@ const Monologues = () => {
             <HandsUpIcon />
           </div>
         </section>
-        {/* <div className={clsx(["section", styles.sectionBlack])}>
-          <div className={clsx(["section-content", styles.img1])}></div>
+        <div className={clsx(['section', styles.sectionBlack])}>
+          <div className={clsx(['section-content', styles.img1])}></div>
         </div>
         <section className={styles.sectionContribution}>
-          <div className={clsx(["section-content", styles.contribution])}>
-            <h2 className={styles.h2}>Other ways to contribute</h2>
-            <div className={styles.sectionListItem}>
+          <div className={clsx(['section-content', styles.contribution])}>
+            <h2 className={styles.h2}>Hands Up</h2>
+            <p>
+              In light of the police shootings of Mike Brown in Ferguson, Missouri and John Crawford III in Beavercreek,
+              Ohio, among others, The New Black Fest commissioned seven emerging Black playwrights to write monologues
+              that explore their feelings about the well-being of Black people in a culture of institutional profiling.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
+            <h2 className={styles.h2}>Cop Out</h2>
+            <p>
+              The Red Door Project commissioned Cop Out: Beyond Black, White & Blue—a series of monologues developed in
+              conversation with Hands Up: 7 Playwrights, 7 Testaments. Cop Out monologues are based on interviews with
+              law enforcement officers. Written by playwrights from across the country, the monologues depict cops of
+              all ranks and experience as they interact with the community, each other, their families, and the
+              institutions they represent.
+            </p>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+        {/* <div className={styles.sectionListItem}>
               <div className={styles.sectionImage}>
                 <img src="/assets/cultural_trust_logo.png" alt="Cultural Trust logo" />
               </div>
@@ -126,7 +150,7 @@ const Monologues = () => {
               </div>
             </div>
           </div>
-        </section> */}
+      </section> */}
       </main>
       <Footer />
     </div>

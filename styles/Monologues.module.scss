@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-@import "./variables";
-@import "./mixins";
-@import "./classes";
+@import './variables';
+@import './mixins';
+@import './classes';
 
 $flex-basis: 100px;
 
@@ -20,7 +20,7 @@ $flex-basis: 100px;
 .sectionGem {
   @include bg(gem);
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     opacity: 0.8;
     width: 120vw;
@@ -28,19 +28,38 @@ $flex-basis: 100px;
     left: -6vw;
     top: -30vw;
     z-index: 1;
-    // @include for-size(s-only) {
-    //   display: none;
-    // }
-    // @include for-size(m-only1) {
-    //   display: none;
-    // }
-    // @include for-size(xl-up) {
-    //   width: 110vw;
-    //   height: 110vw;
-    //   left: -2vw;
-    //   top: -30vw;
-    //   display: block;
-    // }
+    @include for-size(s-only) {
+      display: none;
+    }
+    @include for-size(m-only1) {
+      display: none;
+    }
+    @include for-size(xl-up) {
+      width: 110vw;
+      height: 110vw;
+      left: -2vw;
+      top: -30vw;
+      display: block;
+    }
+  }
+
+  .sidePhoto {
+    @extend %flex-column;
+    flex-grow: 4;
+    flex-basis: $flex-basis;
+    background: url('/assets/about2.png') bottom right no-repeat;
+    background-size: auto 70%;
+
+    @include for-size(m-only) {
+      margin-right: $space-m;
+      display: none;
+    }
+    @include for-size(l-up) {
+      margin-right: $space-l;
+    }
+    @include for-size(s-only) {
+      display: none;
+    }
   }
 
   .button {
@@ -54,7 +73,7 @@ $flex-basis: 100px;
     padding: $space-s $space-l;
     border-radius: 10px;
     border: 2px solid transparent;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
     text-decoration: none;
     &:hover {
@@ -71,7 +90,7 @@ $flex-basis: 100px;
 .img {
   height: 40rem;
   width: 100%;
-  background: url("/assets/monologues_1.png") center center no-repeat;
+  background: url('/assets/monologues_1.png') center center no-repeat;
   background-size: contain;
 }
 
@@ -79,7 +98,7 @@ $flex-basis: 100px;
 .img2 {
   height: 30rem;
   width: 100%;
-  background: url("/assets/donate2.jpg") bottom center no-repeat;
+  background: url('/assets/donate2.jpg') bottom center no-repeat;
   background-size: cover;
   @include for-size(s-only) {
     height: 15rem;
