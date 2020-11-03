@@ -39,7 +39,7 @@ const About = () => {
               Or{' '}
               <Link
                 href="https://reddoorproject.org/wp-content/uploads/2020/08/RedDoorProjectDonationForm.pdf"
-                propsForAnchor={{ download: true, target: '_blank' }}
+                propsForAnchor={{ target: '_blank' }}
                 text="download the donation form (PDF)"
               ></Link>{' '}
               and mail it in with your check or credit card information.
