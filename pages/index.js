@@ -1,11 +1,7 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Nav from "../components/Nav";
-import EmailIcon from "../components/Icon/EmailIcon";
-import TwitterIcon from "../components/icon/TwitterIcon";
-import FaceBookIcon from "../components/Icon/FaceBookIcon";
-import InstagramIcon from "../components/Icon/InstagramIcon";
-import Footer from "../components/Footer/Footer";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
   return (
