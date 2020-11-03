@@ -31,7 +31,7 @@ const About = () => {
               <strong>Donate to The Red Door Project and help create a society where everyone will thrive.</strong>
             </p>
             <Link
-              href="https://app.arts-people.com/index.php?donation=awrdp"
+              href="https://giveguide.org/#the-august-wilson-red-door-project"
               propsForAnchor={{ target: '_blank', className: styles.button }}
               text="Donate"
             ></Link>
