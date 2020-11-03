@@ -17,7 +17,7 @@ const error404 = () => {
       <Nav />
       <main className={clsx(['main', styles.main])}>
         <section className={styles.sectionError}>
-          <div className={clsx(['section-content', styles.errorSectionContent])}>
+          <div className={clsx(['section-content', styles.sectionContent])}>
             <h1 className={styles.h1}>Page not found</h1>
             <p>Sorry, we couldn't find the page you are looking for.</p>
             <Link href="/">

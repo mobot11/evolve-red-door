@@ -2,6 +2,7 @@ import React from 'react';
 import ImageLink from '../Link/ImageLink';
 import styles from '../../styles/Footer.module.scss';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 import IconLink from '../Link/IconLink';
 
@@ -26,6 +27,9 @@ const Footer = ({}) => {
       <div className={styles['horizontal-rule']} />
       <div className={clsx(styles['footer-content'], styles['footer-bottom'])}>
         <p className={styles.copyright}>Copyright &copy;{new Date().getFullYear()} All Rights Reserved.</p>
+        <Link href="/accessibility-statement">
+          <a>Accessibility statement</a>
+        </Link>
         <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
