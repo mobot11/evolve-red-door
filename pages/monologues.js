@@ -47,9 +47,8 @@ const Monologues = () => {
             <HandsUpIcon />
           </div>
         </section>
-        <div className={clsx(['section', styles.sectionBlack])}>
-          <div className={clsx(['section-content', styles.img1])}></div>
-        </div>
+        <div className={styles.sidePhoto}></div>
+        <div className={clsx(['section-content', styles.img1])}></div>
         <section className={styles.sectionContribution}>
           <div className={clsx(['section-content', styles.contribution])}>
             <h2 className={styles.h2}>Hands Up</h2>
