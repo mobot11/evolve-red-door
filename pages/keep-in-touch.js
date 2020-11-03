@@ -6,17 +6,25 @@ import IconLink from '../components/Link/IconLink';
 import clsx from 'clsx';
 import styles from '../styles/KeepInTouch.module.scss';
 import Footer from '../components/Footer/Footer';
+import * as Yup from 'yup';
 
 import { Formik, Form, Field } from 'formik';
-import { Button, withStyles, LinearProgress } from '@material-ui/core';
+import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().email('Please enter a valid email').required('Email is required'),
+  firstname: Yup.string().required('First Name is required'),
+  lastname: Yup.string().required('Last Name is required'),
+});
+
 const KeepInTouch = () => {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-  };
   return (
     <div className="container">
       <Head>
@@ -66,26 +74,12 @@ const KeepInTouch = () => {
                   lastname: '',
                   message: '',
                 }}
-                validate={(values) => {
-                  const errors = {};
-                  if (!values.email) {
-                    errors.email = 'Required';
-                  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-                    errors.email = 'Invalid email address';
-                  }
-                  if (!values.firstname) {
-                    errors.firstname = 'Required';
-                  }
-                  if (!values.lastname) {
-                    errors.lastname = 'Required';
-                  }
-                  return errors;
-                }}
+                validationSchema={validationSchema}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: encode({ 'form-name': 'contact-demo', ...values }),
+                    body: encode({ 'form-name': 'contact', ...values }),
                   })
                     .then(() => {
                       alert('Success');
@@ -147,7 +141,7 @@ const KeepInTouch = () => {
                       onClick={submitForm}
                       type="submit"
                     >
-                      Submit
+                      Subscribe
                     </Button>
                   </Form>
                 )}
