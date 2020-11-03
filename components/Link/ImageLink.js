@@ -14,7 +14,7 @@ const ImageLink = ({ href, alt, src, width, height, propsForAnchor = {}, propsFo
           className={clsx(styles.imgLink, anchorClassName, variant === 'dark-background' && styles['dark-background'])}
           {...otherAnchorProps}
         >
-          <img src={src} width={width} height={height} className={imageClassName} {...otherImageProps} alt={alt} />
+          <img src={src} width={width} height={height} className={imageClassName} alt={alt} {...otherImageProps} />
         </a>
       </span>
     </div>
