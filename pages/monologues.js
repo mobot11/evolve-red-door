@@ -4,11 +4,10 @@ import Link from '../components/Link/Link';
 import clsx from 'clsx';
 import styles from '../styles/Monologues.module.scss';
 import Footer from '../components/Footer/Footer';
-import HandsUpIcon from '../components/Icon/HandsUpIcon';
-import CopOutIcon from '../components/Icon/CopOutIcon';
 
 const Monologues = () => {
   // dom notes
+  // section: image
   // h1 the monologues
   // icon
   // paragraph
@@ -32,22 +31,23 @@ const Monologues = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
+
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', styles.img])}></div>
         </div>
+
         <section className={styles.sectionGem}>
-          <div className={clsx(['section-content', styles.contentNarrow])}>
-            <h1 className={styles.h1}>The Monologues</h1>
-            <CopOutIcon />
+          <h1 className={clsx(['t1', styles.h1])}>The Monologues</h1>
+          <div className={clsx(['section-content', styles.sectionContent])}>
+            <div className={styles.copoutLogo}></div>
             <p>
               The Evolve Experience interweaves monologues from The New Black Fest’s Hands Up: 7 Playwrights, 7
               Testaments, and the Red Door Project’s own Cop Out: Beyond Black, White & Blue.
             </p>
-            <HandsUpIcon />
+            <div className={styles.handsUpLogo}></div>
           </div>
         </section>
-        <div className={styles.sidePhoto}></div>
         <div className={clsx(['section-content', styles.img1])}></div>
         <section className={styles.sectionContribution}>
           <div className={clsx(['section-content', styles.contribution])}>
