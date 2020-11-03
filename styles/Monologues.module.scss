@@ -28,32 +28,11 @@ $flex-basis: 100px;
 // header and paragraph
 .sectionGem {
   @include bg(gem);
-  &::after {
-    content: '';
-    position: absolute;
-    opacity: 0.8;
-    width: 120vw;
-    height: 120vw;
-    left: -6vw;
-    top: -30vw;
-    z-index: 1;
-    @include for-size(s-only) {
-      display: none;
-    }
-    @include for-size(m-only1) {
-      display: none;
-    }
-    @include for-size(xl-up) {
-      width: 110vw;
-      height: 110vw;
-      left: -2vw;
-      top: -30vw;
-      display: block;
-    }
+  .t1 {
+    margin-top: 50px;
   }
   // copout logo
   .copoutLogo {
-    margin-right: 150px;
     width: 100%;
     background: url('/assets/copout_logo.png') center center no-repeat;
     background-size: contain;
@@ -61,7 +40,6 @@ $flex-basis: 100px;
 
   // hands up logo
   .handsUpLogo {
-    margin-left: 150px;
     height: 8rem;
     width: 100%;
     background: url('/assets/handsup_logo.png') center center no-repeat;
@@ -77,77 +55,10 @@ $flex-basis: 100px;
   }
 }
 
-.contentNarrow {
-  z-index: 2;
-  @extend %flex-column;
-  max-width: 70vw;
-  @include for-size(s-only) {
-    max-width: 100%;
-  }
-  @include for-size(m-only1) {
-    max-width: 80vw;
-  }
-  @include for-size(xl-up) {
-    max-width: 60vw;
-  }
-  @include for-size(xl-up1) {
-    max-width: 55vw;
-  }
-}
-
 .sectionContribution {
   z-index: 2;
 }
 .contribution {
   z-index: 3;
   @extend %flex-column;
-}
-
-.sectionListItem {
-  @extend %flex-row;
-  align-items: flex-start;
-  padding: $space-xl 0 $space-l;
-  @include for-size(s-only1) {
-    flex-direction: column;
-    padding: $space-m 0 $space-s;
-  }
-  border-bottom: 1px solid $black;
-  &:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  a {
-    @include color(deep);
-    &:hover,
-    &:focus {
-      background: rgba(0, 64, 80, 0.2);
-    }
-  }
-}
-$flex-basis: 100px;
-
-.sectionImage {
-  @extend %flex-column;
-  margin-bottom: $space-l;
-  width: $bp-s;
-  @include for-size(s-only1) {
-    width: 100%;
-    img {
-      max-width: $bp-s;
-      width: 70%;
-      height: auto;
-    }
-  }
-}
-
-.sectionDescription {
-  @extend %flex-column;
-  align-items: flex-start;
-  flex-grow: 1;
-  flex-basis: $flex-basis;
-  margin-left: $space-l;
-  @include for-size(s-only1) {
-    margin-left: 0;
-  }
 }

@@ -38,7 +38,7 @@ const Monologues = () => {
         </div>
 
         <section className={styles.sectionGem}>
-          <h1 className={clsx(['t1', styles.h1])}>The Monologues</h1>
+          <h1 className={clsx([styles.t1, styles.h1])}>The Monologues</h1>
           <div className={clsx(['section-content', styles.sectionContent])}>
             <div className={styles.copoutLogo}></div>
             <p>
