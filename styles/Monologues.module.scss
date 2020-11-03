@@ -43,6 +43,8 @@ $flex-basis: 100px;
     }
   }
 
+  // link after screenreader
+
   .sidePhoto {
     @extend %flex-column;
     flex-grow: 4;
