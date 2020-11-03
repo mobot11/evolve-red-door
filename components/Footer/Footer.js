@@ -29,7 +29,7 @@ const Footer = ({}) => {
         <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
-            alt="Red Door Project Home"
+            alt="Knowbility Home"
             href="https://knowbility.org/"
             width={180}
             height={60}
