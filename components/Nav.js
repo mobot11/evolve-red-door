@@ -24,6 +24,11 @@ const Nav = () => {
             <a>Donate</a>
           </Link>
         </li>
+        <li>
+          <Link href="/keep-in-touch">
+            <a>Keep in Touch</a>
+          </Link>
+        </li>
       </ul>
     </nav>
   );
