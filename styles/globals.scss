@@ -63,7 +63,8 @@ i,
 strong,
 em,
 ul > li,
-h4 {
+h4,
+q {
   @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
 }
 
@@ -122,7 +123,11 @@ a {
 
 strong,
 h4,
-b {
+b,
+strong > i,
+strong > em,
+q,
+q > i {
   font-weight: 600;
 }
 
