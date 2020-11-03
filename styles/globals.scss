@@ -63,7 +63,8 @@ i,
 strong,
 em,
 ul > li,
-h4 {
+h4,
+q {
   @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
 }
 
@@ -122,7 +123,11 @@ a {
 
 strong,
 h4,
-b {
+b,
+strong > i,
+strong > em,
+q,
+q > i {
   font-weight: 600;
 }
 
@@ -181,5 +186,27 @@ section,
   }
   @include for-size(l-up) {
     padding: $space-l;
+  }
+}
+
+// Material-UI styles
+.MuiFormControl-root.MuiTextField-root {
+  margin-bottom: 30px;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+  background-color: $deep-sea;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gem-of-the-ocean;
+  }
+
+  &:active,
+  &:focus {
+    @include focus-indicator($charcoal);
+  }
+  span.MuiButton-label {
+    padding: 10px 20px;
   }
 }

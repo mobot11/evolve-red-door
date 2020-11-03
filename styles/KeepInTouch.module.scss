@@ -17,62 +17,10 @@ $flex-basis: 100px;
   @include bg(b);
 }
 
-.sectionGem {
-  @include bg(gem);
-  &::after {
-    content: '';
-    position: absolute;
-    opacity: 0.8;
-    width: 120vw;
-    height: 120vw;
-    left: -6vw;
-    top: -30vw;
-    z-index: 1;
-    background: url('/assets/donate_circle.png') center center no-repeat;
-    background-size: contain;
-    @include for-size(s-only) {
-      display: none;
-    }
-    @include for-size(m-only1) {
-      display: none;
-    }
-    @include for-size(xl-up) {
-      width: 1600px;
-      height: 1600px;
-      left: calc(50% - 800px + 80px);
-      top: -400px;
-      display: block;
-    }
-  }
-
-  .button {
-    @extend %flex-row;
-    line-height: 1em;
-    @include box-shadow(0, 0, 10px);
-    @include bg(w);
-    @include color(deep);
-    margin: 0 0 $space-l 0;
-    height: $min-target-size;
-    padding: $space-s $space-l;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    &:hover {
-      background: lighten($gem-of-the-ocean, 15%);
-    }
-    &:focus {
-      background: lighten($gem-of-the-ocean, 15%);
-      border-color: $deep-sea;
-    }
-  }
-}
-
 .img {
   height: 40rem;
   width: 100%;
-  background: url('/assets/donate1.png') center center no-repeat;
+  background: url('/assets/contact1.png') center center no-repeat;
   background-size: contain;
 }
 
@@ -89,6 +37,21 @@ $flex-basis: 100px;
   }
 }
 
+.keepInTouch {
+  color: $charcoal;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.sectionGem {
+  background-color: $gem-of-the-ocean;
+  @include box-shadow(0, 0, 10px);
+}
+
+.sectionWhite {
+  background-color: $white;
+}
+
 .contentNarrow {
   z-index: 2;
   @extend %flex-column;
@@ -100,7 +63,10 @@ $flex-basis: 100px;
     max-width: 80vw;
   }
   @include for-size(xl-up) {
-    max-width: 1000px;
+    max-width: 60vw;
+  }
+  @include for-size(xl-up1) {
+    max-width: 55vw;
   }
 }
 
@@ -115,11 +81,11 @@ $flex-basis: 100px;
 .sectionListItem {
   @extend %flex-row;
   align-items: flex-start;
-  padding: $space-xl 0 $space-l;
-  @include for-size(s-only1) {
-    flex-direction: column;
-    padding: $space-m 0 $space-s;
-  }
+  // padding: $space-xl 0 $space-l;
+  // @include for-size(s-only1) {
+  //   flex-direction: column;
+  //   padding: $space-m 0 $space-s;
+  // }
   border-bottom: 1px solid $black;
   &:last-of-type {
     border-bottom: none;
@@ -155,8 +121,69 @@ $flex-basis: 100px;
   align-items: flex-start;
   flex-grow: 1;
   flex-basis: $flex-basis;
-  margin-left: $space-l;
   @include for-size(s-only1) {
     margin-left: 0;
   }
+  p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.social-links {
+  width: 100%;
+  padding-top: 50px;
+  @extend %flex-row;
+  justify-content: space-between;
+  @include for-size(s-only) {
+    margin-top: $space-l;
+  }
+  @include for-size(m-only) {
+    margin-top: $space-l;
+  }
+}
+
+.social-links-email-phone {
+  display: flex;
+}
+
+.social-links-social-media {
+  @extend %flex-row;
+  width: 200px;
+  justify-content: space-between;
+  @include for-size(s-only) {
+    margin-top: $space-l;
+  }
+  @include for-size(m-only) {
+    margin-top: $space-l;
+  }
+}
+
+.newsletterParagraph {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.email {
+  margin-bottom: 35px;
+}
+
+.form {
+  width: 560px;
+  p {
+    padding: 0 !important;
+  }
+  margin-bottom: 50px;
+}
+
+.firstName,
+.lastName {
+  width: 260px;
+}
+.lastName {
+  float: right;
+}
+
+.submitButton {
+  background-color: orange;
 }
