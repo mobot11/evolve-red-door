@@ -17,10 +17,10 @@ const Footer = ({}) => {
           variant="dark-background"
         />
         <div className={styles['social-links']}>
-          <IconLink variant="facebook" />
-          <IconLink variant="twitter" />
-          <IconLink variant="instagram" />
-          <IconLink variant="email" />
+          <IconLink variant="facebook" theme="background-deep-sea" />
+          <IconLink variant="twitter" theme="background-deep-sea" />
+          <IconLink variant="instagram" theme="background-deep-sea" />
+          <IconLink variant="email" theme="background-deep-sea" />
         </div>
       </div>
       <div className={styles['horizontal-rule']} />

@@ -188,3 +188,25 @@ section,
     padding: $space-l;
   }
 }
+
+// Material-UI styles
+.MuiFormControl-root.MuiTextField-root {
+  margin-bottom: 30px;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+  background-color: $deep-sea;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gem-of-the-ocean;
+  }
+
+  &:active,
+  &:focus {
+    @include focus-indicator($charcoal);
+  }
+  span.MuiButton-label {
+    padding: 10px 20px;
+  }
+}
