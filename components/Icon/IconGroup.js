@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import EmailIcon from "./EmailIcon";
-import TwitterIcon from "./TwitterIcon";
-import InstagramIcon from "./InstagramIcon";
-import FaceBookIcon from "./FaceBookIcon";
+import EmailIcon from './EmailIcon';
+import TwitterIcon from './TwitterIcon';
+import InstagramIcon from './InstagramIcon';
+import FaceBookIcon from './FaceBookIcon';
 
 const IconGroup = () => {
   return (

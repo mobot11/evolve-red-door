@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import "./variables";
+@import './variables';
 
 /* ................................. */
 
@@ -24,8 +24,7 @@
 @mixin box-shadow($x: 0, $y: 1rem, $blur-radius: 1rem) {
   $color-shadow: rgba(66, 65, 67, 0.8);
   @if $x == 0 {
-    box-shadow: $x $y $blur-radius (-#{$blur-radius}) $color-shadow,
-      $x $y $blur-radius $color-shadow;
+    box-shadow: $x $y $blur-radius (-#{$blur-radius}) $color-shadow, $x $y $blur-radius $color-shadow;
   } @else {
     box-shadow: $x $y $blur-radius $color-shadow;
   }
