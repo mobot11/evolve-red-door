@@ -26,7 +26,8 @@ $flex-basis: 100px;
     bottom: 0;
     right: 0;
     top: 0;
-    background: url('/assets/impact_white_strips.png');
+    background: url('/assets/impact_white_strips.png') no-repeat;
+    background-size: 120% 100%;
     z-index: 1;
   }
 }
@@ -107,7 +108,7 @@ $flex-basis: 100px;
 }
 
 .sectionImage {
-  height: 36rem;
+  height: 40rem;
   width: 100%;
   padding: 0;
   background: url('/assets/impact_2_bwmanwithahndsout.png') center center no-repeat;
@@ -137,9 +138,17 @@ $flex-basis: 100px;
   flex-grow: 4;
   flex-basis: $flex-basis;
   position: relative;
-  background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
-  background-size: cover;
-
+  &::after {
+    content: '';
+    top: -7rem;
+    left: 0;
+    right: -10rem;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
+    background-size: cover;
+  }
   @include for-size(m-only) {
     margin-left: $space-m;
     display: none;

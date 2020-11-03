@@ -127,9 +127,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <div className="section">
-          <div className={clsx(['section-content', styles.sectionImage])}></div>
-        </div>
+        <div className={clsx(['section', styles.sectionImage])}></div>
         <section>
           <div className={clsx(['section-content', styles.content])}>
             <div className={styles.sideText}>
@@ -156,7 +154,7 @@ const About = () => {
               <Link
                 href="https://www.youtube.com/watch?v=za8KE_s5LgM&feature=youtu.be&ab_channel=TEDxTalks"
                 propsForAnchor={{ target: '_blank' }}
-                text="“Evolving Through Dissonance”"
+                text="Evolving Through Dissonance"
               ></Link>
               <p>
                 Kevin Jones’ 2019 TEDx talk digs deep into the philosophy that led The Red Door Project to the
