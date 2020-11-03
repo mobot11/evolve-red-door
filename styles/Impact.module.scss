@@ -1,0 +1,164 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+$flex-basis: 100px;
+
+.h1,
+.h2 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.sectionBlack {
+  @include bg(b);
+}
+
+.sectionGem {
+  @include bg(gem);
+  padding-bottom: $space-m;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: url('/assets/impact_white_strips.png');
+    z-index: 1;
+  }
+}
+
+.hero {
+  height: 30rem;
+  width: 100%;
+  background: url('/assets/impact1.jpg') bottom center no-repeat;
+  background-size: contain;
+}
+
+.impactSectionContent,
+.quotesSectionContent {
+  @extend %flex-column;
+  z-index: 2;
+}
+
+.columns {
+  @extend %flex-row;
+  align-items: flex-start;
+  @include for-size(s-only) {
+    flex-direction: column;
+  }
+  @include for-size(m-only) {
+    flex-direction: column;
+  }
+}
+
+.narrowContent {
+  max-width: $bp-l;
+}
+
+.column {
+  @extend %flex-column;
+  flex-grow: 1;
+  flex-basis: $flex-basis;
+  padding-right: $space-l;
+  &:last-of-type() {
+    padding-right: 0;
+  }
+  @include for-size(s-only1) {
+    margin-bottom: $space-m;
+    &:last-of-type() {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.impactSectionContent {
+  .column {
+    @include for-size(s-only) {
+      flex-direction: row;
+      align-items: flex-start;
+      &::before {
+        content: '○';
+        margin-right: $space-xs;
+      }
+    }
+    @include for-size(m-only) {
+      flex-direction: row;
+      align-items: flex-start;
+      &::before {
+        content: '○';
+        margin-right: $space-xs;
+      }
+    }
+  }
+}
+
+.caption {
+  text-align: center;
+  @include for-size(s-only) {
+    text-align: right;
+  }
+  @include for-size(m-only) {
+    text-align: right;
+  }
+}
+
+.sectionImage {
+  height: 36rem;
+  width: 100%;
+  padding: 0;
+  background: url('/assets/impact_2_bwmanwithahndsout.png') center center no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
+.quotesSectionContent {
+  padding-bottom: 0;
+  .column {
+    @include for-size(s-only) {
+      align-items: flex-end;
+    }
+    @include for-size(m-only) {
+      align-items: flex-end;
+    }
+  }
+}
+.content {
+  align-items: stretch;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.sidePhoto {
+  @extend %flex-column;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  position: relative;
+  background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
+  background-size: cover;
+
+  @include for-size(m-only) {
+    margin-left: $space-m;
+    display: none;
+  }
+  @include for-size(l-up) {
+    margin-left: $space-l;
+  }
+  @include for-size(s-only) {
+    display: none;
+  }
+}
+
+.sideText {
+  @extend %flex-column;
+  align-items: flex-start;
+  flex-grow: 5;
+  flex-basis: $flex-basis;
+  a {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}

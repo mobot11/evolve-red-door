@@ -22,12 +22,16 @@
 /// @param {string} $blur-radius - blur-radius, default to 1rem
 /// @group cosmetic
 @mixin box-shadow($x: 0, $y: 1rem, $blur-radius: 1rem) {
-  $color-shadow: rgba($black, 0.5);
+  $color-shadow: rgba(66, 65, 67, 0.8);
   @if $x == 0 {
     box-shadow: $x $y $blur-radius (-#{$blur-radius}) $color-shadow, $x $y $blur-radius $color-shadow;
   } @else {
     box-shadow: $x $y $blur-radius $color-shadow;
   }
+}
+
+@mixin focus-indicator($color: $deep-sea) {
+  box-shadow: 0 0 0 2px $color;
 }
 
 /* ................................. */
@@ -132,8 +136,16 @@
     @media (max-width: #{$bp-s }) {
       @content;
     }
+  } @else if $range == s-only1 {
+    @media (max-width: #{$bp-s1 }) {
+      @content;
+    }
   } @else if $range == m-only {
     @media (min-width: $bp-s + 1) and (max-width: #{$bp-l - 1}) {
+      @content;
+    }
+  } @else if $range == m-only1 {
+    @media (min-width: $bp-s + 1) and (max-width: #{$bp-l1 - 1}) {
       @content;
     }
   } @else if $range == m-up {

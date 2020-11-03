@@ -14,8 +14,9 @@ $color-transparent: transparent;
 /// @require px (or any absolute length unit) same as @alias base font variables,
 /// because it is used @alias fluid-type()
 $bp-s: 320px; // major break point for "small screen" design
-$bp-m: 480px; // major break point for "small screen" design
+$bp-s1: 620px; // minor break point for "small screen" design
 $bp-l: 740px; // major break point for "large screen" design
+$bp-l1: 1000px; // minor break point for "large screen" design
 $bp-xl: 1200px; // minor break point for "x-large screen" typography
 
 $min-size: $bp-s;

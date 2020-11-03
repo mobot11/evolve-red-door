@@ -21,6 +21,10 @@
 /* GLOBAL */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  @include for-size(s-only) {
+    overflow-x: auto;
+  }
 }
 
 /* Accessibility Requirements */
@@ -55,9 +59,12 @@ html {
 p,
 span,
 a,
+i,
 strong,
 em,
-ul > li {
+ul > li,
+h4,
+q {
   @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
 }
 
@@ -129,16 +136,28 @@ a {
   text-decoration: underline;
 }
 
-strong {
+strong,
+h4,
+b,
+strong > i,
+strong > em,
+q,
+q > i {
   font-weight: 600;
 }
 
-em {
+em,
+i {
   font-style: italic;
 }
 
 li {
   list-style-type: circle;
+}
+
+h3,
+h4 {
+  text-transform: capitalize;
 }
 
 // ============= Shared layout============
@@ -149,6 +168,7 @@ li {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .main {
@@ -174,7 +194,7 @@ section,
 .section-content {
   @extend %flex-row;
   max-width: $max-size;
-  min-width: $min-size;
+  width: calc(100% - 2 * #{$space-m});
   padding: $space-s;
   @include for-size(m-only) {
     padding: $space-m;
