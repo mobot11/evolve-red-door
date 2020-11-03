@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from '../styles/Error404.module.scss';
 import Footer from '../components/Footer/Footer';
 
-const error404 = () => {
+const accessibilityStatement = () => {
   return (
     <div className="container">
       <Head>
@@ -36,4 +36,4 @@ const error404 = () => {
   );
 };
 
-export default error404;
+export default accessibilityStatement;
