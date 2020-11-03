@@ -1,13 +1,13 @@
 @charset 'utf-8';
 
-@import "./variables";
-@import "./mixins";
-@import "./classes";
+@import './variables';
+@import './mixins';
+@import './classes';
 
 .hamburger-menu {
-  @include for-size(s-only) {
+  @include for-size(m-down) {
   }
-  @include for-size(m-up) {
+  @include for-size(xl-up) {
     display: none;
   }
 }
