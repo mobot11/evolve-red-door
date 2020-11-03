@@ -81,6 +81,21 @@ const KeepInTouch = () => {
                   }
                   return errors;
                 }}
+                onSubmit={(values, { setSubmitting, resetForm }) => {
+                  fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: encode({ 'form-name': 'contact-demo', ...values }),
+                  })
+                    .then(() => {
+                      alert('Success');
+                      resetForm();
+                    })
+                    .catch(() => {
+                      alert('Error');
+                    })
+                    .finally(() => setSubmitting(false));
+                }}
               >
                 {({ submitForm, isSubmitting }) => (
                   <Form className={styles.form} name="contact" method="POST" data-netlify="true">
