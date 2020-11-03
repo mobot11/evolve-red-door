@@ -55,8 +55,26 @@ $flex-basis: 100px;
   @extend %flex-column;
   flex-grow: 4;
   flex-basis: $flex-basis;
-  background: url('/assets/about2.png') bottom right no-repeat;
-  background-size: auto 70%;
+  &::after {
+    content: '';
+    top: -10rem;
+    left: -10rem;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: url('/assets/about2.png') bottom center no-repeat;
+    background-size: contain;
+    z-index: 1;
+
+    @include for-size(l-up) {
+      top: -15rem;
+      left: -15rem;
+    }
+    @include for-size(xl-up) {
+      top: -10rem;
+      left: -10rem;
+    }
+  }
 
   @include for-size(m-only) {
     margin-right: $space-m;
