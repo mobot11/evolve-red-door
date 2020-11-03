@@ -1,14 +1,14 @@
-import React from "react";
-import ImageLink from "../Link/ImageLink";
-import styles from "../../styles/Footer.module.scss";
-import clsx from "clsx";
+import React from 'react';
+import ImageLink from '../Link/ImageLink';
+import styles from '../../styles/Footer.module.scss';
+import clsx from 'clsx';
 
-import IconLink from "../Link/IconLink";
+import IconLink from '../Link/IconLink';
 
 const Footer = ({}) => {
   return (
     <footer className={styles.footer}>
-      <div className={clsx(styles["footer-content"], styles["footer-top"])}>
+      <div className={clsx(styles['footer-content'], styles['footer-top'])}>
         <ImageLink
           src="assets/reddoorproject_logo_seafoam.png"
           alt="Red Door Project Home"
@@ -16,19 +16,17 @@ const Footer = ({}) => {
           width={270}
           variant="dark-background"
         />
-        <div className={styles["social-links"]}>
+        <div className={styles['social-links']}>
           <IconLink variant="facebook" />
           <IconLink variant="twitter" />
           <IconLink variant="instagram" />
           <IconLink variant="email" />
         </div>
       </div>
-      <div className={styles["horizontal-rule"]} />
-      <div className={clsx(styles["footer-content"], styles["footer-bottom"])}>
-        <p className={styles.copyright}>
-          Copyright &copy;{new Date().getFullYear()} All Rights Reserved.
-        </p>
-        <span className={styles["knowbility-logo"]}>
+      <div className={styles['horizontal-rule']} />
+      <div className={clsx(styles['footer-content'], styles['footer-bottom'])}>
+        <p className={styles.copyright}>Copyright &copy;{new Date().getFullYear()} All Rights Reserved.</p>
+        <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
             alt="Red Door Project Home"
