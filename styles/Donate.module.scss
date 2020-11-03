@@ -37,10 +37,10 @@ $flex-basis: 100px;
       display: none;
     }
     @include for-size(xl-up) {
-      width: 110vw;
-      height: 110vw;
-      left: -2vw;
-      top: -30vw;
+      width: 1600px;
+      height: 1600px;
+      left: calc(50% - 800px + 80px);
+      top: -400px;
       display: block;
     }
   }
@@ -100,10 +100,7 @@ $flex-basis: 100px;
     max-width: 80vw;
   }
   @include for-size(xl-up) {
-    max-width: 60vw;
-  }
-  @include for-size(xl-up1) {
-    max-width: 55vw;
+    max-width: 1000px;
   }
 }
 
