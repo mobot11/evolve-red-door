@@ -1,0 +1,145 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+$flex-basis: 100px;
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  margin-bottom: 0.5em;
+}
+
+.sectionBlack {
+  @include bg(b);
+}
+
+// Top Image
+.img {
+  height: 40rem;
+  width: 100%;
+  background: url('/assets/monologues_1.png') center center no-repeat;
+  background-size: contain;
+}
+
+// Header and Paragraph
+.sectionGem {
+  @include bg(gem);
+  .column {
+    @extend %flex-row;
+    justify-content: space-between;
+
+    .contentNarrow {
+      .t1 {
+        margin-top: -10px;
+        text-align: center;
+        width: 900px;
+      }
+      height: 200px;
+      z-index: 2;
+      @extend %flex-column;
+      max-width: 70vw;
+      @include for-size(s-only) {
+        max-width: 100%;
+      }
+      @include for-size(m-only1) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up1) {
+        max-width: 100%;
+      }
+    }
+    .monologueHeader {
+      color: $charcoal;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .headerText {
+      text-align: center;
+    }
+
+    // Hands up logo
+    .handsUpLogo {
+      height: 8rem;
+      width: 100%;
+      background: url('/assets/handsup_logo.png') center center no-repeat;
+      background-size: contain;
+    }
+
+    // Copout logo
+    .copoutLogo {
+      height: 10rem;
+      width: 100%;
+      background: url('/assets/copout_logo.png') center center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+// Content Section
+.content {
+  align-items: stretch;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.topBorder {
+  border-top: 2px solid $charcoal;
+}
+
+.sideHandsUpPhoto {
+  @extend %flex-column;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  position: relative;
+  background: url('/assets/monologues_2.png') right center no-repeat;
+  background-size: cover;
+
+  @include for-size(m-only) {
+    margin-left: $space-m;
+    display: none;
+  }
+  @include for-size(l-up) {
+    margin-left: $space-l;
+  }
+  @include for-size(s-only) {
+    display: none;
+  }
+}
+
+.sideCopOutPhoto {
+  @extend %flex-column;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  position: relative;
+  background: url('/assets/monologues_3.png') right center no-repeat;
+  background-size: cover;
+
+  @include for-size(m-only) {
+    margin-left: $space-m;
+    display: none;
+  }
+  @include for-size(l-up) {
+    margin-left: $space-l;
+  }
+  @include for-size(s-only) {
+    display: none;
+  }
+}
+
+.sideText {
+  @extend %flex-column;
+  align-items: flex-start;
+  flex-grow: 5;
+  flex-basis: $flex-basis;
+  a {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
