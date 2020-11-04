@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import Head from 'next/head';
-import Nav from '../components/Nav';
+import PageHeader from '../components/PageHeader';
 import clsx from 'clsx';
 import styles from '../styles/Error404.module.scss';
 import Footer from '../components/Footer/Footer';
@@ -14,7 +14,7 @@ const error404 = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <PageHeader />
       <main className={clsx(['main', styles.main])}>
         <section className={styles.sectionError}>
           <div className={clsx(['section-content', styles.sectionContent])}>
