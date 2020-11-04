@@ -84,9 +84,9 @@ $flex-basis: 100px;
 
 // Content Section
 
-.sectionContribution {
+.sectionMonologues {
   z-index: 2;
-  .contribution {
+  .monologues {
     z-index: 3;
     @extend %flex-column;
     .sectionContent {
@@ -96,7 +96,7 @@ $flex-basis: 100px;
       .sidePhoto {
         @extend %flex-column;
         position: relative;
-        background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
+        background: url('/assets/monologues_2.png') right center no-repeat;
         background-size: cover;
 
         @include for-size(m-only) {
@@ -124,9 +124,10 @@ $flex-basis: 100px;
     }
   }
 }
+// TODO: Fix hover state
 .externalLink {
   background-image: url('/assets/external_link.png');
   background-position: left center;
   background-repeat: no-repeat;
-  padding-left: 20px; /* Adjust according to image size to push text across. */
+  padding-left: 20px;
 }

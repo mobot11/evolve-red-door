@@ -54,47 +54,49 @@ const Monologues = () => {
             <div className={styles.handsUpLogo}></div>
           </div>
         </section>
-
-        <div className={clsx(['section-content', styles.sectionContent])}></div>
-        <div className={styles.sidePhoto}></div>
-        <section className={styles.sectionContribution}>
-          <div className={clsx(['section-content', styles.contribution])}>
-            <h2 className={styles.h2}>Hands Up</h2>
-            <p>
-              In light of the police shootings of Mike Brown in Ferguson, Missouri and John Crawford III in Beavercreek,
-              Ohio, among others, The New Black Fest commissioned seven emerging Black playwrights to write monologues
-              that explore their feelings about the well-being of Black people in a culture of institutional profiling.
-            </p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
-            <h3 className={styles.h3}>More Resources</h3>
+        {/* HANDS UP SECTION */}
+        <section className={styles.sectionMonologues}>
+          <div className={clsx(['section-content', styles.monologues])}>
             <div className={styles.links}>
-              <Link
-                linkClass={styles.externalLink}
-                href="https://racc.org/2017/03/28/using-theatre-change-racial-ecology-portland/"
-                propsForAnchor={{ target: '_blank' }}
-                text="Read about Hands Up and the Red Door mission."
-              ></Link>
-              <Link
-                linkClass={styles.externalLink}
-                href="https://youtu.be/UGRLXAeehDk"
-                propsForAnchor={{ target: '_blank' }}
-                text="City Club Forum: Listen to Director Kevin Jones and Retired Deputy Chief Robert Day discuss Hands Up and its impact on law enforcement."
-              ></Link>
-              <Link
-                linkClass={styles.externalLink}
-                href="https://kboo.fm/media/59255-hands-and-kevin-jones"
-                propsForAnchor={{ target: '_blank' }}
-                text="Listen to an interview with Kevin Jones on Stage and Studio on KBOO."
-              ></Link>
-              <Link
-                linkClass={styles.externalLink}
-                href="https://www.youtube.com/watch?v=5BvfYJflXGc&feature=youtu.be"
-                propsForAnchor={{ target: '_blank' }}
-                text="Watch the New Black Fest’s trailer for the National Black Theater’s Production of Hands Up."
-              ></Link>
+              <h2 className={styles.h2}>Hands Up</h2>
+              <p>
+                In light of the police shootings of Mike Brown in Ferguson, Missouri and John Crawford III in
+                Beavercreek, Ohio, among others, The New Black Fest commissioned seven emerging Black playwrights to
+                write monologues that explore their feelings about the well-being of Black people in a culture of
+                institutional profiling.
+              </p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
+              <h3 className={styles.h3}>More Resources</h3>
+              <div className={styles.links}>
+                <Link
+                  linkClass={styles.externalLink}
+                  href="https://racc.org/2017/03/28/using-theatre-change-racial-ecology-portland/"
+                  propsForAnchor={{ target: '_blank' }}
+                  text="Read about Hands Up and the Red Door mission."
+                ></Link>
+                <Link
+                  linkClass={styles.externalLink}
+                  href="https://youtu.be/UGRLXAeehDk"
+                  propsForAnchor={{ target: '_blank' }}
+                  text="City Club Forum: Listen to Director Kevin Jones and Retired Deputy Chief Robert Day discuss Hands Up and its impact on law enforcement."
+                ></Link>
+                <Link
+                  linkClass={styles.externalLink}
+                  href="https://kboo.fm/media/59255-hands-and-kevin-jones"
+                  propsForAnchor={{ target: '_blank' }}
+                  text="Listen to an interview with Kevin Jones on Stage and Studio on KBOO."
+                ></Link>
+                <Link
+                  linkClass={styles.externalLink}
+                  href="https://www.youtube.com/watch?v=5BvfYJflXGc&feature=youtu.be"
+                  propsForAnchor={{ target: '_blank' }}
+                  text="Watch the New Black Fest’s trailer for the National Black Theater’s Production of Hands Up."
+                ></Link>
+              </div>
             </div>
 
-            <div className={clsx(['section-content', styles.contribution])}>
+            {/* COP OUT SECTION */}
+            <div className={clsx(['section-content', styles.monologues])}>
               <div className={styles.links}>
                 <h2 className={styles.h2}>Cop Out</h2>
                 <p>
