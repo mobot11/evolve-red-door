@@ -45,14 +45,9 @@ export default function Home() {
 
         <section className={styles.sectionVideo}>
           <div className={clsx(['section-content', styles.video])}>
-            <div class={styles.embedContainer}>
-              <iframe
-                src="https://www.youtube.com/embed/vano1uIgU_g"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>{' '}
+            <div className={styles.embedContainer}>
+              <iframe src="https://www.youtube.com/embed/vano1uIgU_g"></iframe>
+            </div>
           </div>
         </section>
 
