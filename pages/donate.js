@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
+import PageHeader from '../components/PageHeader';
 import Link from '../components/Link/Link';
 import clsx from 'clsx';
 import styles from '../styles/Donate.module.scss';
@@ -13,7 +13,7 @@ const About = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <PageHeader />
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
