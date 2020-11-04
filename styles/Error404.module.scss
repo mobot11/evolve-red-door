@@ -12,6 +12,14 @@
   min-height: 0;
 }
 
+.sectionBlack {
+  @include bg(b);
+}
+
+.hero {
+  background-image: url('/assets/about1.png');
+}
+
 .sectionError {
   &::before {
     content: '';

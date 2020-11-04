@@ -14,6 +14,9 @@ const accessibilityStatement = () => {
       </Head>
       <PageHeader />
       <main className={clsx(['main', styles.main])}>
+        <div className={clsx(['section', styles.sectionBlack])}>
+          <div className={clsx(['section-content', 'hero', styles.hero])}></div>
+        </div>
         <section>
           <div className={clsx(['section-content', styles.sectionContent])}>
             <h1 className={styles.h1}>Accessibility Statement</h1>
