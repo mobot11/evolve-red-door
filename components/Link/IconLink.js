@@ -13,7 +13,7 @@ const IconLink = ({ variant, text, anchorProps = {}, theme }) => {
       href = 'https://www.facebook.com/reddoorprojectpdx';
       break;
     case 'twitter':
-      href = 'https://www.instagram.com/reddoorproject/';
+      href = 'https://twitter.com/reddoorproject?s=20';
       icon = <TwitterIcon />;
       break;
     case 'email':
