@@ -13,7 +13,7 @@ const PageHeader = () => {
         <HamburgerMenu />
 
         <Link href="/">
-          <a className={styles['site-title']}>The Evolve Experience</a>
+          <a className={styles['desktop-site-title']}>The Evolve Experience</a>
         </Link>
 
         <SiteNav className={styles['desktop-nav']} />

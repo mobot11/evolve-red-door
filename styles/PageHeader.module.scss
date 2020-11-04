@@ -18,9 +18,10 @@
     padding-top: 44px;
     padding-bottom: 20px;
     a {
-      font-size: 24px;
+      font-size: 20px;
       font-family: 'Roboto Condensed', sans-serif;
       text-decoration: none;
+      border: solid 1px transparent;
       &:focus {
         border: solid 1px $gem-of-the-ocean;
         border-bottom: solid 4px $gem-of-the-ocean;
@@ -34,7 +35,7 @@
   display: flex;
   width: calc(100% - 2 * 1rem);
 }
-.site-title {
+.desktop-site-title {
   color: #fff;
   text-align: center;
   margin-left: 30px;
@@ -54,9 +55,10 @@
     background: black;
   }
 }
+.desktop-site-title,
 .desktop-nav {
   display: none;
-  @include for-size(xl-up) {
+  @media only screen and (min-width: 1024px) {
     display: block;
   }
 }

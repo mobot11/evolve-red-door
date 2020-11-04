@@ -5,14 +5,56 @@
 @import './classes';
 
 .hamburger-menu {
-  @include for-size(m-down) {
+  position: absolute;
+  top: 0;
+  button {
+    color: white;
+    background: none;
   }
-  @include for-size(xl-up) {
+  .mobile-site-title {
+    font-weight: 600;
+    color: white;
+    margin-left: 39px;
+    margin-top: 5px;
+    display: block;
+  }
+  @media only screen and (min-width: 1024px) {
     display: none;
   }
 }
 .mobile-nav {
   position: absolute;
-  background: black;
-  border: solid 1px white;
+  top: 0;
+  margin-left: -15px;
+  background: $charcoal;
+  padding: 6px 24px 14px;
+  min-width: 320px;
+  a {
+    color: white;
+    margin: 0 15px 0 30px;
+  }
+  ul {
+    padding-left: 0;
+  }
+  li {
+    display: block;
+    text-align: left;
+    margin: 20px 0;
+  }
+  .active {
+    color: $sea-foam;
+    font-weight: normal;
+    border-bottom: solid 2px $gem-of-the-ocean;
+  }
+}
+.open-btn {
+  font-size: 24px;
+  padding-right: 10px;
+  position: absolute;
+}
+.close-btn {
+  font-size: 24px;
+  position: absolute;
+  padding: 8px;
+  left: 0;
 }
