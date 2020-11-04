@@ -50,7 +50,11 @@ const Monologues = () => {
               <section className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
-                    <iframe src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
+                    <iframe
+                      title="Hands Up - This is what theater is for"
+                      src="https://www.youtube.com/embed/aoT1Krp9HF4"
+                      frameborder="0"
+                    ></iframe>
                   </div>{' '}
                 </div>
               </section>
@@ -101,6 +105,7 @@ const Monologues = () => {
                   <div className={styles.embedContainer}>
                     <iframe
                       src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+                      title="Cop Out: How it's Made"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen

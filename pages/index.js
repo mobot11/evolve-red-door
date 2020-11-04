@@ -46,7 +46,7 @@ export default function Home() {
         <section className={styles.sectionVideo}>
           <div className={clsx(['section-content', styles.video])}>
             <div className={styles.embedContainer}>
-              <iframe src="https://www.youtube.com/embed/vano1uIgU_g"></iframe>
+              <iframe title="The Evolve Experience" src="https://www.youtube.com/embed/vano1uIgU_g"></iframe>
             </div>
           </div>
         </section>
