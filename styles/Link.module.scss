@@ -26,7 +26,7 @@
     &:active,
     &:focus {
       background: rgba(0, 64, 80, 0.2);
-      @include focus-indicator($white);
+      @include focus-indicator($sea-foam);
     }
   }
 }
@@ -35,22 +35,53 @@
   display: block;
 }
 
-.icon-link-green-background {
+.iconLink {
   display: inline-flex;
   max-height: 50px;
   svg {
     border-radius: 100%;
-    fill: $white;
+  }
+}
+
+.icon-background-deep-sea {
+  svg {
+    fill: $sea-foam;
   }
 
   &:hover {
     svg {
       fill: $gem-of-the-ocean;
-      background: $white;
+      background: $sea-foam;
     }
   }
   &:active,
   &:focus {
-    @include focus-indicator($white);
+    @include focus-indicator($sea-foam);
   }
+}
+
+.icon-background-gem-of-the-ocean {
+  text-decoration-color: $deep-sea;
+  svg {
+    fill: $deep-sea;
+  }
+
+  &:hover {
+    svg {
+      fill: $charcoal;
+      background: $sea-foam;
+    }
+  }
+  &:active,
+  &:focus {
+    @include focus-indicator($sea-foam);
+  }
+}
+
+.iconLinkText {
+  padding: 10px 0 0 20px;
+  color: $deep-sea;
+  font-size: 20px;
+  text-decoration-color: $deep-sea;
+  font-weight: 600;
 }

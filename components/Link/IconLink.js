@@ -1,40 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../../styles/Link.module.scss';
-import { EmailIcon, TwitterIcon, FaceBookIcon, InstagramIcon } from '../Icon';
+import { EmailIcon, TwitterIcon, FaceBookIcon, InstagramIcon, PhoneIcon } from '../Icon';
+import clsx from 'clsx';
 
-const IconLink = ({ variant, anchorProps = {} }) => {
+const IconLink = ({ variant, text, anchorProps = {}, theme }) => {
   let icon;
   let href;
-  let alt;
   switch (variant) {
     case 'facebook':
       icon = <FaceBookIcon />;
       href = 'https://www.facebook.com/reddoorprojectpdx';
-      alt = 'Red Door Project Facebook';
       break;
     case 'twitter':
       href = 'https://www.instagram.com/reddoorproject/';
       icon = <TwitterIcon />;
-      alt = 'Red Door Project Twitter';
       break;
     case 'email':
       href = 'mailto:info@reddoorproject.org';
       icon = <EmailIcon />;
-      alt = 'Red Door Project Email';
       break;
     case 'instagram':
       href = 'https://www.instagram.com/reddoorproject/';
       icon = <InstagramIcon />;
-      alt = 'Red Door Project Instagram';
+      break;
+    case 'phone':
+      href = 'tel:1-503-541-0739';
+      icon = <PhoneIcon />;
       break;
     default:
       throw new Error('invalid variant supplied to IconLink');
   }
   return (
     <div>
-      <a href={href} alt={alt} className={styles['icon-link-green-background']} {...anchorProps}>
-        {icon}
+      <a href={href} className={clsx(styles[`icon-${theme}`], styles.iconLink)} {...anchorProps}>
+        {icon} {text && <span className={clsx(styles.iconLinkText, 'icon-text')}>{text}</span>}
       </a>
     </div>
   );
@@ -42,7 +42,8 @@ const IconLink = ({ variant, anchorProps = {} }) => {
 
 IconLink.propTypes = {
   anchorProps: PropTypes.object,
-  variant: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'email']),
+  variant: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'email', 'phone']),
+  theme: PropTypes.oneOf(['background-deep-sea', 'background-gem-of-the-ocean']),
 };
 
 export default IconLink;

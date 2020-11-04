@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-@import "./variables";
-@import "./mixins";
-@import "./classes";
+@import './variables';
+@import './mixins';
+@import './classes';
 
 /* GENERIC */
 /* basic normalization */
@@ -42,14 +42,14 @@ body {
 /* ========================================================================= */
 
 /* TYPOGRAPHY */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* classes t0, t1, t2, t3, s1, s2 and classes with t- prefix */
 /* root font */
 html {
   @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
   color: $black;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
@@ -80,21 +80,17 @@ h1 {
   @include for-size(xl-up) {
     font-size: 60px;
   }
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   line-height: 1.2em !important;
 }
 
 /* second largest font-size */
 .t2,
-h2 {
-  @include fluid-type(
-    $bp-s,
-    $bp-xl,
-    $mod_m * $mod_m * $base-font-min,
-    $mod_d * $mod_d * $base-font-max
-  );
-  font-family: "Roboto", sans-serif;
+h2,
+h2 > * {
+  @include fluid-type($bp-s, $bp-xl, $mod_m * $mod_m * $base-font-min, $mod_d * $mod_d * $base-font-max);
+  font-family: 'Roboto', sans-serif;
   @include for-size(xl-up) {
     font-size: 48px;
   }
@@ -105,13 +101,8 @@ h2 {
 /* third largest font-size */
 .t3,
 h3 {
-  @include fluid-type(
-    $bp-s,
-    $bp-xl,
-    $mod_m * $base-font-min,
-    $mod_d * $base-font-max
-  );
-  font-family: "Roboto Condensed", sans-serif;
+  @include fluid-type($bp-s, $bp-xl, $mod_m * $base-font-min, $mod_d * $base-font-max);
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;
   @include for-size(xl-up) {
     font-size: 24px;
@@ -122,13 +113,8 @@ h3 {
 /* first font-size smaller that base font-size */
 .s1,
 .caption {
-  @include fluid-type(
-    $bp-s,
-    $bp-xl,
-    $base-font-min / $mod_m,
-    $base-font-max / $mod_d
-  );
-  font-family: "Roboto Condensed", sans-serif;
+  @include fluid-type($bp-s, $bp-xl, $base-font-min / $mod_m, $base-font-max / $mod_d);
+  font-family: 'Roboto Condensed', sans-serif;
   font-style: italic;
 }
 
@@ -195,6 +181,57 @@ section,
   @extend %flex-row;
   max-width: $max-size;
   width: calc(100% - 2 * #{$space-m});
+  padding: $space-s;
+  @include for-size(m-only) {
+    padding: $space-m;
+  }
+  @include for-size(l-up) {
+    padding: $space-l;
+  }
+}
+
+// Material-UI styles
+.MuiFormControl-root.MuiTextField-root {
+  margin-bottom: 30px;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+  background-color: $deep-sea;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gem-of-the-ocean;
+  }
+
+  &:active,
+  &:focus {
+    @include focus-indicator($charcoal);
+  }
+  span.MuiButton-label {
+    padding: 10px 20px;
+  }
+}
+
+.hero {
+  height: 40rem;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include for-size(m-only) {
+    height: 20rem;
+  }
+  @include for-size(s-only) {
+    height: 20rem;
+  }
+}
+
+.banner {
+  min-height: 10rem;
+  max-width: $max-size;
+  @include bg(b);
+  @extend %flex-column;
   padding: $space-s;
   @include for-size(m-only) {
     padding: $space-m;

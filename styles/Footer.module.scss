@@ -8,6 +8,21 @@
   @extend %flex-column;
   width: 100%;
   background-color: $deep-sea;
+
+  a {
+    text-align: center;
+    margin: 0 $space-s;
+    color: $white;
+    display: inline-block;
+    &:active,
+    &:focus {
+      background: rgba(255, 255, 255, 0.2);
+      @include focus-indicator($white);
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
 }
 
 .footer-content {
@@ -48,11 +63,19 @@
 
 .copyright {
   color: $white;
-  font-size: $base-font-min;
+  @include for-size(s-only) {
+    margin-bottom: $space-l;
+  }
+  @include for-size(m-only) {
+    margin-bottom: $space-l;
+  }
 }
 
 .knowbility-logo {
-  @include for-size(s-only1) {
-    margin-top: $space-m;
+  @include for-size(s-only) {
+    margin-top: $space-l;
+  }
+  @include for-size(m-only) {
+    margin-top: $space-l;
   }
 }

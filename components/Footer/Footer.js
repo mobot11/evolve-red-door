@@ -2,6 +2,7 @@ import React from 'react';
 import ImageLink from '../Link/ImageLink';
 import styles from '../../styles/Footer.module.scss';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 import IconLink from '../Link/IconLink';
 
@@ -17,15 +18,18 @@ const Footer = ({}) => {
           variant="dark-background"
         />
         <div className={styles['social-links']}>
-          <IconLink variant="facebook" />
-          <IconLink variant="twitter" />
-          <IconLink variant="instagram" />
-          <IconLink variant="email" />
+          <IconLink variant="facebook" theme="background-deep-sea" />
+          <IconLink variant="twitter" theme="background-deep-sea" />
+          <IconLink variant="instagram" theme="background-deep-sea" />
+          <IconLink variant="email" theme="background-deep-sea" />
         </div>
       </div>
       <div className={styles['horizontal-rule']} />
       <div className={clsx(styles['footer-content'], styles['footer-bottom'])}>
         <p className={styles.copyright}>Copyright &copy;{new Date().getFullYear()} All Rights Reserved.</p>
+        <Link href="/accessibility-statement">
+          <a>Accessibility statement</a>
+        </Link>
         <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
