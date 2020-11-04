@@ -16,10 +16,9 @@ const About = () => {
       <Nav />
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>
-          <div className={clsx(['section-content', styles.hero])}>
-            <div className={styles.banner}>
-              <img src="/assets/rdplogo.png" alt="The Red Door Project logo" />
-            </div>
+          <div className={clsx(['section-content', 'hero', styles.hero])}></div>
+          <div className={clsx(['banner', styles.banner])}>
+            <img src="/assets/rdplogo.png" alt="The Red Door Project logo" />
           </div>
         </div>
         <section>

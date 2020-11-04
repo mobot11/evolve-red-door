@@ -16,7 +16,7 @@ const About = () => {
       <Nav />
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>
-          <div className={clsx(['section-content', styles.img])}></div>
+          <div className={clsx(['section-content', 'hero', styles.hero])}></div>
         </div>
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow])}>
