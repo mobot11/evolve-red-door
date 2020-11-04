@@ -210,3 +210,32 @@ section,
     padding: 10px 20px;
   }
 }
+
+.hero {
+  height: 40rem;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include for-size(m-only) {
+    height: 20rem;
+  }
+  @include for-size(s-only) {
+    height: 20rem;
+  }
+}
+
+.banner {
+  min-height: 10rem;
+  max-width: $max-size;
+  @include bg(b);
+  @extend %flex-column;
+  padding: $space-s;
+  @include for-size(m-only) {
+    padding: $space-m;
+  }
+  @include for-size(l-up) {
+    padding: $space-l;
+  }
+}
