@@ -141,21 +141,11 @@ $flex-basis: 100px;
   @include for-size(m-only) {
     margin-top: $space-l;
   }
-}
 
-.social-links-email-phone {
-  display: flex;
-}
-
-.social-links-social-media {
-  @extend %flex-row;
-  width: 200px;
-  justify-content: space-between;
-  @include for-size(s-only) {
-    margin-top: $space-l;
-  }
-  @include for-size(m-only) {
-    margin-top: $space-l;
+  @media screen and (max-width: 1400px) {
+    span {
+      display: none;
+    }
   }
 }
 
