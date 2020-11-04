@@ -16,7 +16,7 @@ const Monologues = () => {
       <PageHeader />
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>
-          <div className={clsx(['section-content', styles.img])}></div>
+          <div className={clsx(['section-content', 'hero', styles.img])}></div>
         </div>
 
         <section className={styles.sectionGem}>
