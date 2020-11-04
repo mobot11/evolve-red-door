@@ -28,7 +28,7 @@ const KeepInTouch = () => {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | Donate</title>
+        <title>The Evolve Experience | Keep in Touch</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -50,22 +50,17 @@ const KeepInTouch = () => {
             </div>
           </div>
         </section>
-        <section className={styles.sectionContribution}>
-          <div className={clsx(['section-content', styles.contribution])}>
-            <div className={styles.sectionListItem}>
-              <div className={styles.sectionDescription}>
-                <h2 className={styles.h2}>THE RED DOOR PROJECT NEWSLETTER</h2>
-                <p>
-                  We send occasional newsletters with information about what's going on at the Red Door, and
-                  notifications to let you know when we have upcoming productions!
-                </p>
-              </div>
-              <div className={styles.sectionImage}></div>
-            </div>
+        <section>
+          <div className={clsx('section-content', styles.newsletterSection)}>
+            <h2 className={styles.h2}>THE RED DOOR PROJECT NEWSLETTER</h2>
+            <p>
+              We send occasional newsletters with information about what's going on at the Red Door, and notifications
+              to let you know when we have upcoming productions!
+            </p>
           </div>
         </section>
-        <section className={styles.sectionContribution}>
-          <div className="section-content">
+        <section>
+          <div className={clsx('section-content', styles.formSection)}>
             <div>
               <Formik
                 initialValues={{
@@ -147,6 +142,9 @@ const KeepInTouch = () => {
                 )}
               </Formik>
             </div>
+          </div>
+          <div className={styles.keepInTouchImage}>
+            <img src="/assets/contact2.png" alt="" />
           </div>
         </section>
       </main>

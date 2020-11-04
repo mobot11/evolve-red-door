@@ -168,8 +168,15 @@ $flex-basis: 100px;
   margin-bottom: 35px;
 }
 
+.formSection {
+  color: $charcoal;
+}
+
 .form {
-  width: 560px;
+  width: 600px;
+  @media screen and(max-width: 690px) {
+    width: 100%;
+  }
   p {
     padding: 0 !important;
   }
@@ -179,11 +186,38 @@ $flex-basis: 100px;
 .firstName,
 .lastName {
   width: 260px;
+  @media screen and (max-width: 690px) {
+    width: 100%;
+  }
 }
 .lastName {
   float: right;
 }
 
-.submitButton {
-  background-color: orange;
+.newsletterSection {
+  color: $charcoal;
+  display: block;
+  padding-top: 65px;
+  p {
+    width: 620px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 0;
+    @media screen and (max-width: 690px) {
+      width: 100%;
+    }
+  }
+}
+
+.keepInTouchImage {
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 450px;
+    width: 650px;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
 }
