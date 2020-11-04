@@ -61,7 +61,25 @@ $flex-basis: 100px;
       padding-bottom: 60px;
     }
     .headerText {
+      margin-top: -10px;
       text-align: center;
+      width: 900px;
+      height: 200px;
+      z-index: 2;
+      @extend %flex-column;
+      max-width: 70vw;
+      @include for-size(s-only) {
+        max-width: 100%;
+      }
+      @include for-size(m-only1) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up1) {
+        max-width: 100%;
+      }
     }
 
     // Hands up logo
