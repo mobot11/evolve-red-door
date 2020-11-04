@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
 import Link from '../components/Link/Link';
 import clsx from 'clsx';
 import styles from '../styles/Monologues.module.scss';
@@ -13,7 +12,6 @@ const Monologues = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
 
       <main className="main">
         <div className={clsx(['section', styles.sectionBlack])}>

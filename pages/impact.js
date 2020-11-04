@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
+import PageHeader from '../components/PageHeader';
 import Link from '../components/Link/Link';
 import Footer from '../components/Footer/Footer';
 import clsx from 'clsx';
@@ -13,10 +13,10 @@ const About = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main className="main">
+      <PageHeader />
+      <main className="main" id="main">
         <div className={clsx(['section', styles.sectionBlack])}>
-          <div className={clsx(['section-content', styles.hero])}></div>
+          <div className={clsx(['section-content', 'hero', styles.hero])}></div>
         </div>
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.impactSectionContent])}>
@@ -127,9 +127,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <div className="section">
-          <div className={clsx(['section-content', styles.sectionImage])}></div>
-        </div>
+        <div className={clsx(['section', styles.sectionImage])}></div>
         <section>
           <div className={clsx(['section-content', styles.content])}>
             <div className={styles.sideText}>
@@ -156,7 +154,7 @@ const About = () => {
               <Link
                 href="https://www.youtube.com/watch?v=za8KE_s5LgM&feature=youtu.be&ab_channel=TEDxTalks"
                 propsForAnchor={{ target: '_blank' }}
-                text="“Evolving Through Dissonance”"
+                text="Evolving Through Dissonance"
               ></Link>
               <p>
                 Kevin Jones’ 2019 TEDx talk digs deep into the philosophy that led The Red Door Project to the

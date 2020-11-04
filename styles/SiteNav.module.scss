@@ -1,0 +1,37 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+.nav {
+  flex: 1 0 auto;
+  a {
+    color: #fff;
+    margin: 0 15px;
+    font-weight: 600;
+    &:hover {
+      color: $sea-foam;
+      border-bottom: solid 2px $gem-of-the-ocean;
+    }
+  }
+
+  .active {
+    color: $sea-foam;
+    font-weight: normal;
+    border-bottom: solid 2px $gem-of-the-ocean;
+  }
+}
+.links {
+  @include for-size(m-up) {
+    // display: flex;
+    // justify-content: space-evenly;
+    text-align: right;
+    margin-right: 15px;
+  }
+  li {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+  }
+}
