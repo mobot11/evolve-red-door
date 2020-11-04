@@ -47,8 +47,18 @@ const Monologues = () => {
                 write monologues that explore their feelings about the well-being of Black people in a culture of
                 institutional profiling.
               </p>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
-
+              <section className={styles.sectionVideo}>
+                <div className={clsx(['section-content', styles.video])}>
+                  <div class={styles.embedContainer}>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/aoT1Krp9HF4"
+                      frameborder="0"
+                    ></iframe>
+                  </div>{' '}
+                </div>
+              </section>
               <Link
                 linkClass={styles.externalLink}
                 href="https://racc.org/2017/03/28/using-theatre-change-racial-ecology-portland/"
@@ -91,15 +101,21 @@ const Monologues = () => {
                   the institutions they represent.
                 </p>
               </p>
+              <section className={styles.sectionVideo}>
+                <div className={clsx(['section-content', styles.video])}>
+                  <div class={styles.embedContainer}>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>{' '}
+                </div>
+              </section>
 
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/6YUH2Oj_0zE"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
               <Link
                 linkClass={styles.externalLink}
                 href="https://www.oregonlive.com/expo/news/erry-2018/09/fd3c25314d6407/groundbreaking-portland-play-r.html"
