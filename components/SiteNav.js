@@ -18,7 +18,7 @@ const SiteNav = ({ className, children }) => {
       label: 'About Us',
     },
     {
-      url: '/contact',
+      url: '/keep-in-touch',
       label: 'Keep In Touch',
     },
     {
