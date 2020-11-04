@@ -128,7 +128,7 @@ $flex-basis: 100px;
   flex-basis: $flex-basis;
   position: relative;
   background: url('/assets/monologues_bottom.png') right center no-repeat;
-  background-size: cover;
+  background-size: 100%;
 
   @include for-size(m-only) {
     margin-left: $space-m;
