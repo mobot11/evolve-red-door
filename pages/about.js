@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
+import PageHeader from '../components/PageHeader';
 import Link from '../components/Link/Link';
 import Footer from '../components/Footer/Footer';
 import clsx from 'clsx';
@@ -13,8 +13,8 @@ const About = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main className="main">
+      <PageHeader />
+      <main className="main" id="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
           <div className={clsx(['banner', styles.banner])}>

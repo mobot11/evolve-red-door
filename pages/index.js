@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import Nav from '../components/Nav';
-import Link from '../components/Link/Link';
+import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer/Footer';
 import clsx from 'clsx';
 import styles from '../styles/Home.module.scss';
@@ -13,8 +12,8 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main className="main">
+      <PageHeader />
+      <main className="main" id="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
           <div className={clsx(['banner', styles.banner])}>
