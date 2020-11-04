@@ -28,37 +28,105 @@ $flex-basis: 100px;
 // header and paragraph
 .sectionGem {
   @include bg(gem);
-  .t1 {
-    margin-top: 50px;
-  }
-  // copout logo
-  .copoutLogo {
-    width: 100%;
-    background: url('/assets/copout_logo.png') center center no-repeat;
-    background-size: contain;
-  }
+  .column {
+    @extend %flex-row;
+    justify-content: space-between;
 
-  // hands up logo
-  .handsUpLogo {
-    height: 8rem;
-    width: 100%;
-    background: url('/assets/handsup_logo.png') center center no-repeat;
-    background-size: contain;
-  }
+    .contentNarrow {
+      .t1 {
+        margin-top: -10px;
+        text-align: center;
+        width: 900px;
+      }
+      height: 200px;
+      z-index: 2;
+      @extend %flex-column;
+      max-width: 70vw;
+      @include for-size(s-only) {
+        max-width: 100%;
+      }
+      @include for-size(m-only1) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up) {
+        max-width: 100%;
+      }
+      @include for-size(xl-up1) {
+        max-width: 100%;
+      }
+    }
+    .monologueHeader {
+      color: $charcoal;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    .headerText {
+      text-align: center;
+    }
 
-  // copout logo
-  .copoutLogo {
-    height: 10rem;
-    width: 100%;
-    background: url('/assets/copout_logo.png') center center no-repeat;
-    background-size: contain;
+    // hands up logo
+    .handsUpLogo {
+      height: 8rem;
+      width: 100%;
+      background: url('/assets/handsup_logo.png') center center no-repeat;
+      background-size: contain;
+    }
+
+    // copout logo
+    .copoutLogo {
+      height: 10rem;
+      width: 100%;
+      background: url('/assets/copout_logo.png') center center no-repeat;
+      background-size: contain;
+    }
   }
 }
+
+// Content Section
 
 .sectionContribution {
   z-index: 2;
+  .contribution {
+    z-index: 3;
+    @extend %flex-column;
+    .sectionContent {
+      position: absolute;
+      @extend %flex-row;
+
+      .sidePhoto {
+        @extend %flex-column;
+        position: relative;
+        background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
+        background-size: cover;
+
+        @include for-size(m-only) {
+          margin-left: $space-m;
+          display: none;
+        }
+        @include for-size(l-up) {
+          margin-left: $space-l;
+        }
+        @include for-size(s-only) {
+          display: none;
+        }
+      }
+
+      .sideText {
+        @extend %flex-column;
+        align-items: flex-start;
+        flex-grow: 5;
+        flex-basis: $flex-basis;
+        a {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
 }
-.contribution {
-  z-index: 3;
-  @extend %flex-column;
+.externalLink {
+  background-image: url('/assets/external_link.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 20px; /* Adjust according to image size to push text across. */
 }
