@@ -71,9 +71,6 @@ $flex-basis: 100px;
       @include for-size(xl-up) {
         max-width: 100%;
       }
-      @include for-size(xl-up1) {
-        max-width: 100%;
-      }
     }
 
     // Hands up logo
