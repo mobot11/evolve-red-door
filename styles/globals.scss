@@ -87,7 +87,8 @@ h1 {
 
 /* second largest font-size */
 .t2,
-h2 {
+h2,
+h2 > * {
   @include fluid-type($bp-s, $bp-xl, $mod_m * $mod_m * $base-font-min, $mod_d * $mod_d * $base-font-max);
   font-family: 'Roboto', sans-serif;
   @include for-size(xl-up) {
