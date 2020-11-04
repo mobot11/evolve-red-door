@@ -6,23 +6,6 @@ import styles from '../styles/Monologues.module.scss';
 import Footer from '../components/Footer/Footer';
 
 const Monologues = () => {
-  // dom notes
-  // section: image
-  // h1 the monologues
-  // icon
-  // paragraph
-  // icon
-  // h2 hands up
-  // paragraph
-  // video (hands up)
-  // h3 more resources
-  // links (4 links)
-  // h2 Cop Out
-  // paragraph
-  // video (cop out)
-  // h3 more resources
-  // links (5 links)
-
   return (
     <div className="container">
       <Head>
@@ -54,10 +37,10 @@ const Monologues = () => {
             <div className={styles.handsUpLogo}></div>
           </div>
         </section>
-        {/* HANDS UP SECTION */}
-        <section className={styles.sectionMonologues}>
-          <div className={clsx(['section-content', styles.monologues])}>
-            <div className={styles.links}>
+        {/* Hands UP */}
+        <section>
+          <div className={clsx(['section-content', styles.content])}>
+            <div className={styles.sideText}>
               <h2 className={styles.h2}>Hands Up</h2>
               <p>
                 In light of the police shootings of Mike Brown in Ferguson, Missouri and John Crawford III in
@@ -66,39 +49,41 @@ const Monologues = () => {
                 institutional profiling.
               </p>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/aoT1Krp9HF4" frameborder="0"></iframe>
-              <h3 className={styles.h3}>More Resources</h3>
-              <div className={styles.links}>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://racc.org/2017/03/28/using-theatre-change-racial-ecology-portland/"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="Read about Hands Up and the Red Door mission."
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://youtu.be/UGRLXAeehDk"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="City Club Forum: Listen to Director Kevin Jones and Retired Deputy Chief Robert Day discuss Hands Up and its impact on law enforcement."
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://kboo.fm/media/59255-hands-and-kevin-jones"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="Listen to an interview with Kevin Jones on Stage and Studio on KBOO."
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://www.youtube.com/watch?v=5BvfYJflXGc&feature=youtu.be"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="Watch the New Black Fest’s trailer for the National Black Theater’s Production of Hands Up."
-                ></Link>
-              </div>
-            </div>
 
-            {/* COP OUT SECTION */}
-            <div className={clsx(['section-content', styles.monologues])}>
-              <div className={styles.links}>
-                <h2 className={styles.h2}>Cop Out</h2>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://racc.org/2017/03/28/using-theatre-change-racial-ecology-portland/"
+                propsForAnchor={{ target: '_blank' }}
+                text="Read about Hands Up and the Red Door mission."
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://youtu.be/UGRLXAeehDk"
+                propsForAnchor={{ target: '_blank' }}
+                text="City Club Forum: Listen to Director Kevin Jones and Retired Deputy Chief Robert Day discuss Hands Up and its impact on law enforcement."
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://kboo.fm/media/59255-hands-and-kevin-jones"
+                propsForAnchor={{ target: '_blank' }}
+                text="Listen to an interview with Kevin Jones on Stage and Studio on KBOO."
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://www.youtube.com/watch?v=5BvfYJflXGc&feature=youtu.be"
+                propsForAnchor={{ target: '_blank' }}
+                text="Watch the New Black Fest’s trailer for the National Black Theater’s Production of Hands Up."
+              ></Link>
+            </div>
+            <div className={styles.sideHandsUpPhoto}></div>
+          </div>
+        </section>
+        {/* Cop out */}
+        <section>
+          <div className={clsx(['section-content', styles.content, styles.topBorder])}>
+            <div className={styles.sideText}>
+              <h2 className={styles.h2}>Cop Out</h2>
+              <p>
                 <p>
                   The Red Door Project commissioned Cop Out: Beyond Black, White & Blue—a series of monologues developed
                   in conversation with Hands Up: 7 Playwrights, 7 Testaments. Cop Out monologues are based on interviews
@@ -106,48 +91,49 @@ const Monologues = () => {
                   cops of all ranks and experience as they interact with the community, each other, their families, and
                   the institutions they represent.
                 </p>
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/6YUH2Oj_0zE"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-                <h3 className={styles.h3}>More Resources</h3>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://www.oregonlive.com/expo/news/erry-2018/09/fd3c25314d6407/groundbreaking-portland-play-r.html"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="The Oregonian: Groundbreaking Portland play reveals the people behind the thin blue line."
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://www.pdxmonthly.com/articles/2018/12/21/what-happens-when-you-put-the-stories-of-police-officers-onstage"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="PDX Monthly: What Happens When you Put The Stories of Police Officers Onstage?"
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="http://www.orartswatch.org/talking-a-blue-streak/"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="OR ArtsWatch Cop Out Review: Talking A Blue Streak."
-                ></Link>
-                <Link
-                  linkClass={styles.externalLink}
-                  href="http://www.oregonlive.com/portland/index.ssf/2018/03/two_men_a_play_and_an_unlikely.html"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="The Oregonian: One play, two men, and a conversation about police and race."
-                ></Link>
+              </p>
 
-                <Link
-                  linkClass={styles.externalLink}
-                  href="https://www.orartswatch.org/from-hands-up-to-cop-out/"
-                  propsForAnchor={{ target: '_blank' }}
-                  text="OR ArtsWatch: From Hands Up to Cop Out."
-                ></Link>
-              </div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://www.oregonlive.com/expo/news/erry-2018/09/fd3c25314d6407/groundbreaking-portland-play-r.html"
+                propsForAnchor={{ target: '_blank' }}
+                text="The Oregonian: Groundbreaking Portland play reveals the people behind the thin blue line."
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="https://www.pdxmonthly.com/articles/2018/12/21/what-happens-when-you-put-the-stories-of-police-officers-onstage"
+                propsForAnchor={{ target: '_blank' }}
+                text="PDX Monthly: What Happens When you Put The Stories of Police Officers Onstage?"
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="http://www.orartswatch.org/talking-a-blue-streak/"
+                propsForAnchor={{ target: '_blank' }}
+                text="OR ArtsWatch Cop Out Review: Talking A Blue Streak."
+              ></Link>
+              <Link
+                linkClass={styles.externalLink}
+                href="http://www.oregonlive.com/portland/index.ssf/2018/03/two_men_a_play_and_an_unlikely.html"
+                propsForAnchor={{ target: '_blank' }}
+                text="The Oregonian: One play, two men, and a conversation about police and race."
+              ></Link>
+
+              <Link
+                linkClass={styles.externalLink}
+                href="https://www.orartswatch.org/from-hands-up-to-cop-out/"
+                propsForAnchor={{ target: '_blank' }}
+                text="OR ArtsWatch: From Hands Up to Cop Out."
+              ></Link>
             </div>
+            <div className={styles.sideCopOutPhoto}></div>
           </div>
         </section>
       </main>

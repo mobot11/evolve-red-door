@@ -17,7 +17,7 @@ $flex-basis: 100px;
   @include bg(b);
 }
 
-// top chair image
+// Top Image
 .img {
   height: 40rem;
   width: 100%;
@@ -25,7 +25,7 @@ $flex-basis: 100px;
   background-size: contain;
 }
 
-// header and paragraph
+// Header and Paragraph
 .sectionGem {
   @include bg(gem);
   .column {
@@ -64,7 +64,7 @@ $flex-basis: 100px;
       text-align: center;
     }
 
-    // hands up logo
+    // Hands up logo
     .handsUpLogo {
       height: 8rem;
       width: 100%;
@@ -72,7 +72,7 @@ $flex-basis: 100px;
       background-size: contain;
     }
 
-    // copout logo
+    // Copout logo
     .copoutLogo {
       height: 10rem;
       width: 100%;
@@ -83,51 +83,63 @@ $flex-basis: 100px;
 }
 
 // Content Section
+.content {
+  align-items: stretch;
+  padding-bottom: 0;
+  padding-right: 0;
+}
 
-.sectionMonologues {
-  z-index: 2;
-  .monologues {
-    z-index: 3;
-    @extend %flex-column;
-    .sectionContent {
-      position: absolute;
-      @extend %flex-row;
+.topBorder {
+  border-top: 2px solid $charcoal;
+}
 
-      .sidePhoto {
-        @extend %flex-column;
-        position: relative;
-        background: url('/assets/monologues_2.png') right center no-repeat;
-        background-size: cover;
+.sideHandsUpPhoto {
+  @extend %flex-column;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  position: relative;
+  background: url('/assets/monologues_2.png') right center no-repeat;
+  background-size: cover;
 
-        @include for-size(m-only) {
-          margin-left: $space-m;
-          display: none;
-        }
-        @include for-size(l-up) {
-          margin-left: $space-l;
-        }
-        @include for-size(s-only) {
-          display: none;
-        }
-      }
-
-      .sideText {
-        @extend %flex-column;
-        align-items: flex-start;
-        flex-grow: 5;
-        flex-basis: $flex-basis;
-        a {
-          font-weight: 600;
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
+  @include for-size(m-only) {
+    margin-left: $space-m;
+    display: none;
+  }
+  @include for-size(l-up) {
+    margin-left: $space-l;
+  }
+  @include for-size(s-only) {
+    display: none;
   }
 }
-// TODO: Fix hover state
-.externalLink {
-  background-image: url('/assets/external_link.png');
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 20px;
+
+.sideCopOutPhoto {
+  @extend %flex-column;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  position: relative;
+  background: url('/assets/monologues_3.png') right center no-repeat;
+  background-size: cover;
+
+  @include for-size(m-only) {
+    margin-left: $space-m;
+    display: none;
+  }
+  @include for-size(l-up) {
+    margin-left: $space-l;
+  }
+  @include for-size(s-only) {
+    display: none;
+  }
+}
+
+.sideText {
+  @extend %flex-column;
+  align-items: flex-start;
+  flex-grow: 5;
+  flex-basis: $flex-basis;
+  a {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
 }
