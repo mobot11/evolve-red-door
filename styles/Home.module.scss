@@ -152,6 +152,13 @@ $flex-basis: 100px;
   @include for-size(xl-up) {
     max-width: 1000px;
   }
+  @include for-ie11() {
+    width: 100%;
+    p {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .columns {
