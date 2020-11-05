@@ -32,14 +32,14 @@ const About = () => {
             </p>
             <Link
               href="https://giveguide.org/#the-august-wilson-red-door-project"
-              propsForAnchor={{ target: '_blank', className: styles.button }}
+              propsForAnchor={{ rel: 'noopener', target: '_blank', className: styles.button }}
               text="Donate"
             ></Link>
             <p>
               Or{' '}
               <Link
                 href="https://reddoorproject.org/wp-content/uploads/2020/08/RedDoorProjectDonationForm.pdf"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="download the donation form (PDF)"
               ></Link>{' '}
               and mail it in with your check or credit card information.
@@ -69,7 +69,7 @@ const About = () => {
                   of your donation to the Trust as a tax credit.{' '}
                   <Link
                     href="https://culturaltrust.org/"
-                    propsForAnchor={{ target: '_blank' }}
+                    propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                     text="Find all the details at culturaltrust.org"
                   ></Link>
                   .
@@ -89,7 +89,7 @@ const About = () => {
                   at no cost to you. When you shop at{' '}
                   <Link
                     href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=45-3729152&ref_=smi_ext_ch_45-3729152_cl"
-                    propsForAnchor={{ target: '_blank' }}
+                    propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                     text="smile.amazon.com"
                   ></Link>
                   , you’ll have the same shopping experience as Amazon.com, with the added bonus that Amazon will donate
@@ -100,7 +100,7 @@ const About = () => {
                   To shop at AmazonSmile simply go to{' '}
                   <Link
                     href="https://smile.amazon.com/gp/chpf/homepage/ref=smi_chpf_redirect?ie=UTF8&ein=45-3729152&ref_=smi_ext_ch_45-3729152_cl"
-                    propsForAnchor={{ target: '_blank' }}
+                    propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                     text="smile.amazon.com"
                   ></Link>
                   . On your first visit to AmazonSmile, you need to select a non-profit to receive donations from your
@@ -124,7 +124,7 @@ const About = () => {
                     Sign up for the Community Rewards Program by{' '}
                     <Link
                       href="https://www.fredmeyer.com/i/community/community-rewards"
-                      propsForAnchor={{ target: '_blank' }}
+                      propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                       text="linking your Fred Meyer’s Reward Card to the Red Door"
                     ></Link>
                     .
