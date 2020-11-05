@@ -125,6 +125,9 @@ $flex-basis: 100px;
     @include for-size(s-only1) {
       margin-top: $space-m;
     }
+    @include for-ie11() {
+      width: 100%;
+    }
   }
 }
 

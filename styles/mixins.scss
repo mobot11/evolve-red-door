@@ -163,6 +163,12 @@
   }
 }
 
+@mixin for-ie11 {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
 /* ................................. */
 
 /// strip-unit function @alias fluid-type mixin
