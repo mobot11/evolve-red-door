@@ -41,11 +41,15 @@ const KeepInTouch = () => {
             <h1 className={styles.h1}>Keep in Touch</h1>
             <p className={clsx([styles.h3, 't3'])}>We'd love to hear from you.</p>
             <div className={styles['social-links']}>
-              <IconLink variant="email" theme="background-gem-of-the-ocean" text="info@reddoorproject.org" />
-              <IconLink variant="phone" theme="background-gem-of-the-ocean" text="+1 (503) 451-0739" />
-              <IconLink variant="facebook" theme="background-gem-of-the-ocean" />
-              <IconLink variant="twitter" theme="background-gem-of-the-ocean" />
-              <IconLink variant="instagram" theme="background-gem-of-the-ocean" />
+              <div className={styles.firstRow}>
+                <IconLink variant="email" theme="background-gem-of-the-ocean" text="info@reddoorproject.org" />
+                <IconLink variant="phone" theme="background-gem-of-the-ocean" text="+1 (503) 451-0739" />
+              </div>
+              <div className={styles.secondRow}>
+                <IconLink variant="facebook" theme="background-gem-of-the-ocean" />
+                <IconLink variant="twitter" theme="background-gem-of-the-ocean" />
+                <IconLink variant="instagram" theme="background-gem-of-the-ocean" />
+              </div>
             </div>
           </div>
         </section>

@@ -109,20 +109,25 @@ $flex-basis: 100px;
 .social-links {
   @extend %flex-row;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-
-  :global(.icon-text) {
-    display: none;
+  @include for-size(s-only1) {
+    flex-direction: column;
   }
 
-  @include for-size(xl-up) {
-    :global(.icon-text) {
-      display: inline;
+  .firstRow,
+  .secondRow {
+    @extend %flex-row;
+    margin-top: $space-s;
+    & div {
+      margin: 0 $space-s;
     }
   }
 
-  & div {
-    margin: 0 $space-s;
+  .firstRow {
+    @include for-size(s-only1) {
+      flex-direction: column;
+    }
   }
 }
 

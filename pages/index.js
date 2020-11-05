@@ -33,7 +33,7 @@ export default function Home() {
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow])}>
             <h1 className={styles.h2}>
-              About <i>The Evolve Experience</i>{' '}
+              About <i>The Evolve Experience</i>
             </h1>
             <p>
               <i>The Evolve Experience</i> explores the relationship between criminal justice and the communities they
