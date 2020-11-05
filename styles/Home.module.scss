@@ -246,6 +246,9 @@ $flex-basis: 100px;
   padding-bottom: 0;
   padding-right: 0;
   border-bottom: 1px solid $black;
+  @include for-ie11() {
+    height: 100%;
+  }
 }
 
 .sidePhoto {
@@ -273,9 +276,6 @@ $flex-basis: 100px;
   }
   @include for-size(s-only) {
     display: none;
-  }
-  @include for-ie11() {
-    height: 1px;
   }
 }
 
@@ -322,6 +322,7 @@ $flex-basis: 100px;
   }
 
   @include for-ie11() {
+    height: 100%;
     q {
       display: block;
       width: 100%;
