@@ -256,6 +256,7 @@ section,
 .banner {
   min-height: 10rem;
   max-width: $max-size;
+  z-index: 3;
   @include bg(b);
   @extend %flex-column;
   padding: $space-s;
