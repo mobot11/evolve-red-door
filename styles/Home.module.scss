@@ -28,6 +28,12 @@ $flex-basis: 100px;
   & > * {
     color: $white;
   }
+  @include for-ie11() {
+    h2 {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .sectionGem {
@@ -140,6 +146,12 @@ $flex-basis: 100px;
 
 .content {
   @extend %flex-column;
+  @include for-ie11() {
+    h2 {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .contentNarrow {
@@ -157,6 +169,7 @@ $flex-basis: 100px;
   }
   @include for-ie11() {
     width: 100%;
+    h1,
     p {
       display: block;
       width: 100%;
@@ -259,6 +272,9 @@ $flex-basis: 100px;
   }
   @include for-size(s-only) {
     display: none;
+  }
+  @include for-ie11() {
+    height: 1px;
   }
 }
 
