@@ -90,6 +90,7 @@ const Monologues = () => {
             <div className={styles.sideHandsUpPhoto}></div>
           </div>
         </section>
+
         {/* Cop out */}
         <section>
           <div className={clsx(['section-content', styles.content, styles.topBorder])}>
