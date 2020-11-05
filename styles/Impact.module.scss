@@ -129,7 +129,8 @@ $flex-basis: 100px;
   align-items: stretch;
   padding-bottom: 0;
   padding-right: 0;
-  a {
+  a,
+  a > span {
     @include fluid-type($bp-s, $bp-xl, $mod_m * $base-font-min, $mod_d * $base-font-max);
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;

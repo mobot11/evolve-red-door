@@ -213,14 +213,15 @@ $flex-basis: 100px;
 .externalLink {
   font-weight: normal !important;
   background-image: url('/assets/external_link.png');
-  background-position: left top;
+  background-position: left 5px;
   background-repeat: no-repeat;
   padding-left: 20px;
-}
-.externalLink:hover {
-  font-weight: normal !important;
-  background-image: url('/assets/external_link.png');
-  background-position: left top;
-  background-repeat: no-repeat;
-  padding-left: 20px;
+  &:hover,
+  &:focus {
+    font-weight: normal !important;
+    background-image: url('/assets/external_link.png');
+    background-position: left 5px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+  }
 }
