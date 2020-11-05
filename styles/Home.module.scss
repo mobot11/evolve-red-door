@@ -107,6 +107,9 @@ $flex-basis: 100px;
     @include for-size(s-only) {
       width: 60%;
     }
+    @include for-ie11() {
+      min-height: 1px;
+    }
   }
 
   .quote {
@@ -172,6 +175,7 @@ $flex-basis: 100px;
   }
   @include for-ie11() {
     width: 100%;
+    flex: 1 1 auto;
   }
 }
 
@@ -192,10 +196,6 @@ $flex-basis: 100px;
     &:last-of-type() {
       margin-bottom: 0;
     }
-  }
-
-  @include for-ie11() {
-    flex: 1 1 auto;
   }
 }
 
@@ -267,6 +267,9 @@ $flex-basis: 100px;
   img {
     width: 100%;
     margin-bottom: $space-m;
+    @include for-ie11() {
+      min-height: 1px;
+    }
   }
 
   .h3 {
