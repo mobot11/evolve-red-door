@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
-import Link from '../components/Link/Link';
 import IconLink from '../components/Link/IconLink';
 import clsx from 'clsx';
 import styles from '../styles/KeepInTouch.module.scss';
@@ -96,6 +95,7 @@ const KeepInTouch = () => {
                       label="Email"
                       fullWidth
                       variant="outlined"
+                      inputProps={{ 'aria-label': 'Please add your email (required)' }}
                       required
                     />
                     <br />
@@ -106,6 +106,7 @@ const KeepInTouch = () => {
                       label="First Name"
                       variant="outlined"
                       className={styles.firstName}
+                      inputProps={{ 'aria-label': 'Please add your first name (required)' }}
                       required
                     />
                     <Field
@@ -115,6 +116,7 @@ const KeepInTouch = () => {
                       label="Last Name"
                       variant="outlined"
                       className={styles.lastName}
+                      inputProps={{ 'aria-label': 'Please add your last name (required)' }}
                       required
                     />
                     <br />
@@ -124,12 +126,14 @@ const KeepInTouch = () => {
                       type="text"
                       fullWidth
                       label="Where did you hear about the Red Door Project?"
+                      inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
                       variant="outlined"
                     />
                     {isSubmitting && <LinearProgress />}
                     <br />
                     <Button
                       variant="contained"
+                      style={{ textTransform: 'uppercase' }}
                       color="primary"
                       disableRipple
                       disabled={isSubmitting}
@@ -143,9 +147,7 @@ const KeepInTouch = () => {
               </Formik>
             </div>
           </div>
-          <div className={styles.keepInTouchImage}>
-            <img src="/assets/contact2.png" alt="" />
-          </div>
+          <div className={styles.keepInTouchImage}></div>
         </section>
       </main>
       <Footer />
