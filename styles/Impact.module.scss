@@ -152,7 +152,7 @@ $flex-basis: 100px;
   position: relative;
   &::after {
     content: '';
-    top: -7rem;
+    top: -20rem;
     left: 0;
     right: -10rem;
     bottom: 0;
@@ -160,6 +160,9 @@ $flex-basis: 100px;
     z-index: 1;
     background: url('/assets/impact_3_bwgrouphoto.png') right center no-repeat;
     background-size: cover;
+    @include for-size(xl-up) {
+      top: -10rem;
+    }
   }
   @include for-size(m-only) {
     margin-left: $space-m;
