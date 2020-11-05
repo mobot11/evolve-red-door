@@ -39,8 +39,8 @@ const KeepInTouch = () => {
         </div>
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow, styles.keepInTouch])}>
-            <h1 className={styles.h1}>KEEP IN TOUCH</h1>
-            <h3 className={styles.h3}>We'd love to hear from you.</h3>
+            <h1 className={styles.h1}>Keep in Touch</h1>
+            <p className={styles.h3}>We'd love to hear from you.</p>
             <div className={styles['social-links']}>
               <IconLink variant="email" theme="background-gem-of-the-ocean" text="info@reddoorproject.org" />
               <IconLink variant="phone" theme="background-gem-of-the-ocean" text="+1 (503) 451-0739" />
@@ -52,7 +52,7 @@ const KeepInTouch = () => {
         </section>
         <section>
           <div className={clsx('section-content', styles.newsletterSection)}>
-            <h2 className={styles.h2}>THE RED DOOR PROJECT NEWSLETTER</h2>
+            <h2 className={styles.h2}>The Red Door Project Newsletter</h2>
             <p>
               We send occasional newsletters with information about what's going on at the Red Door, and notifications
               to let you know when we have upcoming productions!

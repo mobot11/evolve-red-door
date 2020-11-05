@@ -78,11 +78,7 @@ $flex-basis: 100px;
 .sectionListItem {
   @extend %flex-row;
   align-items: flex-start;
-  // padding: $space-xl 0 $space-l;
-  // @include for-size(s-only1) {
-  //   flex-direction: column;
-  //   padding: $space-m 0 $space-s;
-  // }
+
   border-bottom: 1px solid $black;
   &:last-of-type {
     border-bottom: none;
@@ -121,15 +117,12 @@ $flex-basis: 100px;
   @include for-size(s-only1) {
     margin-left: 0;
   }
-  p {
-    font-size: 20px;
-    font-weight: 600;
-  }
 }
 
 .social-links {
   width: 100%;
-  padding-top: 50px;
+  max-width: 400px;
+  padding-top: $space-l;
   @extend %flex-row;
   justify-content: space-between;
   @include for-size(s-only) {
@@ -187,8 +180,6 @@ $flex-basis: 100px;
   padding-top: 65px;
   p {
     width: 620px;
-    font-size: 20px;
-    font-weight: 600;
     padding-bottom: 0;
     @media screen and (max-width: 690px) {
       width: 100%;
