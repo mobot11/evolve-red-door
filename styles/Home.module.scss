@@ -214,7 +214,12 @@ $flex-basis: 100px;
     width: calc(100% / 3 - #{$space-l});
   }
 
-  @include for-ie11-s-only1() {
+  @include for-ie11-s-only() {
+    display: block;
+    width: 100%;
+  }
+  @include for-ie11-m-only() {
+    display: block;
     width: 100%;
   }
 }

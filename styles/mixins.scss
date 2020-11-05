@@ -169,8 +169,14 @@
   }
 }
 
-@mixin for-ie11-s-only1 {
-  @media all and (-ms-high-contrast: none) and (max-width: #{$bp-s1 }) {
+@mixin for-ie11-s-only {
+  @media all and (-ms-high-contrast: none) and (max-width: #{$bp-s }) {
+    @content;
+  }
+}
+
+@mixin for-ie11-m-only {
+  @media all and (-ms-high-contrast: none) and (min-width: $bp-s + 1) and (max-width: #{$bp-l - 1}) {
     @content;
   }
 }
