@@ -175,7 +175,6 @@ $flex-basis: 100px;
   }
   @include for-ie11() {
     width: 100%;
-    flex: 1 1 auto;
   }
 }
 
@@ -195,6 +194,13 @@ $flex-basis: 100px;
     margin-bottom: $space-m;
     &:last-of-type() {
       margin-bottom: 0;
+    }
+  }
+  @include for-ie11() {
+    display: block;
+    width: calc(100% / 3 - #{$space-l});
+    @include for-size(s-only1) {
+      width: 100%;
     }
   }
 }
