@@ -27,8 +27,9 @@ const Monologues = () => {
                 <h1 className={clsx([styles.t1, styles.h1])}>The Monologues</h1>
                 <div className={clsx(['section-text', styles.headerText])}>
                   <p>
-                    The Evolve Experience interweaves monologues from The New Black Fest’s Hands Up: 7 Playwrights, 7
-                    Testaments, and the Red Door Project’s own Cop Out: Beyond Black, White & Blue.
+                    The Evolve Experience interweaves monologues from The New Black Fest’s{' '}
+                    <em>Hands Up: 7 Playwrights, 7 Testaments</em>, and the Red Door Project’s own{' '}
+                    <em>Cop Out: Beyond Black, White & Blue</em>.
                   </p>
                 </div>
               </div>
@@ -89,6 +90,7 @@ const Monologues = () => {
             <div className={styles.sideHandsUpPhoto}></div>
           </div>
         </section>
+
         {/* Cop out */}
         <section>
           <div className={clsx(['section-content', styles.content, styles.topBorder])}>
@@ -96,11 +98,11 @@ const Monologues = () => {
               <h2 className={styles.h2}>Cop Out</h2>
               <p>
                 <p>
-                  The Red Door Project commissioned Cop Out: Beyond Black, White & Blue—a series of monologues developed
-                  in conversation with Hands Up: 7 Playwrights, 7 Testaments. Cop Out monologues are based on interviews
-                  with law enforcement officers. Written by playwrights from across the country, the monologues depict
-                  cops of all ranks and experience as they interact with the community, each other, their families, and
-                  the institutions they represent.
+                  The Red Door Project commissioned <em>Cop Out: Beyond Black, White & Blue</em>—a series of monologues
+                  developed in conversation with <em>Hands Up: 7 Playwrights, 7 Testaments</em>. <em>Cop Out</em>{' '}
+                  monologues are based on interviews with law enforcement officers. Written by playwrights from across
+                  the country, the monologues depict cops of all ranks and experience as they interact with the
+                  community, each other, their families, and the institutions they represent.
                 </p>
               </p>
               <section className={styles.sectionVideo}>
