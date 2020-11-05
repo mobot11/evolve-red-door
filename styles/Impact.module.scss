@@ -137,6 +137,10 @@ $flex-basis: 100px;
       font-size: 24px;
     }
     line-height: 1.2em !important;
+    @include for-ie11() {
+      display: inline-block;
+      width: 100%;
+    }
   }
 }
 
