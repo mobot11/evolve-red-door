@@ -117,7 +117,7 @@ $flex-basis: 100px;
     max-width: 2 * $min-size;
     & > * {
       color: $white;
-      text-align: right;
+      text-align: left;
     }
     @include for-size(s-only) {
       width: 60%;

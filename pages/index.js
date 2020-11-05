@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | Home</title>
+        <title>The Evolve Experience</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,10 +32,13 @@ export default function Home() {
 
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow])}>
-            <h2 className={styles.h2}>
+            <h1 className={styles.h2}>
               About <i>The Evolve Experience</i>{' '}
-            </h2>
-            <p>Evolve explores the relationship between criminal justice and the communities they serve.</p>
+            </h1>
+            <p>
+              <i>The Evolve Experience</i> explores the relationship between criminal justice and the communities they
+              serve.
+            </p>
             <p>
               In the midst of profound conflict, <i>The Evolve Experience</i> challenges our biases and takes this
               charged, complex conversation to a level that generates compassion and empathy.
@@ -82,7 +85,7 @@ export default function Home() {
               <h3 className={styles.h3}>Theatre Component</h3>
               <img src="/assets/evolve_3_performersonstage.jpg" alt="Theatre component illustration. Actors on stage" />
               <p>
-                <i>The Evolve Experience</i> is built first on theatre —- dramatically-crafted stories based on both the
+                <i>The Evolve Experience</i> is built first on theatre - dramatically-crafted stories based on both the
                 lived experiences of African Americans and police officers struggling to make sense of a system that may
                 not be serving either the public or the officers themselves.
               </p>
@@ -114,7 +117,8 @@ export default function Home() {
               more equitably functioning local criminal justice ecosystems. You have the power to make this a reality.
             </q>
             <p>
-              <span>Kevin Jones and Lesli Mones</span>
+              <span>Kevin Jones and Lesli Mones, </span>
+              <br />
               <span>Founders, The Red Door Project</span>
             </p>
           </div>

@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | About Us</title>
+        <title>About Us</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -26,7 +26,7 @@ const About = () => {
             <div className={styles.sidePhoto}></div>
             <div className={styles.sideText}>
               <h1 className={clsx(['t1', styles.h1])}>About the Red Door Project</h1>
-              <p>
+              <p className="t3">
                 <strong>
                   Founded in 2011, The Red Door Project is a 501(c)(3) Nonprofit Organization on a mission to change
                   racial ecology through the arts.
@@ -77,7 +77,7 @@ const About = () => {
                   Media campaign resulting in state and national recognition, diversified funding and sustainability
                 </li>
               </ul>
-              <span className={styles.span}>
+              <span className={clsx([styles.span, 't3'])}>
                 To learn more,{' '}
                 <Link
                   href="https://reddoorproject.org/"

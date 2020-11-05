@@ -27,7 +27,7 @@ const KeepInTouch = () => {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | Keep in Touch</title>
+        <title>Keep in Touch</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -39,7 +39,7 @@ const KeepInTouch = () => {
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow, styles.keepInTouch])}>
             <h1 className={styles.h1}>Keep in Touch</h1>
-            <p className={styles.h3}>We'd love to hear from you.</p>
+            <p className={clsx([styles.h3, 't3'])}>We'd love to hear from you.</p>
             <div className={styles['social-links']}>
               <IconLink variant="email" theme="background-gem-of-the-ocean" text="info@reddoorproject.org" />
               <IconLink variant="phone" theme="background-gem-of-the-ocean" text="+1 (503) 451-0739" />
@@ -52,7 +52,7 @@ const KeepInTouch = () => {
         <section>
           <div className={clsx('section-content', styles.newsletterSection)}>
             <h2 className={styles.h2}>The Red Door Project Newsletter</h2>
-            <p>
+            <p className="t3">
               We send occasional newsletters with information about what's going on at the Red Door, and notifications
               to let you know when we have upcoming productions!
             </p>
@@ -92,7 +92,7 @@ const KeepInTouch = () => {
                       component={TextField}
                       name="email"
                       type="email"
-                      label="Email"
+                      label="Email required"
                       fullWidth
                       variant="outlined"
                       inputProps={{ 'aria-label': 'Please add your email (required)' }}
@@ -103,7 +103,7 @@ const KeepInTouch = () => {
                       component={TextField}
                       name="firstname"
                       type="text"
-                      label="First Name"
+                      label="First Name required"
                       variant="outlined"
                       className={styles.firstName}
                       inputProps={{ 'aria-label': 'Please add your first name (required)' }}
@@ -113,7 +113,7 @@ const KeepInTouch = () => {
                       component={TextField}
                       name="lastname"
                       type="text"
-                      label="Last Name"
+                      label="Last Name required"
                       variant="outlined"
                       className={styles.lastName}
                       inputProps={{ 'aria-label': 'Please add your last name (required)' }}
@@ -125,7 +125,7 @@ const KeepInTouch = () => {
                       name="message"
                       type="text"
                       fullWidth
-                      label="Where did you hear about the Red Door Project?"
+                      label="Where did you hear about the Red Door Project? (optional)"
                       inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
                       variant="outlined"
                     />

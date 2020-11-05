@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | Impact of The Evolve Experience</title>
+        <title>Impact of The Evolve Experience</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -22,7 +22,7 @@ const About = () => {
           <div className={clsx(['section-content', styles.impactSectionContent])}>
             <div className={styles.narrowContent}>
               <h1 className={styles.h1}>Impact of The Evolve Experience</h1>
-              <p>
+              <p className="t3">
                 <strong>
                   By providing a framework to witness lived experiences and engage in open dialogue,{' '}
                   <i>The Evolve Experience</i> enables participants to connect with their common humanity across
@@ -55,12 +55,12 @@ const About = () => {
             </div>
 
             <div className={styles.narrowContent}>
-              <p>
+              <p className="t3">
                 Immediately following <i>The Evolve Experience</i>, participants report increased motivation to:
               </p>
               <ul>
                 <li>Listen to people who have vastly different life experiences.</li>
-                <li>Form new partnerships with groups or organizations with alternative POV’s.</li>
+                <li>Form new partnerships with groups or organizations with alternative points of view.</li>
                 <li>Consider an opposing idea, even while holding a strong point of view.</li>
                 <li>
                   Identify specific ideas, channels and activities to improve relationships between the criminal justice
@@ -144,7 +144,7 @@ const About = () => {
               <Link
                 href="https://www.pbs.org/newshour/show/how-portlands-black-community-and-police-are-sharing-their-stories-through-theater"
                 propsForAnchor={{ target: '_blank' }}
-                text="PBS Newshour: How Portland’s black community and police are sharing their stories through
+                text="PBS Newshour: How Portland’s Black community and police are sharing their stories through
                   theater"
               ></Link>
               <p>
