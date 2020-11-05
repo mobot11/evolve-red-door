@@ -10,7 +10,7 @@ const Link = ({ href, text, propsForAnchor, linkClass = {} }) => {
       <a className={clsx(styles.link, anchorClassName, linkClass)} href={href} {...otherAnchorProps}>
         {text}
         <span className={styles.srOnly}>Opens in new window</span>
-        <i aria-hidden="true" class="fa fa-edit fa-external-link"></i>
+        <i aria-hidden="true" className="fa fa-edit fa-external-link"></i>
       </a>
     </React.Fragment>
   );

@@ -91,8 +91,6 @@ $flex-basis: 100px;
 // Content Section
 .content {
   align-items: stretch;
-  padding-bottom: 0;
-  padding-right: 0;
 }
 
 .topBorder {
@@ -104,8 +102,17 @@ $flex-basis: 100px;
   flex-grow: 4;
   flex-basis: $flex-basis;
   position: relative;
-  background: url('/assets/monologues_2.png') right center no-repeat;
-  background-size: cover;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -$space-l;
+    left: 0;
+    bottom: -$space-l;
+    z-index: 1;
+    background: url('/assets/monologues_2.png') right center no-repeat;
+    background-size: cover;
+  }
 
   @include for-size(m-only) {
     margin-left: $space-m;
@@ -118,16 +125,22 @@ $flex-basis: 100px;
     display: none;
   }
 }
-.moreResources {
-  padding-top: 10%;
-}
+
 .sideCopOutPhoto {
   @extend %flex-column;
   flex-grow: 5;
   flex-basis: $flex-basis;
-  position: relative;
-  background: url('/assets/monologues_bottom.png') right center no-repeat;
-  background-size: 100%;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -$space-l;
+    top: -$space-l;
+    left: 0;
+    bottom: -$space-l;
+    z-index: 1;
+    background: url('/assets/monologues_bottom.png') right center no-repeat;
+    background-size: cover;
+  }
 
   @include for-size(m-only) {
     margin-left: $space-m;
@@ -146,6 +159,7 @@ $flex-basis: 100px;
   align-items: flex-start;
   flex-grow: 4;
   flex-basis: $flex-basis;
+  z-index: 2;
   a {
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -153,6 +167,7 @@ $flex-basis: 100px;
 }
 
 // video container
+
 .sectionVideo {
   padding: 0;
 }
@@ -192,7 +207,6 @@ $flex-basis: 100px;
     height: 100%;
   }
 }
-
 // links
 .externalLink {
   font-weight: normal !important;

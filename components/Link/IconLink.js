@@ -41,7 +41,7 @@ const IconLink = ({ variant, text, anchorProps = {}, theme }) => {
     <div>
       <a href={href} className={clsx(styles[`icon-${theme}`], styles.iconLink)} {...anchorProps}>
         {icon} {text && <span className={clsx(styles.iconLinkText, 'icon-text')}>{text}</span>}
-        <span class="visuallyhidden">{label}</span>
+        <span className="visuallyhidden">{label}</span>
       </a>
     </div>
   );

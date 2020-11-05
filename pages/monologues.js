@@ -48,17 +48,16 @@ const Monologues = () => {
                 write monologues that explore their feelings about the well-being of Black people in a culture of
                 institutional profiling.
               </p>
-              <section className={styles.sectionVideo}>
+              <div className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
                     <iframe
                       title="Hands Up - This is what theater is for"
                       src="https://www.youtube.com/embed/aoT1Krp9HF4"
-                      frameborder="0"
                     ></iframe>
                   </div>{' '}
                 </div>
-              </section>
+              </div>
               <div className={styles.moreResources}>
                 <h3 className={styles.h3}>More Resources</h3>
                 <Link
@@ -97,27 +96,19 @@ const Monologues = () => {
             <div className={styles.sideText}>
               <h2 className={styles.h2}>Cop Out</h2>
               <p>
-                <p>
-                  The Red Door Project commissioned <em>Cop Out: Beyond Black, White & Blue</em>—a series of monologues
-                  developed in conversation with <em>Hands Up: 7 Playwrights, 7 Testaments</em>. <em>Cop Out</em>{' '}
-                  monologues are based on interviews with law enforcement officers. Written by playwrights from across
-                  the country, the monologues depict cops of all ranks and experience as they interact with the
-                  community, each other, their families, and the institutions they represent.
-                </p>
+                The Red Door Project commissioned <em>Cop Out: Beyond Black, White & Blue</em>—a series of monologues
+                developed in conversation with <em>Hands Up: 7 Playwrights, 7 Testaments</em>. <em>Cop Out</em>{' '}
+                monologues are based on interviews with law enforcement officers. Written by playwrights from across the
+                country, the monologues depict cops of all ranks and experience as they interact with the community,
+                each other, their families, and the institutions they represent.
               </p>
-              <section className={styles.sectionVideo}>
+              <div className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
-                    <iframe
-                      src="https://www.youtube.com/embed/6YUH2Oj_0zE"
-                      title="Cop Out: How it's Made"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>{' '}
+                    <iframe src="https://www.youtube.com/embed/6YUH2Oj_0zE" title="Cop Out: How it's Made"></iframe>
+                  </div>
                 </div>
-              </section>
+              </div>
               <div className={styles.moreResources}>
                 <h3 className={styles.h3}>More Resources</h3>
                 <Link
