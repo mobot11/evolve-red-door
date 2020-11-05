@@ -118,7 +118,9 @@ $flex-basis: 100px;
     display: none;
   }
 }
-
+.moreResources {
+  margin-top: 20px;
+}
 .sideCopOutPhoto {
   @extend %flex-column;
   flex-grow: 5;
