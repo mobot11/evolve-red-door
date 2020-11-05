@@ -81,7 +81,7 @@ const About = () => {
                 To learn more,{' '}
                 <Link
                   href="https://reddoorproject.org/"
-                  propsForAnchor={{ target: '_blank' }}
+                  propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                   text="visit RedDoorProject.org"
                 ></Link>
                 .

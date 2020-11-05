@@ -134,7 +134,7 @@ const About = () => {
               <h2 className={styles.h2}>Learn More</h2>
               <Link
                 href="https://www.youtube.com/watch?v=kqZpIRizRMQ&feature=youtu.be&ab_channel=TheRedDoorProject"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="Protect, Expand, Evolve"
               ></Link>
               <p>
@@ -143,7 +143,7 @@ const About = () => {
               </p>
               <Link
                 href="https://www.pbs.org/newshour/show/how-portlands-black-community-and-police-are-sharing-their-stories-through-theater"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="PBS Newshour: How Portland’s Black community and police are sharing their stories through
                   theater"
               ></Link>
@@ -153,7 +153,7 @@ const About = () => {
               </p>
               <Link
                 href="https://www.youtube.com/watch?v=za8KE_s5LgM&feature=youtu.be&ab_channel=TEDxTalks"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="Evolving Through Dissonance"
               ></Link>
               <p>
@@ -162,7 +162,7 @@ const About = () => {
               </p>
               <Link
                 href="https://listenerspodcast.uoregon.edu/2019/04/27/16-august-wilson-red-door-project-hands-up-cop-out-look-within-evolve/"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="Kevin and Lesli on The Listeners Podcast"
               ></Link>
               <p>
@@ -173,7 +173,7 @@ const About = () => {
               </p>
               <Link
                 href="https://www.portlandmercury.com/spring-arts-2019/2019/03/14/26148785/the-august-wilson-red-door-project-pushes-boundaries-with-a-purpose"
-                propsForAnchor={{ target: '_blank' }}
+                propsForAnchor={{ rel: 'noopener', target: '_blank' }}
                 text="
                   Portland Mercury: The Red Door Project Pushes Boundaries with a Purpose"
               ></Link>
