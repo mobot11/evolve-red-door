@@ -44,5 +44,5 @@ $space-xl: 4rem;
 
 /* Accessibility Requirements */
 $line-height: 1.5em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 1.5em
-$letter-spacing: 0.08em; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 0.12em
+$letter-spacing: 0; // WCAG 2.1 Success Criterion 1.4.12 Text Spacing AA: recommendation is min 0.12em
 $min-target-size: 44px; // WCAG 2.1 Success Criterion 2.5.5 Target Size AAA: recommendation is min 44px

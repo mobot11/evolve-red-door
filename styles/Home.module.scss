@@ -256,12 +256,10 @@ $flex-basis: 100px;
 .quoteSectionContent {
   @extend %flex-column;
   align-items: flex-end;
-  q {
-    text-align: end;
-  }
+  width: calc(100% * 2 / 3);
+
   p {
     margin-top: $space-s;
-    text-align: end;
   }
   @include for-size(s-only) {
     padding-left: $space-s;

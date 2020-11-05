@@ -84,6 +84,7 @@ h1 > * {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   line-height: 1.2em !important;
+  letter-spacing: 0.12em;
 }
 
 /* second largest font-size */
@@ -97,12 +98,16 @@ h2 > * {
   }
   text-transform: uppercase;
   line-height: 1.2em !important;
+  letter-spacing: 0.12em;
 }
 
 /* third largest font-size */
 .t3,
 h3,
-.t3 > * {
+.t3 > *,
+.t3 > strong,
+.t3 > strong > i,
+h3 > * {
   @include fluid-type($bp-s, $bp-xl, $mod_m * $base-font-min, $mod_d * $base-font-max);
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;
@@ -183,9 +188,9 @@ section,
   @extend %flex-row;
   max-width: $max-size;
   width: calc(100% - 2 * #{$space-m});
-  padding: $space-s;
+  padding: $space-m;
   @include for-size(m-only) {
-    padding: $space-m;
+    padding: $space-l;
   }
   @include for-size(l-up) {
     padding: $space-l;
