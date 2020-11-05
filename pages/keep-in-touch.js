@@ -27,7 +27,7 @@ const KeepInTouch = () => {
   return (
     <div className="container">
       <Head>
-        <title>The Evolve Experience | Keep in Touch</title>
+        <title>Keep in Touch</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
