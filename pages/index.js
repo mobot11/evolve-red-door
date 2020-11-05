@@ -32,9 +32,9 @@ export default function Home() {
 
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentNarrow])}>
-            <h2 className={styles.h2}>
+            <h1 className={styles.h2}>
               About <i>The Evolve Experience</i>{' '}
-            </h2>
+            </h1>
             <p>Evolve explores the relationship between criminal justice and the communities they serve.</p>
             <p>
               In the midst of profound conflict, <i>The Evolve Experience</i> challenges our biases and takes this
