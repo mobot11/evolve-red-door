@@ -22,7 +22,7 @@ const About = () => {
           <div className={clsx(['section-content', styles.impactSectionContent])}>
             <div className={styles.narrowContent}>
               <h1 className={styles.h1}>Impact of The Evolve Experience</h1>
-              <p>
+              <p className="t3">
                 <strong>
                   By providing a framework to witness lived experiences and engage in open dialogue,{' '}
                   <i>The Evolve Experience</i> enables participants to connect with their common humanity across
@@ -55,7 +55,7 @@ const About = () => {
             </div>
 
             <div className={styles.narrowContent}>
-              <p>
+              <p className="t3">
                 Immediately following <i>The Evolve Experience</i>, participants report increased motivation to:
               </p>
               <ul>

@@ -70,7 +70,8 @@ q {
 
 /* largest font-size */
 .t1,
-h1 {
+h1,
+h1 > * {
   @include fluid-type(
     $bp-s,
     $bp-xl,
@@ -100,7 +101,8 @@ h2 > * {
 
 /* third largest font-size */
 .t3,
-h3 {
+h3,
+.t3 > * {
   @include fluid-type($bp-s, $bp-xl, $mod_m * $base-font-min, $mod_d * $base-font-max);
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 600;
@@ -134,7 +136,7 @@ q > i {
 
 em,
 i {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 li {
