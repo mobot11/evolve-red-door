@@ -50,11 +50,24 @@
 .open-btn {
   font-size: 24px;
   padding-right: 10px;
+  margin-top: 8px;
   position: absolute;
+  top: 2px;
+  left: 0;
+  svg {
+    height: 24px;
+    width: 24px;
+  }
 }
 .close-btn {
   font-size: 24px;
   position: absolute;
   padding: 8px;
-  left: 0;
+  left: 6px;
+  top: 2px;
+
+  svg {
+    height: 24px;
+    width: 24px;
+  }
 }
