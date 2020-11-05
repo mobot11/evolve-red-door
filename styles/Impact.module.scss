@@ -51,6 +51,9 @@ $flex-basis: 100px;
   @include for-size(m-only) {
     flex-direction: column;
   }
+  @include for-ie11() {
+    width: 100%;
+  }
 }
 
 .narrowContent {
@@ -70,6 +73,18 @@ $flex-basis: 100px;
     &:last-of-type() {
       margin-bottom: 0;
     }
+  }
+  @include for-ie11() {
+    display: block;
+    width: calc(100% / 3 - #{$space-l});
+  }
+  @include for-ie11-s-only() {
+    display: block;
+    width: 100%;
+  }
+  @include for-ie11-m-only() {
+    display: block;
+    width: 100%;
   }
 }
 

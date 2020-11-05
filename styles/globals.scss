@@ -186,6 +186,18 @@ section,
   @include for-ie11() {
     height: 100%;
   }
+
+  @include for-ie11() {
+    & > p,
+    & > .t3,
+    & > h3,
+    & > h1,
+    & > h2,
+    & > q {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 .section-content {
