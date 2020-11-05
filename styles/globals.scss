@@ -221,7 +221,7 @@ section,
 
 .hero {
   height: 40rem;
-  width: 100%;
+  max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,6 +231,9 @@ section,
   }
   @include for-size(s-only) {
     height: 20rem;
+  }
+  @include for-size(xl-up) {
+    height: 50rem;
   }
 }
 
