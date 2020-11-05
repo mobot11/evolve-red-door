@@ -58,7 +58,31 @@
 .desktop-site-title,
 .desktop-nav {
   display: none;
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1023px) {
     display: block;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.25s ease;
+  animation: smoothScroll 0.5s forwards;
+  background: $charcoal;
+  padding-bottom: 0;
+  @media only screen and (min-width: 1023px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-142px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
