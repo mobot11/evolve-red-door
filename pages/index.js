@@ -46,13 +46,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sectionVideo}>
+        <div className={clsx(['section', styles.sectionVideo])}>
           <div className={clsx(['section-content', styles.video])}>
             <div className={styles.embedContainer}>
               <iframe title="The Evolve Experience" src="https://www.youtube.com/embed/vano1uIgU_g"></iframe>
             </div>
           </div>
-        </section>
+        </div>
 
         <section className={styles.sectionDeep}>
           <div className={clsx(['section-content', styles.impactSectionContent])}>
@@ -105,7 +105,7 @@ export default function Home() {
             <div className={styles.sidePhoto}></div>
           </div>
         </section>
-        <section className={styles.quoteSection}>
+        <div className={clsx(['section', styles.quoteSection])}>
           <div className={clsx(['section-content', styles.quoteSectionContent])}>
             <q>
               When we come to Evolve and we witness these stories on stage, we are seeing ourselves reflected. This show
@@ -122,7 +122,7 @@ export default function Home() {
               <span className="caption">Founders, The Red Door Project</span>
             </p>
           </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </div>
