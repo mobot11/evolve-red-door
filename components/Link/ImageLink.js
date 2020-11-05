@@ -7,7 +7,7 @@ const ImageLink = ({ href, alt, src, width, height, propsForAnchor = {}, propsFo
   const { className: anchorClassName, ...otherAnchorProps } = propsForAnchor;
   const { className: imageClassName, otherImageProps } = propsForImage;
   return (
-    <div className="footer-container">
+    <span className="footer-container">
       <span className={styles.linkContainer}>
         <a
           href={href}
@@ -17,7 +17,7 @@ const ImageLink = ({ href, alt, src, width, height, propsForAnchor = {}, propsFo
           <img src={src} width={width} height={height} className={imageClassName} alt={alt} {...otherImageProps} />
         </a>
       </span>
-    </div>
+    </span>
   );
 };
 
