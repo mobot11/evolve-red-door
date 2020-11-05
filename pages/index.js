@@ -117,9 +117,9 @@ export default function Home() {
               more equitably functioning local criminal justice ecosystems. You have the power to make this a reality.
             </q>
             <p>
-              <span>Kevin Jones and Lesli Mones, </span>
+              <span className="caption">Kevin Jones and Lesli Mones, </span>
               <br />
-              <span>Founders, The Red Door Project</span>
+              <span className="caption">Founders, The Red Door Project</span>
             </p>
           </div>
         </section>
