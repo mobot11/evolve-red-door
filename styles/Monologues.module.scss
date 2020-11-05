@@ -169,7 +169,9 @@ $flex-basis: 100px;
 // video container
 
 .sectionVideo {
-  padding: 0;
+  @extend %flex-column;
+  width: 100%;
+  padding: 0 0 $space-l 0;
 }
 
 .video {

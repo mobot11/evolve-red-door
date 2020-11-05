@@ -55,7 +55,7 @@ const Monologues = () => {
                       title="Hands Up - This is what theater is for"
                       src="https://www.youtube.com/embed/aoT1Krp9HF4"
                     ></iframe>
-                  </div>{' '}
+                  </div>
                 </div>
               </div>
               <div className={styles.moreResources}>
