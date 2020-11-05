@@ -1,6 +1,7 @@
 @charset 'utf-8';
 @import './variables';
 @import './mixins';
+@import './classes';
 
 .link {
   color: $deep-sea;
@@ -45,14 +46,6 @@
   display: block;
 }
 
-.iconLink {
-  display: inline-flex;
-  max-height: 50px;
-  svg {
-    border-radius: 100%;
-  }
-}
-
 .icon-background-deep-sea {
   svg {
     fill: $sea-foam;
@@ -88,10 +81,25 @@
   }
 }
 
+.iconLink {
+  @extend %flex-row;
+  display: inline-flex;
+  max-height: 50px;
+  &,
+  & > * {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1em !important;
+  }
+  svg {
+    border-radius: 100%;
+  }
+}
+
 .iconLinkText {
-  padding: 10px 0 0 20px;
+  margin-left: $space-s !important;
   color: $deep-sea;
-  font-size: 20px;
   text-decoration-color: $deep-sea;
   font-weight: 600;
+  padding: 0;
 }

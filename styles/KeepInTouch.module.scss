@@ -36,8 +36,6 @@ $flex-basis: 100px;
 
 .keepInTouch {
   color: $charcoal;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .sectionGem {
@@ -52,18 +50,8 @@ $flex-basis: 100px;
 .contentNarrow {
   z-index: 2;
   @extend %flex-column;
-  max-width: 70vw;
   @include for-size(s-only) {
     max-width: 100%;
-  }
-  @include for-size(m-only1) {
-    max-width: 80vw;
-  }
-  @include for-size(xl-up) {
-    max-width: 60vw;
-  }
-  @include for-size(xl-up1) {
-    max-width: 55vw;
   }
 }
 
@@ -78,11 +66,7 @@ $flex-basis: 100px;
 .sectionListItem {
   @extend %flex-row;
   align-items: flex-start;
-  // padding: $space-xl 0 $space-l;
-  // @include for-size(s-only1) {
-  //   flex-direction: column;
-  //   padding: $space-m 0 $space-s;
-  // }
+
   border-bottom: 1px solid $black;
   &:last-of-type {
     border-bottom: none;
@@ -121,17 +105,18 @@ $flex-basis: 100px;
   @include for-size(s-only1) {
     margin-left: 0;
   }
-  p {
-    font-size: 20px;
-    font-weight: 600;
-  }
 }
 
 .social-links {
-  width: 100%;
-  padding-top: 50px;
   @extend %flex-row;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: $space-l;
+  width: 100%;
+
+  :global(.icon-text) {
+    display: none;
+  }
+
   @include for-size(s-only) {
     margin-top: $space-l;
   }
@@ -139,10 +124,15 @@ $flex-basis: 100px;
     margin-top: $space-l;
   }
 
-  @media screen and (max-width: 1400px) {
-    span {
-      display: none;
+  @include for-size(xl-up) {
+    :global(.icon-text) {
+      display: inline;
     }
+    margin-top: $space-l;
+  }
+
+  & div {
+    margin: 0 $space-s;
   }
 }
 
@@ -187,8 +177,6 @@ $flex-basis: 100px;
   padding-top: 65px;
   p {
     width: 620px;
-    font-size: 20px;
-    font-weight: 600;
     padding-bottom: 0;
     @media screen and (max-width: 690px) {
       width: 100%;
@@ -197,12 +185,14 @@ $flex-basis: 100px;
 }
 
 .keepInTouchImage {
-  img {
+  &::after {
+    content: '';
     position: absolute;
     right: 0;
     bottom: 0;
     height: 450px;
     width: 650px;
+    background-image: url('/assets/contact2.png') center center no-repeat;
     @media screen and (max-width: 1200px) {
       display: none;
     }
