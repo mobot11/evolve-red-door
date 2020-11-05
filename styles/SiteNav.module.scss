@@ -24,8 +24,6 @@
 }
 .links {
   @include for-size(m-up) {
-    // display: flex;
-    // justify-content: space-evenly;
     text-align: right;
     margin-right: 15px;
   }

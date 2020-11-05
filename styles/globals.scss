@@ -115,7 +115,7 @@ h3 {
 .caption {
   @include fluid-type($bp-s, $bp-xl, $base-font-min / $mod_m * 1.2, $base-font-max / $mod_d * 1.2);
   font-family: 'Roboto Condensed', sans-serif;
-  font-style: italic;
+  font-style: italic !important;
 }
 
 a {

@@ -60,7 +60,7 @@ const About = () => {
               </p>
               <ul>
                 <li>Listen to people who have vastly different life experiences.</li>
-                <li>Form new partnerships with groups or organizations with alternative POV’s.</li>
+                <li>Form new partnerships with groups or organizations with alternative points of view.</li>
                 <li>Consider an opposing idea, even while holding a strong point of view.</li>
                 <li>
                   Identify specific ideas, channels and activities to improve relationships between the criminal justice
@@ -144,7 +144,7 @@ const About = () => {
               <Link
                 href="https://www.pbs.org/newshour/show/how-portlands-black-community-and-police-are-sharing-their-stories-through-theater"
                 propsForAnchor={{ target: '_blank' }}
-                text="PBS Newshour: How Portland’s black community and police are sharing their stories through
+                text="PBS Newshour: How Portland’s Black community and police are sharing their stories through
                   theater"
               ></Link>
               <p>
