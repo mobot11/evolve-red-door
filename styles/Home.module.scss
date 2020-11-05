@@ -262,6 +262,7 @@ $flex-basis: 100px;
   flex-basis: $flex-basis;
   align-items: flex-start;
   z-index: 2;
+
   @include bg(w);
 
   img {
@@ -277,7 +278,9 @@ $flex-basis: 100px;
   }
 
   @include for-ie11() {
+    width: 100%;
     & > p {
+      display: block;
       width: 100%;
     }
   }
@@ -293,5 +296,12 @@ $flex-basis: 100px;
   }
   @include for-size(s-only) {
     padding-left: $space-s;
+  }
+
+  @include for-ie11() {
+    q {
+      display: block;
+      width: 100%;
+    }
   }
 }
