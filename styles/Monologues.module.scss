@@ -5,6 +5,7 @@
 @import './classes';
 
 $flex-basis: 100px;
+$margin-big-header: -15rem;
 
 .h1,
 .h2,
@@ -84,20 +85,12 @@ $flex-basis: 100px;
     }
     .headerText {
       text-align: center;
-      @include for-size(s-only1) {
-        width: 50vw;
-      }
-      @include for-size(m-only1) {
-        max-width: 70vw;
-      }
-      @include for-size(xl-up) {
-        max-width: 100%;
-      }
+      width: 30rem;
     }
+
     // header icons for smaller screens
     .headerIcons {
       display: flex;
-      margin: -4rem 10rem 4rem;
       @include for-size(m-only1) {
         margin: -4rem 15rem 4rem;
       }
@@ -108,35 +101,44 @@ $flex-basis: 100px;
 
     // Hands up logo
     .handsUpLogo {
-      height: 8rem;
-      width: 100%;
+      height: 6rem;
+      width: 30rem;
       background: url('/assets/handsup_logo.png') center center no-repeat;
       background-size: contain;
+      margin-left: $margin-big-header;
       @include for-size(xs-only1) {
-        height: 3rem;
+        height: 6rem;
+        margin-right: 3rem;
       }
       @include for-size(s-only1) {
-        height: 4rem;
+        height: 6rem;
+        margin-right: 3rem;
       }
       @include for-size(m-only1) {
         height: 6rem;
+        margin-right: 3rem;
       }
     }
 
     // Copout logo
     .copoutLogo {
       height: 10rem;
-      width: 100%;
+      width: 30rem;
       background: url('/assets/copout_logo.png') center center no-repeat;
       background-size: contain;
+      margin-right: $margin-big-header;
+
       @include for-size(xs-only1) {
-        height: 3rem;
+        height: 9rem;
+        margin-right: -3rem;
       }
       @include for-size(s-only1) {
-        height: 4rem;
+        height: 9rem;
+        margin-right: -3rem;
       }
       @include for-size(m-only1) {
-        height: 7rem;
+        height: 9rem;
+        margin-right: -3rem;
       }
     }
   }

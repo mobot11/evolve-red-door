@@ -52,8 +52,8 @@ const Monologues = () => {
                 </div>
               </div>
               <div className={styles.headerIcons}>
-                <div className={styles.handsUpLogo}></div>
                 <div className={styles.copoutLogo}></div>
+                <div className={styles.handsUpLogo}></div>
               </div>
             </div>
           </div>
