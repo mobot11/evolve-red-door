@@ -52,6 +52,31 @@ $flex-basis: 100px;
         max-width: 100%;
       }
     }
+    .contentWrapperBig {
+      display: flex;
+      align-items: center;
+    }
+    .contentWrapperSmall {
+      display: none;
+    }
+
+    @include for-size(m-only1) {
+      .contentWrapperBig {
+        display: none;
+      }
+      .contentWrapperSmall {
+        display: block;
+      }
+    }
+    @include for-size(s-only1) {
+      .contentWrapperBig {
+        display: none;
+      }
+      .contentWrapperSmall {
+        display: block;
+      }
+    }
+
     .monologueHeader {
       color: $charcoal;
       padding-top: 60px;
@@ -69,6 +94,17 @@ $flex-basis: 100px;
         max-width: 100%;
       }
     }
+    // header icons for smaller screens
+    .headerIcons {
+      display: flex;
+      margin: -4rem 10rem 4rem;
+      @include for-size(m-only1) {
+        margin: -4rem 15rem 4rem;
+      }
+      @include for-size(s-only1) {
+        margin: 0 15rem 4rem;
+      }
+    }
 
     // Hands up logo
     .handsUpLogo {
@@ -76,6 +112,15 @@ $flex-basis: 100px;
       width: 100%;
       background: url('/assets/handsup_logo.png') center center no-repeat;
       background-size: contain;
+      @include for-size(xs-only1) {
+        height: 3rem;
+      }
+      @include for-size(s-only1) {
+        height: 4rem;
+      }
+      @include for-size(m-only1) {
+        height: 6rem;
+      }
     }
 
     // Copout logo
@@ -84,6 +129,15 @@ $flex-basis: 100px;
       width: 100%;
       background: url('/assets/copout_logo.png') center center no-repeat;
       background-size: contain;
+      @include for-size(xs-only1) {
+        height: 3rem;
+      }
+      @include for-size(s-only1) {
+        height: 4rem;
+      }
+      @include for-size(m-only1) {
+        height: 7rem;
+      }
     }
   }
 }
