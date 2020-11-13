@@ -8,12 +8,15 @@
   position: absolute;
   top: 0;
   button {
-    color: white;
+    color: $white;
     background: none;
+    @include for-ie11() {
+      line-height: 0;
+    }
   }
   .mobile-site-title {
     font-weight: 600;
-    color: white;
+    color: $white;
     margin-left: 39px;
     margin-top: 5px;
     display: block;
@@ -30,7 +33,7 @@
   padding: 6px 24px 14px;
   min-width: 320px;
   a {
-    color: white;
+    color: $white;
     margin: 0 15px 0 30px;
   }
   ul {
