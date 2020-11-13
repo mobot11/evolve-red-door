@@ -26,120 +26,61 @@ $margin-big-header: -15rem;
 // Header and Paragraph
 .sectionGem {
   @include bg(gem);
-  .column {
+  img {
+    max-width: 150px;
+  }
+
+  .contentWrapperBig {
     @extend %flex-row;
-    justify-content: space-between;
 
-    .contentNarrow {
-      .t1 {
-        margin-top: -10px;
-        text-align: center;
-        width: 900px;
-      }
-      height: 200px;
-      z-index: 2;
+    $flex-basis: 100px;
+    .copoutLogo,
+    .handsUpLogo {
       @extend %flex-column;
-      max-width: 70vw;
-      @include for-size(s-only) {
-        max-width: 100%;
-      }
-      @include for-size(m-only1) {
-        max-width: 100%;
-      }
-      @include for-size(xl-up) {
-        max-width: 100%;
-      }
-      @include for-size(xl-up1) {
-        max-width: 100%;
-      }
-    }
-    .contentWrapperBig {
-      display: flex;
-      align-items: center;
-    }
-    .contentWrapperSmall {
-      display: none;
-    }
-
-    @include for-size(m-only1) {
-      .contentWrapperBig {
-        display: none;
-      }
-      .contentWrapperSmall {
-        display: block;
-      }
-    }
-    @include for-size(s-only1) {
-      .contentWrapperBig {
-        display: none;
-      }
-      .contentWrapperSmall {
-        display: block;
-      }
+      flex-grow: 1;
+      flex-basis: flex-basis;
     }
 
     .monologueHeader {
-      color: $charcoal;
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-    .headerText {
-      text-align: center;
-      width: 30rem;
-    }
+      margin: 0 $space-l;
+      @extend %flex-column;
+      flex-grow: 2;
+      flex-basis: flex-basis;
 
-    // header icons for smaller screens
-    .headerIcons {
-      display: flex;
-      @include for-size(m-only1) {
-        margin: -4rem 15rem 4rem;
-      }
-      @include for-size(s-only1) {
-        margin: 0 15rem 4rem;
+      & > * {
+        text-align: center;
       }
     }
+    @include for-size(s-only) {
+      display: none;
+    }
+    @include for-size(m-only) {
+      display: none;
+    }
+  }
 
-    // Hands up logo
-    .handsUpLogo {
-      height: 6rem;
-      width: 30rem;
-      background: url('/assets/handsup_logo.png') center center no-repeat;
-      background-size: contain;
-      margin-left: $margin-big-header;
-      @include for-size(xs-only1) {
-        height: 6rem;
-        margin-right: 3rem;
-      }
-      @include for-size(s-only1) {
-        height: 6rem;
-        margin-right: 3rem;
-      }
-      @include for-size(m-only1) {
-        height: 6rem;
-        margin-right: 3rem;
+  .contentWrapperSmall {
+    @extend %flex-column;
+    width: 100%;
+    .monologueHeader {
+      @extend %flex-column;
+      margin-bottom: $space-m;
+      width: 100%;
+    }
+    .headerLogos {
+      @extend %flex-row;
+
+      width: 100%;
+      .copoutLogo,
+      .copoutLogo {
+        @extend %flex-column;
+        width: calc(100% / 2 - 2 * #{$space-s});
+        margin: 0 $space-s;
       }
     }
 
-    // Copout logo
-    .copoutLogo {
-      height: 10rem;
-      width: 30rem;
-      background: url('/assets/copout_logo.png') center center no-repeat;
-      background-size: contain;
-      margin-right: $margin-big-header;
-
-      @include for-size(xs-only1) {
-        height: 9rem;
-        margin-right: -3rem;
-      }
-      @include for-size(s-only1) {
-        height: 9rem;
-        margin-right: -3rem;
-      }
-      @include for-size(m-only1) {
-        height: 9rem;
-        margin-right: -3rem;
-      }
+    @include for-size(l-up) {
+      display: none;
     }
   }
 }
@@ -150,7 +91,7 @@ $margin-big-header: -15rem;
 }
 
 .topBorder {
-  border-top: 2px solid $charcoal;
+  border-top: 1px solid $charcoal;
 }
 
 .sideHandsUpPhoto {
