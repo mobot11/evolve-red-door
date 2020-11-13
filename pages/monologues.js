@@ -22,7 +22,13 @@ const Monologues = () => {
         <section className={styles.sectionGem}>
           <div className={styles.column}>
             <div className={styles.contentWrapperBig}>
-              <div className={styles.copoutLogo}></div>
+              <img
+                className={styles.copoutLogo}
+                src="/assets/copout_logo.png"
+                alt="Cop Out. Beyond Black, White and Blue."
+                width="100"
+              />
+
               <div className={styles.monologueHeader}>
                 <div className={clsx(['section-content', styles.narrowContent, styles.contentNarrow])}>
                   <h1 className={clsx([styles.t1, styles.h1])}>The Monologues</h1>
@@ -35,7 +41,12 @@ const Monologues = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.handsUpLogo}></div>
+              <img
+                className={styles.handsUpLogo}
+                src="/assets/handsup_logo.png"
+                alt="The New Black Fest's Hands Up: 7 playwrights 7 testaments."
+                width="200"
+              />
             </div>
             {/* small screens */}
             <div className={styles.contentWrapperSmall}>
@@ -52,8 +63,18 @@ const Monologues = () => {
                 </div>
               </div>
               <div className={styles.headerIcons}>
-                <div className={styles.copoutLogo}></div>
-                <div className={styles.handsUpLogo}></div>
+                <img
+                  className={styles.copoutLogo}
+                  src="/assets/copout_logo.png"
+                  alt="Cop Out: Beyond Black, White and Blue."
+                  width="50"
+                />
+                <img
+                  className={styles.handsUpLogo}
+                  src="/assets/handsup_logo.png"
+                  alt="The New Black Fest's Hands Up: 7 playwrights 7 testaments."
+                  width="100"
+                />
               </div>
             </div>
           </div>

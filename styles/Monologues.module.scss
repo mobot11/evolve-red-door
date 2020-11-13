@@ -101,9 +101,8 @@ $margin-big-header: -15rem;
 
     // Hands up logo
     .handsUpLogo {
-      height: 6rem;
-      width: 30rem;
-      background: url('/assets/handsup_logo.png') center center no-repeat;
+      display: flex;
+      position: relative;
       background-size: contain;
       margin-left: $margin-big-header;
       @include for-size(xs-only1) {
@@ -122,9 +121,6 @@ $margin-big-header: -15rem;
 
     // Copout logo
     .copoutLogo {
-      height: 10rem;
-      width: 30rem;
-      background: url('/assets/copout_logo.png') center center no-repeat;
       background-size: contain;
       margin-right: $margin-big-header;
 
