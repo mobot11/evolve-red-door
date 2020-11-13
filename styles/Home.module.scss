@@ -24,6 +24,21 @@ $flex-basis: 100px;
     h2 {
       text-align: center;
     }
+    .column {
+      text-align: center;
+      text-decoration: none;
+      @include for-size(s-only) {
+        padding-right: 0;
+        padding-bottom: $space-m;
+        margin-bottom: 0;
+        flex-basis: 1px;
+      }
+      @include for-size(m-only) {
+        padding-right: 0;
+        padding-bottom: $space-m;
+        flex-basis: 1px;
+      }
+    }
   }
   & > * {
     color: $white;

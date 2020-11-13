@@ -59,18 +59,18 @@ export default function Home() {
             <h2 className={styles.h2}>
               Problems Addressed by <i>The Evolve Experience</i>
             </h2>
-            <div className={styles.columns}>
-              <p className={styles.column}>
+            <ul className={styles.columns}>
+              <li className={styles.column}>
                 The hyper-divisive public climate leading to breakdown in public conversation.
-              </p>
-              <p className={styles.column}>
+              </li>
+              <li className={styles.column}>
                 Conflicting agendas and cultural differences leading to a lack of trust between criminal justice
                 institutions and community.
-              </p>
-              <p className={styles.column}>
+              </li>
+              <li className={styles.column}>
                 Increased harm and decreased public safety for vulnerable populations and law enforcement.
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
