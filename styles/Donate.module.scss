@@ -137,6 +137,7 @@ $flex-basis: 100px;
   }
   @include for-ie11() {
     width: 100%;
+    display: block;
   }
 }
 $flex-basis: 100px;
@@ -153,6 +154,10 @@ $flex-basis: 100px;
       height: auto;
     }
   }
+  @include for-ie11() {
+    display: block;
+    width: 100&;
+  }
 }
 
 .sectionDescription {
@@ -166,5 +171,6 @@ $flex-basis: 100px;
   }
   @include for-ie11() {
     display: block;
+    width: 100&;
   }
 }
