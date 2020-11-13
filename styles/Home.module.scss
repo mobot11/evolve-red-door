@@ -53,6 +53,9 @@ $flex-basis: 100px;
 
 .sectionGem {
   @include bg(gem);
+  p {
+    color: $black;
+  }
 
   &::after {
     content: '';
