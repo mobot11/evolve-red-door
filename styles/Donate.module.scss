@@ -99,6 +99,11 @@ $flex-basis: 100px;
   @include for-size(xl-up) {
     max-width: 1000px;
   }
+  @include for-ie11() {
+    p {
+      width: 100%;
+    }
+  }
 }
 
 .sectionContribution {
