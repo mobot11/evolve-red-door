@@ -12,9 +12,11 @@
     top: 0;
     z-index: 50;
     color: $white;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40px, rgba(0, 212, 255, 0) 100%);
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40px, rgba(0, 212, 255, 0) 100%); // add after competition
+    @include bg(b); // remove after competition
     padding-top: $space-m;
-    padding-bottom: 20px;
+    // padding-bottom: 20px; // add after competition
+    padding-bottom: $space-m; // remove after competition
     min-height: 3rem;
     a {
       font-size: 20px;
@@ -70,7 +72,7 @@
   top: 0;
   width: 100%;
   transition: all 0.5s ease;
-  animation: smoothScroll 0.3s forwards;
+  // animation: smoothScroll 0.3s forwards; // add after competition
   background: $charcoal;
   padding-bottom: 0;
   @media only screen and (min-width: 1023px) {
@@ -79,12 +81,12 @@
   }
 }
 
-@keyframes smoothScroll {
-  0% {
-    transform: translateY(-142px);
-  }
+// @keyframes smoothScroll { // add after competition
+//   0% {
+//     transform: translateY(-142px);
+//   }
 
-  100% {
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
