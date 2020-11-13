@@ -11,6 +11,10 @@ const Monologues = () => {
       <Head>
         <title>The Monologues</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="The Evolve Experience interweaves monologues from The New Black Fest’s Hands Up: 7 Playwrights, 7 Testaments, and the Red Door Project’s own Cop Out: Beyond Black, White & Blue."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />

@@ -11,6 +11,10 @@ const About = () => {
       <Head>
         <title>About Us</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="The mission of The Red Door Project is to change racial ecology through the arts. Our systems approach to exploring race and human interaction provides a framework for examining root causes of problems and needed policy changes."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
@@ -18,7 +22,7 @@ const About = () => {
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
           <div className={clsx(['banner', styles.banner])}>
-            <img src="/assets/rdplogo.png" alt="The Red Door Project logo" />
+            <img src="/assets/rdplogo.png" alt="The Red Door Project logo." />
           </div>
         </div>
         <section>

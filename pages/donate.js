@@ -11,6 +11,10 @@ const About = () => {
       <Head>
         <title>Donate</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Donate to The Red Door Project and help create a society where everyone will thrive."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
@@ -59,7 +63,7 @@ const About = () => {
             <h2 className={styles.h2}>Other ways to contribute</h2>
             <div className={styles.sectionListItem}>
               <div className={styles.sectionImage}>
-                <img src="/assets/cultural_trust_logo.png" alt="Cultural Trust logo" />
+                <img src="/assets/cultural_trust_logo.png" alt="Cultural Trust logo." />
               </div>
               <div className={styles.sectionDescription}>
                 <h3 className={styles.h3}>Oregon Cultural Trust</h3>
@@ -79,7 +83,7 @@ const About = () => {
 
             <div className={styles.sectionListItem}>
               <div className={styles.sectionImage}>
-                <img src="/assets/amazon_smile_logo.png" alt="Amazon Smile logo" />
+                <img src="/assets/amazon_smile_logo.png" alt="Amazon Smile logo." />
               </div>
               <div className={styles.sectionDescription}>
                 <h3 className={styles.h3}>Shop With Amazon Smile</h3>
@@ -113,7 +117,7 @@ const About = () => {
 
             <div className={styles.sectionListItem}>
               <div className={styles.sectionImage}>
-                <img src="/assets/fred_meyers_community_rewards_logo.jpg" alt="Fred Meyer’s Community Rewards logo" />
+                <img src="/assets/fred_meyers_community_rewards_logo.jpg" alt="Fred Meyer’s Community Rewards logo." />
               </div>
               <div className={styles.sectionDescription}>
                 <h3 className={styles.h3}>Shop With Your Fred Meyer’s Reward Card</h3>

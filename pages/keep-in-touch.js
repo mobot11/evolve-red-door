@@ -29,6 +29,10 @@ const KeepInTouch = () => {
       <Head>
         <title>Keep in Touch</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Send us an email, give us a call, follow us on social media, or sign up for our newsletter."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
