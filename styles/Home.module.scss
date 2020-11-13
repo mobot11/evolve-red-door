@@ -239,27 +239,6 @@ $flex-basis: 100px;
   }
 }
 
-.problemsColumn {
-  .column {
-    @include for-size(s-only) {
-      flex-direction: row;
-      align-items: flex-start;
-      &::before {
-        content: '○';
-        margin-right: $space-xs;
-      }
-    }
-    @include for-size(m-only) {
-      flex-direction: row;
-      align-items: flex-start;
-      &::before {
-        content: '○';
-        margin-right: $space-xs;
-      }
-    }
-  }
-}
-
 .content {
   flex-direction: row;
   align-items: stretch;
