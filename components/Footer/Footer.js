@@ -12,7 +12,7 @@ const Footer = ({}) => {
       <div className={clsx(styles['footer-content'], styles['footer-top'])}>
         <ImageLink
           src="assets/reddoorproject_logo_seafoam.png"
-          alt="Red Door Project Home"
+          alt="Red Door Project homepage link"
           href="https://reddoorproject.org/"
           width={270}
           variant="dark-background"
@@ -33,7 +33,7 @@ const Footer = ({}) => {
         <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
-            alt="Knowbility Home"
+            alt="Knowbility homepage link"
             href="https://knowbility.org/"
             width={180}
             height={60}

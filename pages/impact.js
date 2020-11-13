@@ -11,6 +11,10 @@ const About = () => {
       <Head>
         <title>Impact of The Evolve Experience</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="The Evolve Experience enables participants to connect with their common humanity across difference, discover shared values, take on alternative views, see multiple truths and understand what it might feel like to be someone else."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />

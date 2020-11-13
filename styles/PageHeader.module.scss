@@ -10,13 +10,14 @@
     left: 0;
     right: 0;
     top: 0;
-    z-index: 4;
+    z-index: 50;
     color: $white;
     // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40px, rgba(0, 212, 255, 0) 100%); // removing for the competition
     @include bg(b); // adding for the competition
     padding-top: $space-m;
     // padding-bottom: 20px; // removing for the competition
     padding-bottom: $space-m; // adding for the competition
+    min-height: 3rem;
     a {
       font-size: 20px;
       font-family: 'Roboto Condensed', sans-serif;

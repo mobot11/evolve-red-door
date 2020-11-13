@@ -99,6 +99,11 @@ $flex-basis: 100px;
   @include for-size(xl-up) {
     max-width: 1000px;
   }
+  @include for-ie11() {
+    p {
+      width: 100%;
+    }
+  }
 }
 
 .sectionContribution {
@@ -130,6 +135,16 @@ $flex-basis: 100px;
       background: rgba(0, 64, 80, 0.2);
     }
   }
+  @include for-ie11() {
+    width: 100%;
+  }
+
+  @include for-ie11-s-only() {
+    display: block;
+  }
+  @include for-ie11-m-only() {
+    display: block;
+  }
 }
 $flex-basis: 100px;
 
@@ -145,6 +160,10 @@ $flex-basis: 100px;
       height: auto;
     }
   }
+  @include for-ie11() {
+    display: block;
+    width: 100&;
+  }
 }
 
 .sectionDescription {
@@ -155,5 +174,9 @@ $flex-basis: 100px;
   margin-left: $space-l;
   @include for-size(s-only1) {
     margin-left: 0;
+  }
+  @include for-ie11() {
+    display: block;
+    width: 100&;
   }
 }

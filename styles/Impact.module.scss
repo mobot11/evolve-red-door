@@ -54,10 +54,19 @@ $flex-basis: 100px;
   @include for-ie11() {
     width: 100%;
   }
+  @include for-ie11-s-only() {
+    display: block;
+  }
+  @include for-ie11-m-only() {
+    display: block;
+  }
 }
 
 .narrowContent {
   max-width: $bp-l;
+  @include for-ie11() {
+    width: 100%;
+  }
 }
 
 .column {
@@ -184,6 +193,9 @@ $flex-basis: 100px;
   a {
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+  @include for-ie11() {
+    display: block;
   }
 }
 

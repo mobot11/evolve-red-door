@@ -11,6 +11,10 @@ const About = () => {
       <Head>
         <title>Donate</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Donate to The Red Door Project and help create a society where everyone will thrive."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />

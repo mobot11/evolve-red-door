@@ -11,6 +11,10 @@ const Monologues = () => {
       <Head>
         <title>The Monologues</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="The Evolve Experience interweaves monologues from The New Black Fest’s Hands Up: 7 Playwrights, 7 Testaments, and the Red Door Project’s own Cop Out: Beyond Black, White & Blue."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
@@ -20,23 +24,45 @@ const Monologues = () => {
         </div>
 
         <section className={styles.sectionGem}>
-          <div className={styles.column}>
-            <div className={styles.copoutLogo}></div>
+          <div className={clsx(['section-content', styles.contentWrapperBig])}>
+            <div className={styles.copoutLogo}>
+              <img src="/assets/copout_logo.png" alt="Cop Out logo" />
+            </div>
             <div className={styles.monologueHeader}>
-              <div className={clsx(['section-content', styles.narrowContent, styles.contentNarrow])}>
-                <h1 className={clsx([styles.t1, styles.h1])}>The Monologues</h1>
-                <div className={clsx(['section-text', styles.headerText])}>
-                  <p>
-                    The Evolve Experience interweaves monologues from The New Black Fest’s{' '}
-                    <em>Hands Up: 7 Playwrights, 7 Testaments</em>, and the Red Door Project’s own{' '}
-                    <em>Cop Out: Beyond Black, White & Blue</em>.
-                  </p>
-                </div>
+              <h1 className={styles.h1}>The Monologues</h1>
+              <p>
+                The Evolve Experience interweaves monologues from The New Black Fest’s{' '}
+                <em>Hands Up: 7 Playwrights, 7 Testaments</em>, and the Red Door Project’s own{' '}
+                <em>Cop Out: Beyond Black, White & Blue</em>.
+              </p>
+            </div>
+            <div className={styles.handsUpLogo}>
+              <img src="/assets/handsup_logo.png" alt="Hands Up logo" />
+            </div>
+          </div>
+
+          {/* small screens */}
+
+          <div className={clsx(['section-content', styles.contentWrapperSmall])}>
+            <div className={styles.monologueHeader}>
+              <h1 className={clsx([styles.t1, styles.h1])}>The Monologues</h1>
+              <p>
+                The Evolve Experience interweaves monologues from The New Black Fest’s{' '}
+                <em>Hands Up: 7 Playwrights, 7 Testaments</em>, and the Red Door Project’s own{' '}
+                <em>Cop Out: Beyond Black, White & Blue</em>.
+              </p>
+            </div>
+            <div className={styles.headerLogos}>
+              <div className={styles.copoutLogo}>
+                <img src="/assets/copout_logo.png" alt="Cop Out logo" />
+              </div>
+              <div className={styles.handsUpLogo}>
+                <img src="/assets/handsup_logo.png" alt="Hands Up logo" />
               </div>
             </div>
-            <div className={styles.handsUpLogo}></div>
           </div>
         </section>
+
         {/* Hands UP */}
         <section>
           <div className={clsx(['section-content', styles.content])}>

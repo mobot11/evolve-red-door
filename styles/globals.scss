@@ -120,7 +120,7 @@ h3 > * {
 /* first font-size smaller that base font-size */
 .s1,
 .caption {
-  @include fluid-type($bp-s, $bp-xl, $base-font-min / $mod_m * 1.2, $base-font-max / $mod_d * 1.2);
+  @include fluid-type($bp-s, $bp-xl, $base-font-min / $mod_m * 1.3, $base-font-max / $mod_d * 1.3);
   font-family: 'Roboto Condensed', sans-serif !important;
   font-style: italic !important;
 }
