@@ -5,7 +5,6 @@
 @import './classes';
 
 $flex-basis: 100px;
-$margin-big-header: -15rem;
 
 .h1,
 .h2,
@@ -32,8 +31,6 @@ $margin-big-header: -15rem;
 
   .contentWrapperBig {
     @extend %flex-row;
-
-    $flex-basis: 100px;
     .copoutLogo,
     .handsUpLogo {
       @extend %flex-column;
