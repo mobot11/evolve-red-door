@@ -39,10 +39,16 @@ $flex-basis: 100px;
     }
 
     .monologueHeader {
+      width: 100%;
       margin: 0 $space-l;
       @extend %flex-column;
       flex-grow: 2;
       flex-basis: flex-basis;
+
+      h1,
+      p {
+        width: 100%;
+      }
 
       & > * {
         text-align: center;
@@ -63,6 +69,14 @@ $flex-basis: 100px;
       @extend %flex-column;
       margin-bottom: $space-m;
       width: 100%;
+      h1,
+      p {
+        width: 100%;
+      }
+
+      & > * {
+        text-align: center;
+      }
     }
     .headerLogos {
       @extend %flex-row;
