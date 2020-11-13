@@ -31,12 +31,12 @@ $flex-basis: 100px;
         padding-right: 0;
         padding-bottom: $space-m;
         margin-bottom: 0;
-        flex-basis: 1px;
+        flex-basis: auto;
       }
       @include for-size(m-only) {
         padding-right: 0;
         padding-bottom: $space-m;
-        flex-basis: 1px;
+        flex-basis: auto;
       }
     }
   }
