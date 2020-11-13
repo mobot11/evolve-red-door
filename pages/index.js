@@ -10,6 +10,10 @@ export default function Home() {
       <Head>
         <title>The Evolve Experience</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="The Evolve Experience is a workshop that explores the relationship between criminal justice professionals and the communities they serve."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
@@ -83,7 +87,10 @@ export default function Home() {
                 professionals and community stakeholders that combines dramatic storytelling and audience engagement.
               </p>
               <h3 className={styles.h3}>Theatre Component</h3>
-              <img src="/assets/evolve_3_performersonstage.jpg" alt="Theatre component illustration. Actors on stage" />
+              <img
+                src="/assets/evolve_3_performersonstage.jpg"
+                alt="Theatre component illustration. Actors on stage."
+              />
               <p>
                 <i>The Evolve Experience</i> is built first on theatre - dramatically-crafted stories based on both the
                 lived experiences of African Americans and police officers struggling to make sense of a system that may
@@ -93,7 +100,7 @@ export default function Home() {
               <h3 className={styles.h3}>Audience Engagement</h3>
               <img
                 src="/assets/evolve_4_peoplediscussing.jpg"
-                alt="Audience engagement illustration. People discussing"
+                alt="Audience engagement illustration. People discussing."
               />
               <p>
                 The theatrical portion of the program is followed by a curriculum designed to encourage participants to

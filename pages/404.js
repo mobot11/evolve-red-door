@@ -12,6 +12,7 @@ const error404 = () => {
       <Head>
         <title>Page Not Found</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="404 error. Page not found." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
