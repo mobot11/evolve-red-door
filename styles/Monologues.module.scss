@@ -25,65 +25,59 @@ $flex-basis: 100px;
 // Header and Paragraph
 .sectionGem {
   @include bg(gem);
-  .column {
+  img {
+    max-width: 150px;
+  }
+
+  .contentWrapperBig {
     @extend %flex-row;
-    justify-content: space-between;
-
-    .contentNarrow {
-      .t1 {
-        margin-top: -10px;
-        text-align: center;
-        width: 900px;
-      }
-      height: 200px;
-      z-index: 2;
-      @extend %flex-column;
-      max-width: 70vw;
-      @include for-size(s-only) {
-        max-width: 100%;
-      }
-      @include for-size(m-only1) {
-        max-width: 100%;
-      }
-      @include for-size(xl-up) {
-        max-width: 100%;
-      }
-      @include for-size(xl-up1) {
-        max-width: 100%;
-      }
-    }
-    .monologueHeader {
-      color: $charcoal;
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-    .headerText {
-      text-align: center;
-      @include for-size(s-only1) {
-        width: 50vw;
-      }
-      @include for-size(m-only1) {
-        max-width: 70vw;
-      }
-      @include for-size(xl-up) {
-        max-width: 100%;
-      }
-    }
-
-    // Hands up logo
+    .copoutLogo,
     .handsUpLogo {
-      height: 8rem;
-      width: 100%;
-      background: url('/assets/handsup_logo.png') center center no-repeat;
-      background-size: contain;
+      @extend %flex-column;
+      flex-grow: 1;
+      flex-basis: flex-basis;
     }
 
-    // Copout logo
-    .copoutLogo {
-      height: 10rem;
+    .monologueHeader {
+      margin: 0 $space-l;
+      @extend %flex-column;
+      flex-grow: 2;
+      flex-basis: flex-basis;
+
+      & > * {
+        text-align: center;
+      }
+    }
+    @include for-size(s-only) {
+      display: none;
+    }
+    @include for-size(m-only) {
+      display: none;
+    }
+  }
+
+  .contentWrapperSmall {
+    @extend %flex-column;
+    width: 100%;
+    .monologueHeader {
+      @extend %flex-column;
+      margin-bottom: $space-m;
       width: 100%;
-      background: url('/assets/copout_logo.png') center center no-repeat;
-      background-size: contain;
+    }
+    .headerLogos {
+      @extend %flex-row;
+
+      width: 100%;
+      .copoutLogo,
+      .copoutLogo {
+        @extend %flex-column;
+        width: calc(100% / 2 - 2 * #{$space-s});
+        margin: 0 $space-s;
+      }
+    }
+
+    @include for-size(l-up) {
+      display: none;
     }
   }
 }
@@ -94,7 +88,7 @@ $flex-basis: 100px;
 }
 
 .topBorder {
-  border-top: 2px solid $charcoal;
+  border-top: 1px solid $charcoal;
 }
 
 .sideHandsUpPhoto {
