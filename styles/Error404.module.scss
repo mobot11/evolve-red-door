@@ -58,4 +58,9 @@
       background: rgba(0, 64, 80, 0.2);
     }
   }
+  @include for-ie11() {
+    p {
+      width: 100%;
+    }
+  }
 }
