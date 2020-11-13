@@ -21,7 +21,7 @@ export default function Home() {
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
           <div className={clsx(['banner', styles.banner])}>
-            <img src="/assets/evolve_logo.png" alt="The Evolve Experience logo." />
+            <img src="/assets/evolve_logo.png" alt="The Evolve Experience logo" />
             <div className={styles.quote}>
               <q>
                 The most meaningful presentation I have ever seen on race, power imbalances, and the exercise of
