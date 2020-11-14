@@ -36,20 +36,22 @@ const HamburgerMenu = () => {
         <a className={styles['mobile-site-title']}>The Evolve Experience</a>
       </Link>
       <SiteNav className={`${styles['mobile-nav']} ${!isOpen && styles['hidden']}`}>
-        <button
-          aria-label="Close Menu"
-          type="button"
-          className={styles['close-btn']}
-          onClick={() => {
-            toggleMenu(openRef.current);
-          }}
-          ref={closeRef}
-        >
-          <Close />
-        </button>
-        <Link href="/">
-          <a className={currentUrl === '/' ? styles['active'] : ''}>The Evolve Experience</a>
-        </Link>
+        <div className={styles['open-title-layout']}>
+          <button
+            aria-label="Close Menu"
+            type="button"
+            className={styles['close-btn']}
+            onClick={() => {
+              toggleMenu(openRef.current);
+            }}
+            ref={closeRef}
+          >
+            <Close />
+          </button>
+          <Link href="/">
+            <a className={currentUrl === '/' ? styles['active'] : ''}>The Evolve Experience</a>
+          </Link>
+        </div>
       </SiteNav>
     </div>
   );

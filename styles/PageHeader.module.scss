@@ -5,29 +5,37 @@
 @import './classes';
 
 .page-header {
-  @include for-size(m-up) {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 50;
-    color: $white;
-    // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40px, rgba(0, 212, 255, 0) 100%); // add after competition
-    @include bg(b); // remove after competition
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  color: $white;
+  // background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40px, rgba(0, 212, 255, 0) 100%); // add after competition
+  @include bg(b); // remove after competition
+  height: 4rem;
+  padding-top: $space-s;
+  padding-bottom: $space-s; // remove after competition
+  a {
+    font-size: 1.25rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    border: solid 1px transparent;
+    border-bottom: solid 2px transparent;
+    &:focus {
+      border: solid 1px $gem-of-the-ocean;
+      border-bottom: solid 4px $gem-of-the-ocean;
+    }
+  }
+  @include for-size(l-up) {
+    height: 5rem;
     padding-top: $space-m;
     // padding-bottom: 20px; // add after competition
     padding-bottom: $space-m; // remove after competition
-    min-height: 3rem;
-    a {
-      font-size: 20px;
-      font-family: 'Roboto Condensed', sans-serif;
-      text-decoration: none;
-      border: solid 1px transparent;
-      &:focus {
-        border: solid 1px $gem-of-the-ocean;
-        border-bottom: solid 4px $gem-of-the-ocean;
-      }
-    }
+  }
+  @media only screen and (min-width: 1023px) {
+    padding-top: 1.33rem;
+    padding-bottom: 1.33rem;
   }
 }
 .page-header-inner {
@@ -74,11 +82,6 @@
   transition: all 0.5s ease;
   // animation: smoothScroll 0.3s forwards; // add after competition
   background: $charcoal;
-  padding-bottom: 0;
-  @media only screen and (min-width: 1023px) {
-    padding-top: $space-m;
-    padding-bottom: $space-m;
-  }
 }
 
 // @keyframes smoothScroll { // add after competition
