@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
 import IconLink from '../components/Link/IconLink';
@@ -78,6 +78,7 @@ const KeepInTouch = () => {
                 }}
                 validationSchema={validationSchema}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
+                  console.log('called on submit');
                   fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -93,65 +94,82 @@ const KeepInTouch = () => {
                     .finally(() => setSubmitting(false));
                 }}
               >
-                {({ submitForm, isSubmitting }) => (
-                  <Form className={styles.form} name="contact" method="POST" data-netlify="true">
-                    <h2 className={styles.h2}>SUBSCRIBE</h2>
-                    <Field
-                      component={TextField}
-                      name="email"
-                      type="email"
-                      label="Email required"
-                      fullWidth
-                      variant="outlined"
-                      inputProps={{ 'aria-label': 'Please add your email (required)' }}
-                      required
-                    />
-                    <br />
-                    <Field
-                      component={TextField}
-                      name="firstname"
-                      type="text"
-                      label="First Name required"
-                      variant="outlined"
-                      className={styles.firstName}
-                      inputProps={{ 'aria-label': 'Please add your first name (required)' }}
-                      required
-                    />
-                    <Field
-                      component={TextField}
-                      name="lastname"
-                      type="text"
-                      label="Last Name required"
-                      variant="outlined"
-                      className={styles.lastName}
-                      inputProps={{ 'aria-label': 'Please add your last name (required)' }}
-                      required
-                    />
-                    <br />
-                    <Field
-                      component={TextField}
-                      name="message"
-                      type="text"
-                      fullWidth
-                      label="Where did you hear about the Red Door Project? (optional)"
-                      inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
-                      variant="outlined"
-                    />
-                    {isSubmitting && <LinearProgress />}
-                    <br />
-                    <Button
-                      variant="contained"
-                      style={{ textTransform: 'uppercase' }}
-                      color="primary"
-                      disableRipple
-                      disabled={isSubmitting}
-                      onClick={submitForm}
-                      type="submit"
-                    >
-                      Subscribe
-                    </Button>
-                  </Form>
-                )}
+                {(props) => {
+                  return (
+                    <Form className={styles.form} name="contact" method="POST" data-netlify="true" noValidate>
+                      <h2 className={styles.h2}>SUBSCRIBE</h2>
+                      <Field
+                        id="email-field"
+                        component={TextField}
+                        name="email"
+                        type="email"
+                        label="Email required"
+                        fullWidth
+                        variant="outlined"
+                        inputProps={{
+                          'aria-label': props.errors.email ? props.errors.email : 'Please add your email (required)',
+                        }}
+                        onBlur={() => {
+                          console.log('blur called');
+                        }}
+                        required
+                      />
+                      <br />
+                      <Field
+                        component={TextField}
+                        id="firstname-field"
+                        name="firstname"
+                        type="text"
+                        label="First Name required"
+                        variant="outlined"
+                        className={styles.firstName}
+                        inputProps={{
+                          'aria-label': props.errors.firstname
+                            ? props.errors.firstname
+                            : 'Please add your first name (required)',
+                        }}
+                        required
+                      />
+                      <Field
+                        id="lastname-field"
+                        component={TextField}
+                        name="lastname"
+                        type="text"
+                        label="Last Name required"
+                        variant="outlined"
+                        className={styles.lastName}
+                        inputProps={{
+                          'aria-label': props.errors.lastname
+                            ? props.errors.lastname
+                            : 'Please add your last name (required)',
+                        }}
+                        required
+                      />
+                      <br />
+                      <Field
+                        component={TextField}
+                        name="message"
+                        type="text"
+                        fullWidth
+                        label="Where did you hear about the Red Door Project? (optional)"
+                        inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
+                        variant="outlined"
+                      />
+                      {props.isSubmitting && <LinearProgress />}
+                      <br />
+                      <Button
+                        variant="contained"
+                        style={{ textTransform: 'uppercase' }}
+                        color="primary"
+                        disableRipple
+                        disabled={props.isSubmitting}
+                        type="submit"
+                      >
+                        Subscribe
+                      </Button>
+                    </Form>
+                  );
+                }}
               </Formik>
             </div>
           </div>
