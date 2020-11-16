@@ -24,6 +24,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const KeepInTouch = () => {
+  const emailInput = React.useRef();
+  const firstNameInput = React.createRef();
+  const lastNameInput = React.createRef();
   return (
     <div className="container">
       <Head>
@@ -105,6 +108,7 @@ const KeepInTouch = () => {
                         label="Email required"
                         fullWidth
                         variant="outlined"
+                        inputRef={emailInput}
                         inputProps={{
                           'aria-label': props.errors.email ? props.errors.email : 'Please add your email (required)',
                         }}
@@ -119,6 +123,7 @@ const KeepInTouch = () => {
                         label="First Name required"
                         variant="outlined"
                         className={styles.firstName}
+                        inputRef={firstNameInput}
                         inputProps={{
                           'aria-label': props.errors.firstname
                             ? props.errors.firstname
@@ -134,6 +139,7 @@ const KeepInTouch = () => {
                         label="Last Name required"
                         variant="outlined"
                         className={styles.lastName}
+                        inputRef={lastNameInput}
                         inputProps={{
                           'aria-label': props.errors.lastname
                             ? props.errors.lastname
@@ -160,6 +166,23 @@ const KeepInTouch = () => {
                         disableRipple
                         disabled={props.isSubmitting}
                         type="submit"
+                        onClick={() => {
+                          props.submitForm;
+                          setTimeout(() => {
+                            if (props.errors.email) {
+                              emailInput.current.focus();
+                              return;
+                            }
+                            if (props.errors.firstname) {
+                              firstNameInput.current.focus();
+                              return;
+                            }
+                            if (props.errors.lastname) {
+                              lastNameInput.current.focus();
+                              return;
+                            }
+                          }, 5);
+                        }}
                       >
                         Subscribe
                       </Button>
