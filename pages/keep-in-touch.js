@@ -167,17 +167,17 @@ const KeepInTouch = () => {
                         disabled={props.isSubmitting}
                         type="submit"
                         onClick={() => {
-                          props.submitForm;
+                          props.submitForm();
                           setTimeout(() => {
-                            if (props.errors.email) {
+                            if (props.errors.email || !props.touched.email) {
                               emailInput.current.focus();
                               return;
                             }
-                            if (props.errors.firstname) {
+                            if (props.errors.firstname || !props.touched.firstname) {
                               firstNameInput.current.focus();
                               return;
                             }
-                            if (props.errors.lastname) {
+                            if (props.errors.lastname || !props.touched.lastname) {
                               lastNameInput.current.focus();
                               return;
                             }
