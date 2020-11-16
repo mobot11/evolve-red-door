@@ -78,7 +78,6 @@ const KeepInTouch = () => {
                 }}
                 validationSchema={validationSchema}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
-                  console.log('called on submit');
                   fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -108,9 +107,6 @@ const KeepInTouch = () => {
                         variant="outlined"
                         inputProps={{
                           'aria-label': props.errors.email ? props.errors.email : 'Please add your email (required)',
-                        }}
-                        onBlur={() => {
-                          console.log('blur called');
                         }}
                         required
                       />
