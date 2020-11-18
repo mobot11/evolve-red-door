@@ -3,6 +3,9 @@ import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer/Footer';
 import Video from '../components/Video';
 import clsx from 'clsx';
+import EvolveTranscript from '../transcripts/evolve';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@reach/disclosure';
+
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -55,6 +58,14 @@ export default function Home() {
           <div className={clsx(['section-content', styles.video])}>
             <div className={styles.embedContainer}>
               <Video title="The Evolve Experience video" src="https://www.youtube.com/embed/vano1uIgU_g"></Video>
+            </div>
+            <div className="disclosure">
+              <Disclosure>
+                <DisclosureButton>Access the full transcript for "The Evolve Experience" video</DisclosureButton>
+                <DisclosurePanel>
+                  <EvolveTranscript />
+                </DisclosurePanel>
+              </Disclosure>
             </div>
           </div>
         </div>
