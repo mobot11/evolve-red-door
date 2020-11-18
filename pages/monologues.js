@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from '../components/Link/Link';
+import Video from '../components/Video';
 import clsx from 'clsx';
 import styles from '../styles/Monologues.module.scss';
 import Footer from '../components/Footer/Footer';
@@ -77,10 +78,10 @@ const Monologues = () => {
               <div className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
-                    <iframe
-                      title="Hands Up - This is what theater is for."
+                    <Video
+                      title="Hands Up - This is what theater is for video."
                       src="https://www.youtube.com/embed/aoT1Krp9HF4"
-                    ></iframe>
+                    ></Video>
                   </div>
                 </div>
               </div>
@@ -131,7 +132,10 @@ const Monologues = () => {
               <div className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
-                    <iframe src="https://www.youtube.com/embed/6YUH2Oj_0zE" title="Cop Out: How it's Made."></iframe>
+                    <Video
+                      src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+                      title="Cop Out: How it's made video."
+                    ></Video>
                   </div>
                 </div>
               </div>

@@ -128,6 +128,11 @@ $flex-basis: 100px;
     @include for-size(s-only1) {
       flex-direction: column;
     }
+    @media screen and (max-width: 620px) {
+      div:first-child {
+        margin-left: 40px;
+      }
+    }
   }
 }
 
@@ -172,7 +177,10 @@ $flex-basis: 100px;
   p {
     width: 620px;
     padding-bottom: 0;
-    @media screen and (max-width: 690px) {
+    @include for-size(s-only) {
+      width: 100%;
+    }
+    @include for-size(m-only) {
       width: 100%;
     }
   }
@@ -183,12 +191,15 @@ $flex-basis: 100px;
     content: '';
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -6px;
     height: 450px;
     width: 650px;
-    background-image: url('/assets/contact2.png') center center no-repeat;
-    @media screen and (max-width: 1200px) {
-      display: none;
+    z-index: 1;
+    background: url('/assets/contact2.png') center center no-repeat;
+    background-size: contain;
+    display: none;
+    @include for-size(xl-up) {
+      display: block;
     }
   }
 }

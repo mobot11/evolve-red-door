@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer/Footer';
+import Video from '../components/Video';
 import clsx from 'clsx';
 import styles from '../styles/Home.module.scss';
 
@@ -53,7 +54,7 @@ export default function Home() {
         <div className={clsx(['section', styles.sectionVideo])}>
           <div className={clsx(['section-content', styles.video])}>
             <div className={styles.embedContainer}>
-              <iframe title="The Evolve Experience." src="https://www.youtube.com/embed/vano1uIgU_g"></iframe>
+              <Video title="The Evolve Experience video." src="https://www.youtube.com/embed/vano1uIgU_g"></Video>
             </div>
           </div>
         </div>
