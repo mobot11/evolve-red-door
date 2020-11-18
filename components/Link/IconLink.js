@@ -12,30 +12,30 @@ const IconLink = ({ variant, text, anchorProps = {}, theme }) => {
     case 'facebook':
       icon = <FaceBookIcon />;
       href = 'https://www.facebook.com/reddoorprojectpdx';
-      label = `access The Red Door Project's Facebook page`;
+      label = `access The Red Door Project's Facebook page.`;
       break;
     case 'twitter':
       href = 'https://twitter.com/reddoorproject?s=20';
       icon = <TwitterIcon />;
-      label = `access The Red Door Project's Twitter page`;
+      label = `access The Red Door Project's Twitter page.`;
       break;
     case 'email':
       href = 'mailto:info@reddoorproject.org';
       icon = <EmailIcon />;
-      label = `email The Red Door Project`;
+      label = `email The Red Door Project.`;
       break;
     case 'instagram':
       href = 'https://www.instagram.com/reddoorproject/';
       icon = <InstagramIcon />;
-      label = `access The Red Door Project's Instagram page`;
+      label = `access The Red Door Project's Instagram page.`;
       break;
     case 'phone':
       href = 'tel:1-503-541-0739';
       icon = <PhoneIcon />;
-      label = `contact telephone number 1 503 541 07 39`;
+      label = `contact telephone number 1 503 541 07 39.`;
       break;
     default:
-      throw new Error('invalid variant supplied to IconLink');
+      throw new Error('invalid variant supplied to IconLink.');
   }
   return (
     <div>

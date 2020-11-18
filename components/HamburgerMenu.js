@@ -21,7 +21,7 @@ const HamburgerMenu = () => {
   return (
     <div className={styles['hamburger-menu']}>
       <button
-        aria-label="Open Menu"
+        aria-label="Open Menu."
         type="button"
         className={styles['open-btn']}
         onClick={() => {
@@ -38,7 +38,7 @@ const HamburgerMenu = () => {
       <SiteNav className={`${styles['mobile-nav']} ${!isOpen && styles['hidden']}`}>
         <div className={styles['open-title-layout']}>
           <button
-            aria-label="Close Menu"
+            aria-label="Close Menu."
             type="button"
             className={styles['close-btn']}
             onClick={() => {

@@ -103,7 +103,7 @@ const KeepInTouch = () => {
                       label="Email required"
                       fullWidth
                       variant="outlined"
-                      inputProps={{ 'aria-label': 'Please add your email (required)' }}
+                      inputProps={{ 'aria-label': 'Please add your email (required).' }}
                       required
                     />
                     <br />
@@ -114,7 +114,7 @@ const KeepInTouch = () => {
                       label="First Name required"
                       variant="outlined"
                       className={styles.firstName}
-                      inputProps={{ 'aria-label': 'Please add your first name (required)' }}
+                      inputProps={{ 'aria-label': 'Please add your first name (required).' }}
                       required
                     />
                     <Field
@@ -124,7 +124,7 @@ const KeepInTouch = () => {
                       label="Last Name required"
                       variant="outlined"
                       className={styles.lastName}
-                      inputProps={{ 'aria-label': 'Please add your last name (required)' }}
+                      inputProps={{ 'aria-label': 'Please add your last name (required).' }}
                       required
                     />
                     <br />
@@ -134,7 +134,7 @@ const KeepInTouch = () => {
                       type="text"
                       fullWidth
                       label="Where did you hear about the Red Door Project? (optional)"
-                      inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
+                      inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional).' }}
                       variant="outlined"
                     />
                     {isSubmitting && <LinearProgress />}
