@@ -277,3 +277,50 @@ section,
   white-space: nowrap;
   width: 1px;
 }
+
+.disclosure {
+  @extend %flex-column;
+  width: 100%;
+  & > *,
+  & > * > * {
+    @include fluid-type($bp-s, $bp-xl, $base-font-min, $base-font-max);
+  }
+  button {
+    @extend %flex-row;
+    line-height: 1em;
+    @include bg(w);
+    @include color(deep);
+    cursor: pointer;
+    margin: $space-m 0 $space-m 0;
+    height: $min-target-size;
+    padding: $space-s $space-l;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    &:hover {
+      background: lighten($gem-of-the-ocean, 15%);
+      text-decoration: none;
+    }
+    &:focus {
+      background: lighten($gem-of-the-ocean, 15%);
+      border-color: $deep-sea;
+      text-decoration: none;
+    }
+  }
+
+  div[data-reach-disclosure-panel] {
+    padding: 0 $space-l;
+    margin-bottom: $space-l;
+    span {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+    }
+    .timestamp {
+      margin-top: $space-s;
+      color: $deep-sea;
+    }
+  }
+}

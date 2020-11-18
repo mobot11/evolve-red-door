@@ -317,7 +317,13 @@ $flex-basis: 100px;
     margin-top: $space-s;
   }
   @include for-size(s-only) {
-    padding-left: $space-s;
+    padding: $space-m $space-l;
+    width: 100%;
+  }
+
+  @include for-size(m-only) {
+    padding: $space-m $space-l;
+    width: 100%;
   }
 
   @include for-ie11() {
