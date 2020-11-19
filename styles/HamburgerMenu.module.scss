@@ -7,22 +7,16 @@
 .hamburger-menu {
   display: flex;
   align-items: center;
-  button {
-    color: $white;
-    background: none;
-    @include for-ie11() {
-      line-height: 0;
-    }
-  }
-  .mobile-site-title {
-    font-weight: 600;
-    color: $white;
-    margin-left: 8px;
-    display: block;
-  }
+
   @media only screen and (min-width: 1023px) {
     display: none;
   }
+}
+.mobile-site-title {
+  font-weight: 600;
+  color: $white;
+  margin-left: 8px;
+  display: block;
 }
 .mobile-nav {
   position: absolute;
@@ -64,12 +58,14 @@
     margin-left: 8px;
   }
 }
-.open-btn {
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
+.button {
   border: solid 1px transparent;
+  color: $white;
+  background: none;
+  padding: 8px;
+  @include for-ie11() {
+    line-height: 0;
+  }
   &:focus {
     border: solid 1px $gem-of-the-ocean;
     border-bottom: solid 2px $gem-of-the-ocean;
@@ -78,21 +74,15 @@
     height: 24px;
     width: 24px;
   }
+}
+.open-btn {
+  @extend .button;
 }
 .hidden {
   display: none;
 }
 .close-btn {
-  padding: 8px;
   left: 9px;
   top: 0px;
-  border: solid 1px transparent;
-  &:focus {
-    border: solid 1px $gem-of-the-ocean;
-    border-bottom: solid 2px $gem-of-the-ocean;
-  }
-  svg {
-    height: 24px;
-    width: 24px;
-  }
+  @extend .button;
 }
