@@ -292,7 +292,7 @@ section,
     @include color(deep);
     cursor: pointer;
     margin: $space-m 0 $space-m 0;
-    height: $min-target-size;
+    min-height: $min-target-size;
     padding: $space-s $space-l;
     border-radius: 10px;
     border: 2px solid transparent;
