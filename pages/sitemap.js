@@ -16,7 +16,7 @@ const Sitemap = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
-      <main className={clsx(['main', styles.main])}>
+      <main className={clsx(['main', styles.main])} id="main">
         <div className={clsx(['section'])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}>
             <nav>
