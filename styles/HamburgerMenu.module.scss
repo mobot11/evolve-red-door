@@ -62,6 +62,7 @@
   border: solid 1px transparent;
   color: $white;
   background: none;
+  padding: 8px;
   @include for-ie11() {
     line-height: 0;
   }
@@ -75,17 +76,12 @@
   }
 }
 .open-btn {
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
   @extend .button;
 }
 .hidden {
   display: none;
 }
 .close-btn {
-  padding: 8px;
   left: 9px;
   top: 0px;
   @extend .button;
