@@ -156,6 +156,10 @@
     @media (min-width: $bp-l) {
       @content;
     }
+  } @else if $range == l-up1 {
+    @media (min-width: $bp-l1) {
+      @content;
+    }
   } @else if $range == xl-up {
     @media (min-width: $bp-xl) {
       @content;

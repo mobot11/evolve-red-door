@@ -107,9 +107,10 @@ $flex-basis: 100px;
 
 .sideHandsUpPhoto {
   @extend %flex-column;
-  flex-grow: 4;
+  flex-grow: 6;
   flex-basis: $flex-basis;
   position: relative;
+  display: none;
   &::after {
     content: '';
     position: absolute;
@@ -117,27 +118,23 @@ $flex-basis: 100px;
     top: -$space-l;
     left: 0;
     bottom: -$space-l;
+    max-height: 1200px;
     z-index: 1;
     background: url('/assets/monologues_2.png') right center no-repeat;
     background-size: cover;
   }
 
-  @include for-size(m-only) {
-    margin-left: $space-m;
-    display: none;
-  }
-  @include for-size(l-up) {
+  @include for-size(l-up1) {
     margin-left: $space-l;
-  }
-  @include for-size(s-only) {
-    display: none;
+    display: flex;
   }
 }
 
 .sideCopOutPhoto {
   @extend %flex-column;
-  flex-grow: 5;
+  flex-grow: 6;
   flex-basis: $flex-basis;
+  display: none;
   &::after {
     content: '';
     position: absolute;
@@ -145,27 +142,22 @@ $flex-basis: 100px;
     top: -$space-l;
     left: 0;
     bottom: -$space-l;
+    max-height: 1200px;
     z-index: 1;
     background: url('/assets/monologues_bottom.png') right center no-repeat;
     background-size: cover;
   }
 
-  @include for-size(m-only) {
-    margin-left: $space-m;
-    display: none;
-  }
-  @include for-size(l-up) {
+  @include for-size(l-up1) {
     margin-left: $space-l;
-  }
-  @include for-size(s-only) {
-    display: none;
+    display: flex;
   }
 }
 
 .sideText {
   @extend %flex-column;
   align-items: flex-start;
-  flex-grow: 4;
+  flex-grow: 7;
   flex-basis: $flex-basis;
   z-index: 2;
   a {

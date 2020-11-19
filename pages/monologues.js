@@ -5,6 +5,9 @@ import clsx from 'clsx';
 import styles from '../styles/Monologues.module.scss';
 import Footer from '../components/Footer/Footer';
 import PageHeader from '../components/PageHeader';
+import HandsUpTranscript from '../transcripts/hands_up';
+import CopOutTranscript from '../transcripts/cop_out';
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@reach/disclosure';
 
 const Monologues = () => {
   return (
@@ -79,9 +82,19 @@ const Monologues = () => {
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
                     <Video
-                      title="Hands Up - This is what theater is for video."
+                      title="Hands Up - This is what theatre is for video."
                       src="https://www.youtube.com/embed/aoT1Krp9HF4"
                     ></Video>
+                  </div>
+                  <div className="disclosure">
+                    <Disclosure>
+                      <DisclosureButton>
+                        Access the full transcript for "Hands Up - This is what theatre is for" video
+                      </DisclosureButton>
+                      <DisclosurePanel>
+                        <HandsUpTranscript />
+                      </DisclosurePanel>
+                    </Disclosure>
                   </div>
                 </div>
               </div>
@@ -136,6 +149,14 @@ const Monologues = () => {
                       src="https://www.youtube.com/embed/6YUH2Oj_0zE"
                       title="Cop Out: How it's made video."
                     ></Video>
+                  </div>
+                  <div className="disclosure">
+                    <Disclosure>
+                      <DisclosureButton>Access the full transcript for "Cop Out: How it's made" video</DisclosureButton>
+                      <DisclosurePanel>
+                        <CopOutTranscript />
+                      </DisclosurePanel>
+                    </Disclosure>
                   </div>
                 </div>
               </div>
