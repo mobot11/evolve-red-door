@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+.alertContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 8px;
+}
+
+.alertCloseButton {
+  background-color: initial;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  span {
+    padding: 0 4px;
+  }
+  &:focus {
+    span {
+      @include focus-indicator($deep-sea);
+    }
+  }
+}
+
+p.alertText {
+  font-size: $base-font-max;
+  padding: 10px 10px 10px 10px;
+}
+
+.success {
+  background-color: $sea-foam;
+}
+
+.error {
+  background-color: $error;
+  color: $black;
+}
