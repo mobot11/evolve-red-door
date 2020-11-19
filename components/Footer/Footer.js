@@ -30,6 +30,9 @@ const Footer = ({}) => {
         <Link href="/accessibility-statement">
           <a>Accessibility statement</a>
         </Link>
+        <Link href="/sitemap">
+          <a>Sitemap</a>
+        </Link>
         <span className={styles['knowbility-logo']}>
           <ImageLink
             src="assets/knowbility-logo.svg"
