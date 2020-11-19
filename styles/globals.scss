@@ -313,6 +313,12 @@ section,
   div[data-reach-disclosure-panel] {
     padding: 0 $space-l;
     margin-bottom: $space-l;
+    p {
+      display: block;
+      width: 100%;
+      position: relative;
+      padding-bottom: 0;
+    }
     span {
       display: inline-block;
       width: 100%;
