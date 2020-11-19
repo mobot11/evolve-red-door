@@ -5,11 +5,11 @@
 @import './classes';
 
 .h1 {
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .main {
-  min-height: 0;
+  min-height: calc(100vh - 432px);
 }
 
 .sectionBlack {
@@ -17,9 +17,10 @@
 }
 
 .sectionContent {
-  padding: $space-xl 0;
+  padding: $space-xl $space-l 0;
   height: 30rem;
   @extend %flex-column;
+  align-items: flex-start;
   z-index: 2;
   @include for-size(s-only1) {
     height: auto;

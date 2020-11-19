@@ -17,8 +17,9 @@ const Sitemap = () => {
       </Head>
       <PageHeader />
       <main className={clsx(['main', styles.main])} id="main">
-        <div className={clsx(['section'])}>
-          <div className={clsx(['section-content', 'hero', styles.hero])}>
+        <div className={'section'}>
+          <div className={clsx(['section-content', styles.sectionContent])}>
+            <h1 className={styles.h1}>Site Map</h1>
             <nav>
               <ul>
                 <li>
