@@ -5,8 +5,9 @@ import IconLink from '../components/Link/IconLink';
 import clsx from 'clsx';
 import styles from '../styles/KeepInTouch.module.scss';
 import Footer from '../components/Footer/Footer';
-import * as Yup from 'yup';
+import FormAlert from '../components/formAlert';
 
+import * as Yup from 'yup';
 import { Formik, Form, Field } from 'formik';
 import { Button, LinearProgress } from '@material-ui/core';
 import { TextField } from 'formik-material-ui';
@@ -27,6 +28,10 @@ const KeepInTouch = () => {
   const emailInput = React.useRef();
   const firstNameInput = React.createRef();
   const lastNameInput = React.createRef();
+
+  const [alertText, setAlertText] = React.useState();
+  const [showAlert, setShowAlert] = React.useState(false);
+  const [alertState, setAlertState] = React.useState();
   return (
     <div className="container">
       <Head>
@@ -87,11 +92,15 @@ const KeepInTouch = () => {
                     body: encode({ 'form-name': 'contact', ...values }),
                   })
                     .then(() => {
-                      alert('Success');
+                      setAlertText('Form submitted successfully.');
+                      setAlertState('success');
+                      setShowAlert(true);
                       resetForm();
                     })
                     .catch(() => {
-                      alert('Error');
+                      setAlertText('Error Submitting form, please try again');
+                      setAlertState('error');
+                      setShowAlert(true);
                     })
                     .finally(() => setSubmitting(false));
                 }}
@@ -158,6 +167,7 @@ const KeepInTouch = () => {
                         variant="outlined"
                       />
                       {props.isSubmitting && <LinearProgress />}
+                      {showAlert && <FormAlert text={alertText} alertState={alertState} setShowAlert={setShowAlert} />}
                       <br />
                       <Button
                         variant="contained"
