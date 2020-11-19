@@ -51,7 +51,7 @@ export const EvolveTranscript = () => {
       <span className="timestamp">01:09</span>
       <span className="line">[Kevin] Yeah, take a breath.</span>
       <span className="timestamp">01:11</span>
-      <span className="line">[Actor 2] Move one inch and I'll blow your f***in head off.</span>
+      <span className="line">[Actor 2] Move one inch and I'll blow your fucking head off.</span>
       <span className="timestamp">01:16</span>
       <span className="line">
         [Kevin] So, Evolve takes the nuance, the conflict between two sides, and puts that on stage.
@@ -98,7 +98,7 @@ export const EvolveTranscript = () => {
       <span className="line">[Heartbeat, increasing in speed]</span>
       <span className="timestamp">03:27</span>
       <span className="line">
-        [Actor 3] So guns. Here is what I know about them. They don’t solve many problems. Mostly... they make s**t
+        [Actor 3] So guns. Here is what I know about them. They don’t solve many problems. Mostly... they make shit
         worse. Think of this as a PSA.
       </span>
       <span className="timestamp">03:38</span>
@@ -116,7 +116,7 @@ export const EvolveTranscript = () => {
       </span>
       <span className="timestamp">04:04</span>
       <span className="line">
-        [Actor 4] He grips his gun. "Tell me your f***ing badge number and if I find out you’re lying, I’m going to beat
+        [Actor 4] He grips his gun. "Tell me your fucking badge number and if I find out you’re lying, I’m going to beat
         the black right off you."
       </span>
       <span className="timestamp">04:12</span>
@@ -169,7 +169,7 @@ export const EvolveTranscript = () => {
       <span className="timestamp">05:47</span>
       <span className="line">
         [Actor 1] My life is valuable and I shouldn’t have to keep my hands held high to prove it. Keeping our hands
-        held high hasn’t gotten us treated the way human beings should be treated so how do I feel? F*** you is how I
+        held high hasn’t gotten us treated the way human beings should be treated so how do I feel? Fuck you is how I
         feel.
       </span>
       <span className="timestamp">06:05</span>
