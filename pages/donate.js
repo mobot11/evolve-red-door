@@ -74,7 +74,7 @@ const About = () => {
                   <Link
                     href="https://culturaltrust.org/"
                     propsForAnchor={{ rel: 'noopener', target: '_blank' }}
-                    text="Find all the details at culturaltrust.org"
+                    text="Find all the details about donating at culturaltrust.org"
                   ></Link>
                   .
                 </p>
