@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import styles from '../../styles/Link.module.scss';
 
-const Link = ({ href, text, propsForAnchor, linkClass = {} }) => {
+const Link = ({ href, text, propsForAnchor = {}, linkClass = {} }) => {
   const { className: anchorClassName, ...otherAnchorProps } = propsForAnchor;
   return (
     <React.Fragment>

@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+@import './variables';
+@import './mixins';
+@import './classes';
+
+.h1 {
+  margin-bottom: 0.5em;
+}
+
+.main {
+  min-height: 0;
+}
+
+.sectionBlack {
+  @include bg(b);
+}
+
+.sectionContent {
+  padding: $space-xl 0;
+  height: 30rem;
+  @extend %flex-column;
+  z-index: 2;
+  @include for-size(s-only1) {
+    height: auto;
+  }
+
+  a {
+    color: $deep-sea;
+    display: inline-block;
+    &:active,
+    &:focus {
+      background: rgba(0, 64, 80, 0.2);
+      @include focus-indicator;
+    }
+    &:hover {
+      background: rgba(0, 64, 80, 0.2);
+    }
+  }
+  @include for-ie11() {
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.sitemap {
+  margin-top: 50px;
+}
