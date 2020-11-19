@@ -5,7 +5,7 @@ import IconLink from '../components/Link/IconLink';
 import clsx from 'clsx';
 import styles from '../styles/KeepInTouch.module.scss';
 import Footer from '../components/Footer/Footer';
-import FormAlert from '../components/formAlert';
+import FormAlert from '../components/FormAlert';
 
 import * as Yup from 'yup';
 import { Formik, Form, Field } from 'formik';
@@ -26,8 +26,8 @@ const validationSchema = Yup.object().shape({
 
 const KeepInTouch = () => {
   const emailInput = React.useRef();
-  const firstNameInput = React.createRef();
-  const lastNameInput = React.createRef();
+  const firstNameInput = React.useRef();
+  const lastNameInput = React.useRef();
 
   const [alertText, setAlertText] = React.useState();
   const [showAlert, setShowAlert] = React.useState(false);
