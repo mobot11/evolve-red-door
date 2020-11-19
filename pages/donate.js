@@ -18,7 +18,7 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
-      <main className="main">
+      <main className="main" id="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
         </div>

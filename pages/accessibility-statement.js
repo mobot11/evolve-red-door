@@ -17,7 +17,7 @@ const accessibilityStatement = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader />
-      <main className={clsx(['main', styles.main])}>
+      <main className={clsx(['main', styles.main])} id="main">
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
         </div>
