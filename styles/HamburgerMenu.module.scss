@@ -58,11 +58,7 @@
     margin-left: 8px;
   }
 }
-.open-btn {
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
+.button {
   border: solid 1px transparent;
   color: $white;
   background: none;
@@ -77,6 +73,13 @@
     height: 24px;
     width: 24px;
   }
+}
+.open-btn {
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  @extend .button;
 }
 .hidden {
   display: none;
@@ -85,18 +88,5 @@
   padding: 8px;
   left: 9px;
   top: 0px;
-  border: solid 1px transparent;
-  color: $white;
-  background: none;
-  @include for-ie11() {
-    line-height: 0;
-  }
-  &:focus {
-    border: solid 1px $gem-of-the-ocean;
-    border-bottom: solid 2px $gem-of-the-ocean;
-  }
-  svg {
-    height: 24px;
-    width: 24px;
-  }
+  @extend .button;
 }
