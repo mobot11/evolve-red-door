@@ -7,22 +7,16 @@
 .hamburger-menu {
   display: flex;
   align-items: center;
-  // button {
-  //   color: $white;
-  //   background: none;
-  //   @include for-ie11() {
-  //     line-height: 0;
-  //   }
-  // }
-  .mobile-site-title {
-    font-weight: 600;
-    color: $white;
-    margin-left: 8px;
-    display: block;
-  }
+
   @media only screen and (min-width: 1023px) {
     display: none;
   }
+}
+.mobile-site-title {
+  font-weight: 600;
+  color: $white;
+  margin-left: 8px;
+  display: block;
 }
 .mobile-nav {
   position: absolute;
