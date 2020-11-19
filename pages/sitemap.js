@@ -42,9 +42,6 @@ const Sitemap = () => {
                 <li>
                   <Link href="/monologues" text="Monologues" />
                 </li>
-                <li>
-                  <Link href="/404" text="404" />
-                </li>
               </ul>
             </nav>
           </div>
