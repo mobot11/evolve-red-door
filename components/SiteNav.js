@@ -32,7 +32,7 @@ const SiteNav = ({ className, children }) => {
     },
   ];
   return (
-    <nav aria-label="Site" className={`${styles['nav']} ${className}`}>
+    <nav aria-label="Site." className={`${styles['nav']} ${className}`}>
       {children}
       <ul className={styles['links']}>
         {links.map((link) => (
