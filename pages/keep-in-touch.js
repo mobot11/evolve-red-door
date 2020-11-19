@@ -75,8 +75,8 @@ const KeepInTouch = () => {
           </div>
         </section>
         <section>
-          <div className={clsx('section-content', styles.formSection)}>
-            <div>
+          <div className={clsx('section-content', styles.content)}>
+            <div className={styles.formSection}>
               <Formik
                 initialValues={{
                   email: '',
@@ -201,8 +201,9 @@ const KeepInTouch = () => {
                 }}
               </Formik>
             </div>
+
+            <div className={styles.keepInTouchImage}></div>
           </div>
-          <div className={styles.keepInTouchImage}></div>
         </section>
       </main>
       <Footer />

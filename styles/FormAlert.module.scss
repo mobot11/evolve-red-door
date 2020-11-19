@@ -5,32 +5,28 @@
 @import './classes';
 
 .alertContainer {
-  display: flex;
+  @extend %flex-row;
   width: 100%;
   justify-content: space-between;
-  position: relative;
   border-radius: 8px;
+  padding: $space-m;
 }
 
 .alertCloseButton {
-  background-color: initial;
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  @extend %flex-column;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+
   cursor: pointer;
-  span {
-    padding: 0 4px;
-  }
-  &:focus {
-    span {
-      @include focus-indicator($deep-sea);
-    }
+  &:focus,
+  &:hover {
+    @include focus-indicator($deep-sea);
   }
 }
 
 p.alertText {
   font-size: $base-font-max;
-  padding: 10px 10px 10px 10px !important;
 }
 
 .success {

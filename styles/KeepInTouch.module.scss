@@ -145,10 +145,6 @@ $flex-basis: 100px;
   margin-bottom: 35px;
 }
 
-.formSection {
-  color: $charcoal;
-}
-
 .form {
   width: 600px;
   @media screen and(max-width: 690px) {
@@ -186,20 +182,42 @@ $flex-basis: 100px;
   }
 }
 
+.content {
+  flex-direction: row;
+  align-items: stretch;
+  padding-bottom: 0;
+  padding-right: 0;
+  @include for-ie11() {
+    height: 100%;
+  }
+}
+.formSection {
+  @extend %flex-column;
+  align-items: flex-start;
+  flex-grow: 4;
+  flex-basis: $flex-basis;
+  z-index: 2;
+}
+
 .keepInTouchImage {
+  @extend %flex-column;
+  flex-grow: 3;
+  flex-basis: $flex-basis;
+  display: none;
+
   &::after {
     content: '';
     position: absolute;
-    right: 0;
-    bottom: -6px;
-    height: 450px;
-    width: 650px;
+    bottom: -5em;
+    top: 5em;
+    right: -5em;
+    left: 0;
+    display: block;
     z-index: 1;
-    background: url('/assets/contact2.png') center center no-repeat;
+    background: url('/assets/contact2.png') bottom right no-repeat;
     background-size: contain;
-    display: none;
-    @include for-size(xl-up) {
-      display: block;
-    }
+  }
+  @include for-size(xl-up) {
+    display: flex;
   }
 }
