@@ -27,7 +27,7 @@ const Monologues = () => {
         <section className={styles.sectionGem}>
           <div className={clsx(['section-content', styles.contentWrapperBig])}>
             <div className={styles.copoutLogo}>
-              <img src="/assets/copout_logo.png" alt="Cop Out logo" />
+              <img src="/assets/copout_logo.png" alt="Cop Out logo." />
             </div>
             <div className={styles.monologueHeader}>
               <h1 className={styles.h1}>The Monologues</h1>
@@ -38,7 +38,7 @@ const Monologues = () => {
               </p>
             </div>
             <div className={styles.handsUpLogo}>
-              <img src="/assets/handsup_logo.png" alt="Hands Up logo" />
+              <img src="/assets/handsup_logo.png" alt="Hands Up logo." />
             </div>
           </div>
 
@@ -55,10 +55,10 @@ const Monologues = () => {
             </div>
             <div className={styles.headerLogos}>
               <div className={styles.copoutLogo}>
-                <img src="/assets/copout_logo.png" alt="Cop Out logo" />
+                <img src="/assets/copout_logo.png" alt="Cop Out logo." />
               </div>
               <div className={styles.handsUpLogo}>
-                <img src="/assets/handsup_logo.png" alt="Hands Up logo" />
+                <img src="/assets/handsup_logo.png" alt="Hands Up logo." />
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Monologues = () => {
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
                     <Video
-                      title="Hands Up - This is what theater is for video"
+                      title="Hands Up - This is what theater is for video."
                       src="https://www.youtube.com/embed/aoT1Krp9HF4"
                     ></Video>
                   </div>
@@ -132,7 +132,10 @@ const Monologues = () => {
               <div className={styles.sectionVideo}>
                 <div className={clsx(['section-content', styles.video])}>
                   <div className={styles.embedContainer}>
-                    <Video src="https://www.youtube.com/embed/6YUH2Oj_0zE" title="Cop Out: How it's made video"></Video>
+                    <Video
+                      src="https://www.youtube.com/embed/6YUH2Oj_0zE"
+                      title="Cop Out: How it's made video."
+                    ></Video>
                   </div>
                 </div>
               </div>

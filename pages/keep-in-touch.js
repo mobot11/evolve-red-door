@@ -110,7 +110,7 @@ const KeepInTouch = () => {
                         variant="outlined"
                         inputRef={emailInput}
                         inputProps={{
-                          'aria-label': props.errors.email ? props.errors.email : 'Please add your email (required)',
+                          'aria-label': props.errors.email ? props.errors.email : 'Please add your email (required).',
                         }}
                         required
                       />
@@ -127,7 +127,7 @@ const KeepInTouch = () => {
                         inputProps={{
                           'aria-label': props.errors.firstname
                             ? props.errors.firstname
-                            : 'Please add your first name (required)',
+                            : 'Please add your first name (required).',
                         }}
                         required
                       />
@@ -143,7 +143,7 @@ const KeepInTouch = () => {
                         inputProps={{
                           'aria-label': props.errors.lastname
                             ? props.errors.lastname
-                            : 'Please add your last name (required)',
+                            : 'Please add your last name (required).',
                         }}
                         required
                       />
@@ -154,7 +154,7 @@ const KeepInTouch = () => {
                         type="text"
                         fullWidth
                         label="Where did you hear about the Red Door Project? (optional)"
-                        inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional)' }}
+                        inputProps={{ 'aria-label': 'Where did you hear about the Red Door Project? (optional).' }}
                         variant="outlined"
                       />
                       {props.isSubmitting && <LinearProgress />}

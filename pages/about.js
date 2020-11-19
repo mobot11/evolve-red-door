@@ -22,7 +22,7 @@ const About = () => {
         <div className={clsx(['section', styles.sectionBlack])}>
           <div className={clsx(['section-content', 'hero', styles.hero])}></div>
           <div className={clsx(['banner', styles.banner])}>
-            <img src="/assets/rdplogo.png" alt="The Red Door Project logo" />
+            <img src="/assets/rdplogo.png" alt="The Red Door Project logo." />
           </div>
         </div>
         <section>
