@@ -72,7 +72,7 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <div ref={elRef} tabIndex={0}>
+      <div ref={elRef}>
         {activeTrap && (
           <SiteNav className={`${styles['mobile-nav']}`}>
             <div className={styles['open-title-layout']}>
