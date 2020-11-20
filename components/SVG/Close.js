@@ -10,6 +10,7 @@ const Close = () => {
       y="0px"
       viewBox="0 0 28 28"
       xmlSpace="preserve"
+      focusable="false"
     >
       <rect
         x="12.09"

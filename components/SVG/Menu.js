@@ -10,6 +10,7 @@ const Menu = () => {
       y="0px"
       viewBox="0 0 36 28"
       xmlSpace="preserve"
+      focusable="false"
     >
       <g>
         <rect y="3" style={{ fill: '#E3E5DB' }} width="36" height="4" />
