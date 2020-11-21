@@ -35,7 +35,7 @@ const accessibilityStatement = () => {
               with sensory, cognitive and mobility disabilities, but ultimately to all users, regardless of ability.
             </p>
             <p>
-              If you have any trouble accessing information or services on The Red Door Project's site,
+              If you have any trouble accessing information or services on The Red Door Project's site,{' '}
               <a href="mailto:info@reddoorproject.org">please contact info@reddoorproject.org</a>. Please specify the
               nature of the accessibility issue and the assistive technology you use.
             </p>
