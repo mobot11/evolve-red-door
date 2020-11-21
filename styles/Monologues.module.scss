@@ -216,14 +216,16 @@ $flex-basis: 100px;
 .externalLink {
   font-weight: normal !important;
   background-image: url('/assets/external_link.png');
-  background-position: left 5px;
+  background-position: left $space-xs;
+  background-size: 0.9rem 0.9rem;
   background-repeat: no-repeat;
   padding-left: 20px;
   &:hover,
   &:focus {
     font-weight: normal !important;
+    background-position: left $space-xs;
     background-image: url('/assets/external_link.png');
-    background-position: left 5px;
+    background-size: 0.9rem 0.9rem;
     background-repeat: no-repeat;
     padding-left: 20px;
   }
