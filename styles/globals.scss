@@ -299,6 +299,10 @@ section,
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 600;
     text-decoration: underline;
+    @include for-ie11() {
+      display: block;
+      max-width: 100%;
+    }
     &:hover {
       background: lighten($gem-of-the-ocean, 15%);
       text-decoration: none;
