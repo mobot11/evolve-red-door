@@ -26,6 +26,11 @@
     height: auto;
   }
 
+  .links {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
   a {
     color: $deep-sea;
     display: inline-block;
