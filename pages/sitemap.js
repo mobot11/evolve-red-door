@@ -1,10 +1,47 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import PageHeader from '../components/PageHeader';
 import clsx from 'clsx';
 import styles from '../styles/Sitemap.module.scss';
 import Footer from '../components/Footer/Footer';
 
-import Link from '../components/Link/Link';
+const links = [
+  {
+    url: '/about',
+    label: 'About Us',
+    id: 'about',
+  },
+  {
+    url: '/accessibility-statement',
+    label: 'Accessibility Statement',
+    id: 'accessibility-statement',
+  },
+  {
+    url: '/donate',
+    label: 'Donate',
+    id: 'donate',
+  },
+  {
+    url: '/',
+    label: 'The Evolve Experience (Home)',
+    id: 'home',
+  },
+  {
+    url: '/impact',
+    label: 'Impact',
+    id: 'impact',
+  },
+  {
+    url: '/keep-in-touch',
+    label: 'Keep In Touch',
+    id: 'keep-in-touch',
+  },
+  {
+    url: '/monologues',
+    label: 'The Monologues',
+    id: 'monologues',
+  },
+];
 
 const Sitemap = () => {
   return (
@@ -20,31 +57,17 @@ const Sitemap = () => {
         <div className={'section'}>
           <div className={clsx(['section-content', styles.sectionContent])}>
             <h1 className={styles.h1}>Site Map</h1>
-            <nav>
-              <ul>
-                <li>
-                  <Link href="/about" text="About" />
-                </li>
-                <li>
-                  <Link href="/accessibility-statement" text="Accessibility Statement" />
-                </li>
-                <li>
-                  <Link href="/donate" text="Donate" />
-                </li>
-                <li>
-                  <Link href="/" text="Home" />
-                </li>
-                <li>
-                  <Link href="/impact" text="Impact" />
-                </li>
-                <li>
-                  <Link href="/keep-in-touch" text="Keep in Touch" />
-                </li>
-                <li>
-                  <Link href="/monologues" text="Monologues" />
-                </li>
+            <div className="links">
+              <ul className={styles['links']}>
+                {links.map((link) => (
+                  <li key={link.id}>
+                    <Link href={link.url}>
+                      <a>{link.label}</a>
+                    </Link>
+                  </li>
+                ))}
               </ul>
-            </nav>
+            </div>
           </div>
         </div>
       </main>
