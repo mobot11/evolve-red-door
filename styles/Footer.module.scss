@@ -17,11 +17,10 @@
     display: inline-block;
     &:active,
     &:focus {
-      background: rgba(255, 255, 255, 0.2);
       @include focus-indicator($white);
     }
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.2) !important;
     }
   }
 }
