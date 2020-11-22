@@ -53,6 +53,11 @@
   @include for-size(m-only) {
     margin-top: $space-l;
   }
+  a:hover {
+    &:not(:focus) {
+      border-radius: 100%;
+    }
+  }
 }
 
 .horizontal-rule {
