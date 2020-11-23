@@ -1,6 +1,6 @@
 #!/bin/bash
 
-protected_branch='feat/add-pre-push'
+protected_branch='main'
 
 policy="\n\n[Policy] Never push code directly to the "$protected_branch" branch! (Prevented with pre-push hook.)\n\n"
 
