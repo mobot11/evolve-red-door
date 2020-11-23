@@ -29,7 +29,7 @@ const Footer = ({}) => {
         <p className={styles.copyright}>Copyright &copy;{new Date().getFullYear()} All Rights Reserved.</p>
         <Link href="/accessibility-statement">
           <a>Accessibility statement</a>
-        </Link>
+        </Link>{' '}
         <Link href="/sitemap">
           <a>Sitemap</a>
         </Link>
