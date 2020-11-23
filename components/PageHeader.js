@@ -17,17 +17,32 @@ const PageHeader = () => {
     }
   };
 
-  // add/remove scroll event listener
+  // handle hash for skiplinks (IE11)
+  function handleHashChange() {
+    var element = document.getElementById(location.hash.substring(1));
+
+    if (element) {
+      if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+        element.tabIndex = -1;
+      }
+
+      element.focus();
+    }
+  }
+
+  // add/remove scroll event listener and hashchange for skiplinks (IE11)
   useEffect(() => {
     var header = headerRef.current.getBoundingClientRect();
     const handleScrollEvent = () => {
       handleScroll(header.top, header.height);
     };
 
+    window.addEventListener('hashchange', handleHashChange, false);
     window.addEventListener('scroll', handleScrollEvent);
 
     return () => {
       window.removeEventListener('scroll', handleScrollEvent);
+      window.addEventListener('hashchange', handleHashChange);
     };
   }, []);
 
