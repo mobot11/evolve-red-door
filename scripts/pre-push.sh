@@ -17,6 +17,8 @@ do_exit(){
   exit 1
 }
 
+echo "checking permissions"
+
 if [[ $push_command =~ $is_destructive ]] && [ $current_branch = $protected_branch ]; then
   do_exit
 fi
